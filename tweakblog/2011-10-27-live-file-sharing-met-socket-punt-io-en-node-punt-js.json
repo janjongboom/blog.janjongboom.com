@@ -1,0 +1,48 @@
+{
+    "title": "Live file sharing met socket.io en node.js",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/7238/live-file-sharing-met-socket-punt-io-en-node-punt-js.html",
+    "date": "2011-10-27T15:00:00.000Z",
+    "category": "Reacties (6)",
+    "views": 3502,
+    "articleHtml": "File uploading is altijd een pain in the ass geweest, upload limits, geen progress informatie, geklooi met Flash plugins voor multiple file selection. Gedoe. Maar nu hebben we de <a href=\"http://www.html5rocks.com/en/tutorials/file/dndfiles/\" rel=\"external\">File API</a>, <a href=\"http://socket.io\" rel=\"external\">socket.io</a> en node.js. Alvast filmpje van het eindresultaat:<br>\r\n<br>\r\n<a href=\"http://www.screenr.com/C04s\" rel=\"external\">Video</a><br>\r\n<br>\r\n<b>Zit daar in dan?</b><ul><li>Aan de achterkant een simpele node.js server met:</li><li>Een laagje socket.io die als proxy dient voor het doorgeven van data tussen clients</li><li>Een beetje express en ejs om HTML te serveren</li><li>Drag and drop API om bestanden in de site te slepen</li><li>File API om de data te lezen</li><li>&lt;progress&gt; element voor de status</li><li>Socket.io om de data gebuffered door te sturen</li></ul><a name=\"more\"></a><br>\r\n<b>Socket.io in 5 regels</b><br>\r\nSocket.io is WebSockets toegangelijk gemaakt. Polling on steroids. Client legt verbinding met de server, en ze kunnen two-way berichten naar elkaar sturen via een simpele one-liner. Bijvoorbeeld: na connection wordt er een bericht teruggestuurd (de tekst &apos;welcome&apos; die je ziet in het filmpje).<br>\r\n<br>JavaScript:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><code>1<br>2<br>3<br>4<br>5<br></code></td><td class=\"phphighlightcode\"><div><code><span class=\"code_ident\">io</span>.<span class=\"code_ident\">sockets</span>.<span class=\"code_method\">on</span>(<span class=\"code_string\">&apos;connection&apos;</span>,&#xA0;<span class=\"code_keyword\">function</span>(<span class=\"code_ident\">socket</span>)&#xA0;{\n<br>&#xA0;&#xA0;&#xA0;&#xA0;<span class=\"code_ident\">socket</span>.<span class=\"code_method\">emit</span>(<span class=\"code_string\">&apos;message&apos;</span>,&#xA0;{\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class=\"code_ident\">text</span>:&#xA0;<span class=\"code_string\">&apos;welcome&apos;</span>\n<br>&#xA0;&#xA0;&#xA0;&#xA0;});\n<br>});</code></div></td></tr></table><br>\r\n<br>\r\n<b>Zien!</b><br>\r\n<a href=\"http://c9.io/open/git/?url=git://github.com/janjongboom/socketioupload.git&amp;file=server.js\" rel=\"external\">KLIK</a>. De code is ca. 200 regels lang (client + server), dus probeer het zelf uit. Klik op de link, druk op &apos;Run&apos; en open een paar browsers (FF/Chrome/Safari, IE8 alleen met kleine afbeeldingen en zonder chat). Afbeeldingen door elkaar sturen kan hij niet, dus daar valt nog wat te winnen.<br>\r\n<br>\r\n<i>Werkt niet?</i><br>\r\nOp de command line (in cloud9) typ:<br>\r\n<br>plain:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><pre>1\n</pre></td><td class=\"phphighlightcode\"><div><pre>npm install socket.io</pre></div></td></tr></table><br>\r\n<br>\r\n<b>Wat een baggercode</b><br>\r\nKlopt!",
+    "nextLink": "http://glamour.tweakblogs.net/blog/7223/nerd-tshirts-met-obfuscated-javascript.html",
+    "comments": [
+        {
+            "author": "Damic",
+            "date": "donderdag 27 oktober 2011 18:41",
+            "contentHtml": "Ow chat box <img src=\"http://tweakimg.net/g/s/biggrin.gif\" width=\"15\" height=\"15\" alt=\":D\">",
+            "ownReply": false
+        },
+        {
+            "author": "donderdag 27 oktober 2011 23:03",
+            "date": "",
+            "contentHtml": "Leuk idee! Ik snap hier helaas helemaal niks van.<br>\r\n<br>\r\nWat je zegt over file sharing klopt echter als een bus. Leuk XKCD stripje waar ik meteen aan moest denken wat hier over gaat. <a href=\"http://xkcd.com/949/\" rel=\"external\" title=\"http://xkcd.com/949/\">http://xkcd.com/949/</a><br>\r\n<br>\r\nMijn huidige methode om bestanden te verzenden wat eindelijk wel goed werkt is met torrents. &#xB5; (alt gr + m  <img src=\"http://tweakimg.net/g/s/redface.gif\" width=\"15\" height=\"15\" alt=\":o\"> ) torrent 3.0  heeft een handig vakje waarin je een bestand op map heen sleept. Hij maakt vervolgens zelf een link aan naar het te downloaden torrent bestand. Dit is ideaal om om bijvoorbeeld vakantiefoto&apos;s, die je moeder niet mag zien op Facebook, te delen met elkaar.",
+            "ownReply": false
+        },
+        {
+            "author": "donderdag 27 oktober 2011 23:39",
+            "date": "",
+            "contentHtml": "Helemaal hip is toch wetransfer.com tegenwoordig? Tot ik daarvan hoorde kon ik mij ook in het XKCD stripje vinden. Overigens doet de code van deze blog inderdaad meer dan wetransfer.com, desalniettemin voldoet het voor 99% van de mensen.<br>\r\n<br>\r\n<small>M&apos;n browser iets te strikt ingesteld, en nu doet t.net account login het even niet meer</small>",
+            "ownReply": false
+        },
+        {
+            "author": "Deathraven",
+            "date": "vrijdag 28 oktober 2011 08:41",
+            "contentHtml": "Waarom moet ik een cloud9 account aanmaken? <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"> Als je je code wilt showen of je app wilt demonstreren. Heb dan aub het fatsoen om deze niet achter een login wall te zetten <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"><br>\r\nJe mag best het bedrijf waar je werkt promoten. Maar dit is wel vrij irritant zo <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 28 oktober 2011 09:54",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/7238/live-file-sharing-met-socket-punt-io-en-node-punt-js.html#r_98063\">Deathraven schreef op vrijdag 28 oktober 2011 @ 08:41:</a><br>\r\nWaarom moet ik een cloud9 account aanmaken? <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"> Als je je code wilt showen of je app wilt demonstreren. Heb dan aub het fatsoen om deze niet achter een login wall te zetten <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"><br>\r\nJe mag best het bedrijf waar je werkt promoten. Maar dit is wel vrij irritant zo <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\"></div></blockquote>Voor de code kan je ook terecht op <a href=\"https://github.com/janjongboom/socketioupload\" rel=\"external\">GitHub</a>. Voor het runnen van de app heb ik een server nodig en ik heb alleen shared hosting, dus dan is Cloud9 best een goed alternatief, omdat het klikken, en draaien is.<br>\r\n<br>\r\nOverigens: inloggen bij Cloud9 kan zonder een account aan te maken, met je GitHub account of met je BitBucket account.",
+            "ownReply": true
+        },
+        {
+            "author": "zaterdag 28 januari 2012 17:59",
+            "date": "",
+            "contentHtml": "tl;dr heeft het ook binary files support? websocket heeft toch nog nie officieel binary support toch? waardoor je alles base64 moet encoden en dus best wel wat overhead krijgt van het sturen van een file?",
+            "ownReply": false
+        }
+    ]
+}

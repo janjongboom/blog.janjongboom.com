@@ -1,0 +1,84 @@
+{
+    "title": "API documentatie genereren uit code?",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html",
+    "date": "2011-03-21T13:20:00.000Z",
+    "category": "Backend",
+    "views": 3858,
+    "articleHtml": "Om het proces van API updates wat te verzachten willen we switchen van een op basis van een Word doc gegenereerd document, naar documentatie op basis van onze code (C#, met XML documentatie). Nu zou dat prima moeten kunnen met <a href=\"http://sandcastle.codeplex.com/\" rel=\"external\">SandCastle</a>, maar die genereert de documentatie op basis van onze code, en niet op basis van onze DataContracts. Probleem, want in de uiteindelijke API zijn alleen de data contracts beschikbaar, en zijn de namen die we zelf intern gebruiken niet beschikbaar. Wie weet een tool die w&#xE9;l nette documentatie voor WCF services kan genereren (REST en SOAP) op basis van XML Docs?",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6282/video%21-preview-van-touch-based-mobile-photo-gallery.html",
+    "comments": [
+        {
+            "author": "mindcrash",
+            "date": "maandag 21 maart 2011 14:55",
+            "contentHtml": "WCFExtras (wcfextras.codeplex.com) kan documentatie in je WSDLs injecteren op basis van de xml documentatie die je toevoegt aan je contracten. Bedoel je zoiets?",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 21 maart 2011 15:48",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html#r_84813\">mindcrash schreef op maandag 21 maart 2011 @ 14:55:</a><br>\r\nWCFExtras (wcfextras.codeplex.com) kan documentatie in je WSDLs injecteren op basis van de xml documentatie die je toevoegt aan je contracten. Bedoel je zoiets?</div></blockquote>Ziet er wel nuttig uit, moet ik alleen nog een XSLT transformer bakken om van WSDL naar normale documentatie om te zetten; maar komt in ieder geval in de richting.",
+            "ownReply": true
+        },
+        {
+            "author": "kipusoep",
+            "date": "maandag 21 maart 2011 16:26",
+            "contentHtml": "Zal ik mijn reactie maar weer gewoon terug toveren?",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 21 maart 2011 17:08",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html#r_84824\">kipusoep schreef op maandag 21 maart 2011 @ 16:26:</a><br>\r\nZal ik mijn reactie maar weer gewoon terug toveren?</div></blockquote>Ik sta altijd open voor positieve en negatieve kritiek en haal normaal gesproken nooit iets weg; maar dit keer wel voordat dit in een &apos;dit hoort wel/niet op een blog&apos;-discussie verwordt.",
+            "ownReply": true
+        },
+        {
+            "author": "johnkeates",
+            "date": "maandag 21 maart 2011 17:46",
+            "contentHtml": "Er zou als het goed is een docblock optie moeten zijn. Maar het kan natuurlijk voor C# niet bestaan. XML documentatie kan je natuurlijk altijd zelf transformen, dat is meestal sneller dan alles modificeren om met een specifiek documentatie pakket te werken.",
+            "ownReply": false
+        },
+        {
+            "author": "kipusoep",
+            "date": "maandag 21 maart 2011 19:47",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html#r_84827\">creator1988 schreef op maandag 21 maart 2011 @ 17:08:</a><br>\r\n[...]<br>\r\n<br>\r\nIk sta altijd open voor positieve en negatieve kritiek en haal normaal gesproken nooit iets weg; maar dit keer wel voordat dit in een &apos;dit hoort wel/niet op een blog&apos;-discussie verwordt.</div></blockquote>Mag ik uit deze reactie concluderen dat je niet van mening bent dat vragen op het forum thuis horen en blogs gebruikt worden om iets te delen met anderen? Oftewel:<br>\r\nForum; informatiestroom naar je toe<br>\r\nBlog; informatiestroom naar buiten",
+            "ownReply": false
+        },
+        {
+            "author": "sebastius",
+            "date": "maandag 21 maart 2011 20:24",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html#r_84838\">kipusoep schreef op maandag 21 maart 2011 @ 19:47:</a><br>\r\n[...]<br>\r\n<br>\r\nMag ik uit deze reactie concluderen dat je niet van mening bent dat vragen op het forum thuis horen en blogs gebruikt worden om iets te delen met anderen? Oftewel:<br>\r\nForum; informatiestroom naar je toe<br>\r\nBlog; informatiestroom naar buiten</div></blockquote>Dat mag hij zelf weten toch? En trouwens, zijn blog is altijd trouw bezocht door veel tweakers die van zaken weten, dan is het vrij logisch om hier de vraag te stellen. Maar vooral: tis zijn blog <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "RobIII",
+            "date": "maandag 21 maart 2011 23:59",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html#r_84838\">kipusoep schreef op maandag 21 maart 2011 @ 19:47:</a><br>\r\n[...]<br>\r\n<br>\r\nMag ik uit deze reactie concluderen dat je niet van mening bent dat vragen op het forum thuis horen en blogs gebruikt worden om iets te delen met anderen? Oftewel:<br>\r\nForum; informatiestroom naar je toe<br>\r\nBlog; informatiestroom naar buiten</div></blockquote>Tenzij je een officie&#xEB;le bron hebt (en ik zal je vast verklappen: die is er niet) zou ik daar niet te stellig in zijn <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"><br>\r\nEenieder mag op zijn/haar tweakblog schrijven wat hij/zij wil zolang er aan de AV voldaan wordt en er dus (bijv.) geen porno gepost wordt.<p class=\"edit\">[Reactie gewijzigd op maandag 21 maart 2011 23:59]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Mei",
+            "date": "dinsdag 22 maart 2011 03:03",
+            "contentHtml": "Misschien een hele stomme reactie (Ik doe geen C met XML docs), maar wat denk je van doxygen docblocks? Heb je gelijk je documentatie samen met je code. Scheelt een hoop in maintainability (maar nogmaals, ik heb geen ervaring met jullie huidige setup).",
+            "ownReply": false
+        },
+        {
+            "author": "Blasterxp",
+            "date": "dinsdag 22 maart 2011 10:52",
+            "contentHtml": "javadoc lijkt het op <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "kipusoep",
+            "date": "dinsdag 22 maart 2011 15:55",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html#r_84840\">sebastius schreef op maandag 21 maart 2011 @ 20:24:</a><br>\r\n[...]<br>\r\nDat mag hij zelf weten toch? En trouwens, zijn blog is altijd trouw bezocht door veel tweakers die van zaken weten, dan is het vrij logisch om hier de vraag te stellen. Maar vooral: tis zijn blog <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Ja dat mag hij zelf weten, ik verbied hem toch ook niets?<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html#r_84845\">RobIII schreef op maandag 21 maart 2011 @ 23:59:</a><br>\r\n[...]<br>\r\n<br>\r\nTenzij je een officie&#xEB;le bron hebt (en ik zal je vast verklappen: die is er niet) zou ik daar niet te stellig in zijn <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"><br>\r\nEenieder mag op zijn/haar tweakblog schrijven wat hij/zij wil zolang er aan de AV voldaan wordt en er dus (bijv.) geen porno gepost wordt.</div></blockquote>Het is een, naar mijn weten, algemene aanname. Als je een vraag hebt, waar stel je die dan? Juist; op het forum...<br>\r\nMaar nogmaals, zoals ik hierboven ook zet; ik verbied hem niets...<br>\r\nAlleen lijkt het mij dat op het forum de kans groter is dat mensen met deze specifieke kennis de vraag lezen. Ook kunnen anderen met dezelfde vraag de antwoorden makkelijker terugvinden op het forum.",
+            "ownReply": false
+        },
+        {
+            "author": "cosmo_roel",
+            "date": "woensdag 23 maart 2011 10:37",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6301/api-documentatie-genereren-uit-code.html#r_84838\">kipusoep schreef op maandag 21 maart 2011 @ 19:47:</a><br>\r\n[...]<br>\r\n<br>\r\nForum; informatiestroom naar je toe<br>\r\nBlog; informatiestroom naar buiten</div></blockquote>Nee:<br>\r\nForum: informatiestroom naar je toe<br>\r\nBlog: informatiestroom naar je toe met het voordeel dat je onzinnige off-topic reacties over verzonnen regeltjes eruit kan filteren.",
+            "ownReply": false
+        }
+    ]
+}

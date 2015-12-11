@@ -1,0 +1,84 @@
+{
+    "title": "Waarom Javascript zo awesome is",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6143/waarom-javascript-zo-awesome-is.html",
+    "date": "2011-02-14T13:03:00.000Z",
+    "category": "Frontend",
+    "views": 4196,
+    "articleHtml": "<br>JavaScript:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><code>1<br>2<br>3<br></code></td><td class=\"phphighlightcode\"><div><code>(<span class=\"code_ident\">$</span>=[<span class=\"code_ident\">$</span>=[]][(<span class=\"code_ident\">__</span>=!<span class=\"code_ident\">$</span>+<span class=\"code_ident\">$</span>)[<span class=\"code_ident\">_</span>=-~-~-~<span class=\"code_ident\">$</span>]+({}+<span class=\"code_ident\">$</span>)[<span class=\"code_ident\">_</span>/<span class=\"code_ident\">_</span>]+\n<br>(<span class=\"code_ident\">$$</span>=(<span class=\"code_ident\">$_</span>=!<span class=\"code_string\">&apos;&apos;</span>+<span class=\"code_ident\">$</span>)[<span class=\"code_ident\">_</span>/<span class=\"code_ident\">_</span>]+<span class=\"code_ident\">$_</span>[+<span class=\"code_ident\">$</span>])])()[<span class=\"code_ident\">__</span>[<span class=\"code_ident\">_</span>/<span class=\"code_ident\">_</span>]+<span class=\"code_ident\">__</span>\n<br>[<span class=\"code_ident\">_</span>+~<span class=\"code_ident\">$</span>]+<span class=\"code_ident\">$_</span>[<span class=\"code_ident\">_</span>]+<span class=\"code_ident\">$$</span>](<span class=\"code_ident\">_</span>/<span class=\"code_ident\">_</span>)</code></div></td></tr></table><br>\r\n<a href=\"http://adamcecc.blogspot.com/2011/01/javascript.html\" rel=\"external\">Via ADAMCECC</a><br>\r\n<br>\r\nNiet alleen awesome, want welke andere taal is zo flexibel met haar language-constructs? Tevens weer een quick reminder dat user input nooit te vertrouwen is. Wanneer je ge&#xEF;nteresseerd bent in beveiliging tegen dit soort aanvallen, kijk dan eens naar dit paper van Ryan Barnett: <a href=\"https://media.blackhat.com/bh-dc-11/Barnett/BlackHat_DC_2011_Barnett_XSS%20Streetfight-wp.pdf\" rel=\"external\">XSS Street Fight</a>.",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6109/nieuwe-mobiele-website-deel-1-kickoff.html",
+    "comments": [
+        {
+            "author": "-RetroX-",
+            "date": "maandag 14 februari 2011 14:44",
+            "contentHtml": "geweldige manier om javascript zo zelf de text te laten genereren om uit te voeren. Heel mooi.",
+            "ownReply": false
+        },
+        {
+            "author": "Apache",
+            "date": "maandag 14 februari 2011 14:53",
+            "contentHtml": "Yep, een taal die language constructs kan hebben die zo obscuur zijn dat zelfs doorgewinterde javascript devs helemaal geen enkel idee hebben wat ze doen lijkt me ideaal voor long term development en onderhoud van code. Het lijkt visueel wel heel erg op perl op deze manier <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "tech-no-logical",
+            "date": "maandag 14 februari 2011 15:18",
+            "contentHtml": "het lijkt idd op obfuscated perl, het zou zo een <a href=\"http://en.wikipedia.org/wiki/Just_another_Perl_hacker\" rel=\"external\">japh</a> kunnen zijn. ik vond (en vind) het altijd wel grappig, zo&apos;n obfuscated code contest, maar het praktisch nut is ver te zoeken imho.",
+            "ownReply": false
+        },
+        {
+            "author": "ajakkes",
+            "date": "maandag 14 februari 2011 15:28",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6143/waarom-javascript-zo-awesome-is.html#r_82621\">tech-no-logical schreef op maandag 14 februari 2011 @ 15:18:</a><br>\r\nhet lijkt idd op obfuscated perl, het zou zo een <a href=\"http://en.wikipedia.org/wiki/Just_another_Perl_hacker\" rel=\"external\">japh</a> kunnen zijn. ik vond (en vind) het altijd wel grappig, zo&apos;n obfuscated code contest, maar het praktisch nut is ver te zoeken imho.</div></blockquote>Mocht een dergelijke code regel in mijn javascript file van 1000 regels staan en kwaadaardige code uitvoeren, wat heel goed mogelijk is, zou deze regel mij niet heel erg snel gaan opvallen. Ik denk dat er voor hackers een heel groot praktisch nut is. En daarmee ook voor developers die javascript gebruiken om zich hiertegen te beveiligen. Of voer jij regelmatig een hash validatie uit op je javascript files?",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 14 februari 2011 15:36",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6143/waarom-javascript-zo-awesome-is.html#r_82619\">Apache schreef op maandag 14 februari 2011 @ 14:53:</a><br>\r\nYep, een taal die language constructs kan hebben die zo obscuur zijn dat zelfs doorgewinterde javascript devs helemaal geen enkel idee hebben wat ze doen lijkt me ideaal voor long term development en onderhoud van code. Het lijkt visueel wel heel erg op perl op deze manier <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Het toont vooral aan hoe flexibel javascript is, het praktisch nut van puur deze snippet lijkt me ook niet zo evident maar het toont wel aan dat je met weinig code hele &apos;mooie&apos; constructies kan maken. En mooie constructies betekent minder code, en minder code is altijd awesome.",
+            "ownReply": true
+        },
+        {
+            "author": "Jaap-Jan",
+            "date": "maandag 14 februari 2011 16:00",
+            "contentHtml": "Minder code betekent dat je er te lang over na hebt gedacht om het zo slim mogelijk te doen.<br>\r\n<br>\r\nEn dat is niet goed: &quot;Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.&quot;<br>\r\n<br>\r\nOftewel: fijn dat de code er slim uitziet, maar als er wat mis mee is is het een hel om erachter te komen wat dat is. Ideaal voor hackers die code willen obfuscaten, maar niet voor programmeurs die een goed programma willen afleveren.<p class=\"edit\">[Reactie gewijzigd op maandag 14 februari 2011 16:02]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "-RetroX-",
+            "date": "maandag 14 februari 2011 16:15",
+            "contentHtml": "Het voorbeeld toont aan dat je niet de direct geschreven code nodig bent om het toch uitgevoerd te krijgen. Het voorbeeld hierboven laat heel duidelijk zien dat je altijd je userinput moet controleren. Niet alleen op een blacklist methode met verboden woorden maar juist op een whitelist op toegestane input.<br>\r\n<br>\r\n(en ja, ik ben erg voorstander van leesbare code, waarbij in ontwikkelmodus ook gedocumenteerd wordt en in live mode alle comments er uit gaan.. wat voor onzin je soms uitgecommentarieerd ziet is ongeloofelijk.)<p class=\"edit\">[Reactie gewijzigd op maandag 14 februari 2011 16:17]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "PrisonerOfPain",
+            "date": "maandag 14 februari 2011 16:19",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6143/waarom-javascript-zo-awesome-is.html#r_82625\">creator1988 schreef op maandag 14 februari 2011 @ 15:36:</a><br>\r\n[...]<br>\r\n<br>\r\nHet toont vooral aan hoe flexibel javascript is, het praktisch nut van puur deze snippet lijkt me ook niet zo evident maar het toont wel aan dat je met weinig code hele &apos;mooie&apos; constructies kan maken. En mooie constructies betekent minder code, en minder code is altijd awesome.</div></blockquote>Het praktische nut is natuurlijk het uitvoeren van xss exploits ;-)",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 14 februari 2011 17:06",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6143/waarom-javascript-zo-awesome-is.html#r_82626\">Jaap-Jan schreef op maandag 14 februari 2011 @ 16:00:</a><br>\r\nMinder code betekent dat je er te lang over na hebt gedacht om het zo slim mogelijk te doen.<br>\r\n<br>\r\nEn dat is niet goed: &quot;Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.&quot;</div></blockquote>Nee hoor. Ik kan in javascript in minder regels code schrijven dan in C#, zonder dat het onduidelijker wordt; omdat in JS zaken als AOP, Reflection &amp; Anonieme objecten first class citizens zijn.",
+            "ownReply": true
+        },
+        {
+            "author": "Spetsnaz",
+            "date": "maandag 14 februari 2011 18:12",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6143/waarom-javascript-zo-awesome-is.html#r_82626\">Jaap-Jan schreef op maandag 14 februari 2011 @ 16:00:</a><br>\r\nMinder code betekent dat je er te lang over na hebt gedacht om het zo slim mogelijk te doen.<br>\r\n<br>\r\nEn dat is niet goed: &quot;Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.&quot;<br>\r\n<br>\r\nOftewel: fijn dat de code er slim uitziet, maar als er wat mis mee is is het een hel om erachter te komen wat dat is. Ideaal voor hackers die code willen obfuscaten, maar niet voor programmeurs die een goed programma willen afleveren.</div></blockquote>Slimme code die door ervaring in 1x opkomt kan dus volgens jou niet? Als het goed is is slimme code ook beter te onderhouden anders zou het geen slimme code zijn.",
+            "ownReply": false
+        },
+        {
+            "author": "ChessSpider",
+            "date": "maandag 14 februari 2011 20:38",
+            "contentHtml": "@spetsnaz; alles is relatief.. Maar als er een foutje in ($=[$=[]][(__=!$+$)[_=-~-~-~$]+({}+$)[_/_]+<br>\r\n($$=($_=!&apos;&apos;+$)[_/_]+$_[+$])])()[__[_/_]+__<br>\r\n[_+~$]+$_[_]+$$](_/_) zit kan je dat niet zomaar debuggen, terwijl het wel &apos;mooie&apos; code is volgens sommige hier omdat het zo klein is geschreven is. <br>\r\nJaap-Jan geeft terecht aan dat het niet het doel is om dingen zo klein mogelijk op te schrijven.",
+            "ownReply": false
+        },
+        {
+            "author": "YopY",
+            "date": "maandag 14 februari 2011 20:45",
+            "contentHtml": "Met een taal als C kun je minstens zo goed vage stukjes code schrijven, zie <a href=\"http://www.ioccc.org/\" rel=\"external\" title=\"http://www.ioccc.org/\">http://www.ioccc.org/</a>. Moet wel zeggen, deze zou zo in dat rijtje passen, en de meeste entries van de IOCCC gebruiken defines om aliassen voor &apos;gewone&apos; taalconstructs te defini&#xEB;ren.",
+            "ownReply": false
+        }
+    ]
+}

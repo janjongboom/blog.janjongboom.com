@@ -1,0 +1,60 @@
+{
+    "title": "Zoekbox live!",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6214/zoekbox-live%21.html",
+    "date": "2011-03-01T15:41:00.000Z",
+    "category": "Frontend",
+    "views": 2962,
+    "articleHtml": "Al een <a href=\"http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html\" rel=\"external\">aantal</a> <a href=\"http://glamour.tweakblogs.net/blog/5832/intelligente-suggesties-deel-1-introductie-en-startswith.html\" rel=\"external\">keer</a> over geschreven; en nu beschikbaar om z&#xE9;lf mee te spelen!<br>\r\n<br>\r\n<a href=\"http://www.funda.nl\" rel=\"external\"><img src=\"http://www.100procentjan.nl/tweakers/zoekboxlive.png\" title=\"http://www.100procentjan.nl/tweakers/zoekboxlive.png\" alt=\"http://www.100procentjan.nl/tweakers/zoekboxlive.png\"></a><br>\r\n<i>Klik op plaatje, en begin te typen in het Locatie veld. Meerdere locaties combineren kan met puntkomma of plus.</i>",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6183/zoekscherm-dat-dynamisch-queries-maakt-met-expression-trees-en-mvc.html",
+    "comments": [
+        {
+            "author": "yamahabest",
+            "date": "dinsdag 01 maart 2011 17:00",
+            "contentHtml": "Volgens mij zit er nog een bugje in. <br>\r\nAls ik een zoekterm inklop en dan op het kruisje klik, dan klapt de lijst dicht en daarna nog weer heel even open.<br>\r\n<br>\r\nDit in Firefox 3.6.13 en IE 8 op Windows XP.<p class=\"edit\">[Reactie gewijzigd op dinsdag 01 maart 2011 21:11]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "ReenL",
+            "date": "dinsdag 01 maart 2011 17:37",
+            "contentHtml": "Ik volg vanaf artikel 1 al deze reeks.<br>\r\n<br>\r\nDeed net even testen en een paar dingen vallen mij op (of mijn verwachtingen waren te optimistisch):<br>\r\n- Soundex werkt niet goed, g en ch (schiedam bijv);<br>\r\n- Woorden omdraaien werkt niet (woerden rekken, rekken woerden);<br>\r\n- Een typefout wordt niet hersteld;<br>\r\n- Wat  yamahabest zegt, hij flikkert op het moment dat je hem sluit (Chrome).<br>\r\n<br>\r\nWerkt verder erg soepel!",
+            "ownReply": false
+        },
+        {
+            "author": "DarkNeogen",
+            "date": "dinsdag 01 maart 2011 19:24",
+            "contentHtml": "Dat van die box die flikkert, geldt ook voor Opera 11.01 en Internet Explorer 9 (RC1).",
+            "ownReply": false
+        },
+        {
+            "author": "Rowdy.nl",
+            "date": "woensdag 02 maart 2011 09:09",
+            "contentHtml": "FireFox 4, b&#xE8;ta 12 verneukt de interface. Of dit aan FF ligt of aan je code, geen idee... <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"><br>\r\n<br>\r\n<a href=\"http://dump.tcit.nl/got/20110302_fundasearchbox_ff4b12_fail1.png\" rel=\"external\" title=\"http://dump.tcit.nl/got/20110302_fundasearchbox_ff4b12_fail1.png\">http://dump.tcit.nl/got/2...earchbox_ff4b12_fail1.png</a><br>\r\n<a href=\"http://dump.tcit.nl/got/20110302_fundasearchbox_ff4b12_fail2.png\" rel=\"external\" title=\"http://dump.tcit.nl/got/20110302_fundasearchbox_ff4b12_fail2.png\">http://dump.tcit.nl/got/2...earchbox_ff4b12_fail2.png</a>",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 02 maart 2011 12:09",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6214/zoekbox-live!.html#r_83538\">ReenL schreef op dinsdag 01 maart 2011 @ 17:37:</a><br>\r\nIk volg vanaf artikel 1 al deze reeks.<br>\r\n<br>\r\nDeed net even testen en een paar dingen vallen mij op (of mijn verwachtingen waren te optimistisch):<br>\r\n- Soundex werkt niet goed, g en ch (schiedam bijv);<br>\r\n- Woorden omdraaien werkt niet (woerden rekken, rekken woerden);<br>\r\n- Een typefout wordt niet hersteld;<br>\r\n- Wat  yamahabest zegt, hij flikkert op het moment dat je hem sluit (Chrome).<br>\r\n<br>\r\nWerkt verder erg soepel!</div></blockquote>* Soundex: ja zou wel gematcht moeten worden. Let op dat soundex pas gaat werken na drukken op &apos;enter&apos;. Bug.<br>\r\n* Woorden omdraaien: werkt alleen in alternatieven modus. Dus na drukken op &apos;enter&apos; vindt de box wel het gebied.<br>\r\n* Heb je een voorbeeld van een soort typfout?<br>\r\n* Ja, dat speelt bij iedereen; maar niet overal even zichtbaar.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6214/zoekbox-live!.html#r_83583\">Rowdy.nl schreef op woensdag 02 maart 2011 @ 09:09:</a><br>\r\nFireFox 4, b&#xE8;ta 12 verneukt de interface. Of dit aan FF ligt of aan je code, geen idee... <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"><br>\r\n<br>\r\n<a href=\"http://dump.tcit.nl/got/20110302_fundasearchbox_ff4b12_fail1.png\" rel=\"external\" title=\"http://dump.tcit.nl/got/20110302_fundasearchbox_ff4b12_fail1.png\">http://dump.tcit.nl/got/2...earchbox_ff4b12_fail1.png</a><br>\r\n<a href=\"http://dump.tcit.nl/got/20110302_fundasearchbox_ff4b12_fail2.png\" rel=\"external\" title=\"http://dump.tcit.nl/got/20110302_fundasearchbox_ff4b12_fail2.png\">http://dump.tcit.nl/got/2...earchbox_ff4b12_fail2.png</a></div></blockquote>Lijkt iets niet goed gegaan te zijn met het ophogen van ons CSS/JS versienummer. Blijft dit spelen als je refresht met CTRL+F5?",
+            "ownReply": true
+        },
+        {
+            "author": "ReenL",
+            "date": "woensdag 02 maart 2011 23:23",
+            "contentHtml": "Typo&apos;s werken ook als je op zoeken drukt. Is het een bewuste keuze om sommige dingen alleen bij een submit te doen?",
+            "ownReply": false
+        },
+        {
+            "author": "GewoonWatSpulle",
+            "date": "maandag 07 maart 2011 15:33",
+            "contentHtml": "Roterdam kan ook niet verbeteren, afstand 1 lijkt me toch wel redelijk basic voor een typo..?<br>\r\n<br>\r\n* na op enter rammen zie ik pas &quot;Bedoelde u&quot;, misschien meer ala auto-correctie zoals Google instant heeft?<p class=\"edit\">[Reactie gewijzigd op maandag 07 maart 2011 15:35]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Rowdy.nl",
+            "date": "vrijdag 11 maart 2011 11:33",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6214/zoekbox-live!.html#r_83600\">creator1988 schreef op woensdag 02 maart 2011 @ 12:09:</a><br>\r\n<br>\r\n[...]<br>\r\n<br>\r\nLijkt iets niet goed gegaan te zijn met het ophogen van ons CSS/JS versienummer. Blijft dit spelen als je refresht met CTRL+F5?</div></blockquote>Werkt nu prima... <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><br>\r\nNijs!",
+            "ownReply": false
+        }
+    ]
+}

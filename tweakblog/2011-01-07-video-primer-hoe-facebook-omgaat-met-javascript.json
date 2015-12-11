@@ -1,0 +1,108 @@
+{
+    "title": "Video: Primer; Hoe Facebook omgaat met Javascript",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html",
+    "date": "2011-01-07T12:34:00.000Z",
+    "category": "Reacties (16)",
+    "views": 3659,
+    "articleHtml": "De beste video die ik in 2010 heb gezien, &quot;Primer: Facebook&apos;s 2k of JavaScript to power (almost) all interactions&quot; door Makinde Adeagbo. Verplicht voer voor iedereen die professioneel met JavaScript bezig is.<br>\r\n<br>\r\n<a href=\"http://blip.tv/file/3839676/\" rel=\"external\">Videolink</a>",
+    "nextLink": "http://glamour.tweakblogs.net/blog/5902/mvc-views-gebruiken-in-asp-punt-net-webforms.html",
+    "comments": [
+        {
+            "author": "Meijuh",
+            "date": "vrijdag 07 januari 2011 13:44",
+            "contentHtml": "Kun je in je blog niet meer informatie geven over de inhoud van de video?",
+            "ownReply": false
+        },
+        {
+            "author": "RobIII",
+            "date": "vrijdag 07 januari 2011 14:02",
+            "contentHtml": "Ik ben &apos;m nog aan &apos;t kijken (hij is wat nerveus, hoe schattig <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"> ), maar ik neig na een derde te hebben gezien meer naar <a href=\"http://paulirish.com/2010/10-things-i-learned-from-the-jquery-source/\" rel=\"external\">deze</a> (Paul Irish) als beste video voor 2010 voor wat betreft javascript. Ondanks de titel is &apos;t wat generieker dan &quot;alleen maar jQuery&quot;.<p class=\"edit\">[Reactie gewijzigd op vrijdag 07 januari 2011 14:15]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Cave_Boy",
+            "date": "vrijdag 07 januari 2011 14:11",
+            "contentHtml": "Meer informatie zou wel leuk zijn geweest voor de rest een intressant filmpje.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 07 januari 2011 14:17",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html#r_78976\">RobIII schreef op vrijdag 07 januari 2011 @ 14:02:</a><br>\r\nIk ben &apos;m nog aan &apos;t kijken (hij is wat nerveus, hoe schattig <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"> ), maar ik neig na een derde te hebben gezien meer naar <a href=\"http://paulirish.com/2010/10-things-i-learned-from-the-jquery-source/\" rel=\"external\">deze</a> (Paul Irish) als beste video voor 2010 voor wat betreft javascript. Ondanks de titel is &apos;t wat generieker dan &quot;alleen maar jQuery&quot;.</div></blockquote>Zit er nu 6 minuten in, en inderdaad leuk om naar te kijken. Wel wat meer echt language-specifiek, waar Primer meer over de achterkant gaat <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"> . Tnx tho!",
+            "ownReply": true
+        },
+        {
+            "author": "Meijuh",
+            "date": "vrijdag 07 januari 2011 14:34",
+            "contentHtml": "Hmm, ik vind toch dat ze bij facebook rare keuzes maken.<br>\r\nVoor het submitten van forms kun je prima de jquery form plugin gebruiken.<br>\r\n<br>\r\nOok kun je in bijvoorbeeld symfony kijken of een request een ajax request is, om zo een andere response te sturen.<br>\r\n<br>\r\nLijkt alsof ze het wiel keer op keer opnieuw hebben uitgevonden.<br>\r\n<br>\r\nVerder kijk ik bewust naar wanneer javascript uitgevoerd moeten worden. Als het direct moet gebeuren gooi ik het direct in een .js. Als het niet direct uitgevoerd hoeft te worden gooi ik het in een $(document).ready().",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 07 januari 2011 15:31",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html#r_78979\">Meijuh schreef op vrijdag 07 januari 2011 @ 14:34:</a><br>\r\nHmm, ik vind toch dat ze bij facebook rare keuzes maken.<br>\r\nVoor het submitten van forms kun je prima de jquery form plugin gebruiken.<br>\r\n<br>\r\nOok kun je in bijvoorbeeld symfony kijken of een request een ajax request is, om zo een andere response te sturen.<br>\r\n<br>\r\nLijkt alsof ze het wiel keer op keer opnieuw hebben uitgevonden.<br>\r\n<br>\r\nVerder kijk ik bewust naar wanneer javascript uitgevoerd moeten worden. Als het direct moet gebeuren gooi ik het direct in een .js. Als het niet direct uitgevoerd hoeft te worden gooi ik het in een $(document).ready().</div></blockquote>Nou, de keuze van facebook in deze is juist dat er zo min mogelijk geladen dient te worden. Gebruik van bandbreedte kost vertraging en geld. JS die dus niet direct uitgevoerd hoeft te worden wil je helemaal niet naar de client sturen (of pas als de client toch niets aan het doen is). Daarbij breken ze ook geen interacties; voordat de Javascript voor een bepaald gedeelte geladen is (of niet snel genoeg ondemand geladen kan worden) dan is er altijd een non-JS fallback.<br>\r\n<br>\r\nOverigens is het ook verdedigbaar om geen jQuery te gebruiken in deze situaties. Als je je core-JS zo klein mogelijk wil houden ga je geen library van 40 KB inladen.",
+            "ownReply": true
+        },
+        {
+            "author": "Comgenie",
+            "date": "vrijdag 07 januari 2011 15:44",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html#r_78979\">Meijuh schreef op vrijdag 07 januari 2011 @ 14:34:</a><br>\r\nLijkt alsof ze het wiel keer op keer opnieuw hebben uitgevonden.</div></blockquote>Tja, het wiel opnieuw uitvinden.. Voor jQuery waren er ook al duizende plugins die hetzelfde kunnen. Ikzelf heb ook de keuze gemaakt om een klein (fijn) js libary te maken die ik gebruik in mijn projecten. <br>\r\n<br>\r\njQuery zit prima in elkaar, maar soms is een eigen libary fijner. Dit kan bijvoorbeeld zijn omdat je eigen JS-codestijl heel anders is opgebouwd en het dan beter aansluit (met JS heb je veel vrijheid daarin!), of je misschien je JS applicatie ook voor niet-browsers schrijft (javascript is een taal die ook prima inzet baar is voor andere dingen, terwijl jQuery zelf toch wel aardig gericht is op puur browser development).<p class=\"edit\">[Reactie gewijzigd op vrijdag 07 januari 2011 15:45]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Meijuh",
+            "date": "vrijdag 07 januari 2011 16:21",
+            "contentHtml": "Toch vind ik het niet zo&apos;n probleem om eenmalig 40kb te laden voor de jQuery library, die wordt immers gecached door de browser. Het is niet zo dat bij elke page-refresh de hele jQuery library opnieuw wordt opgehaald.",
+            "ownReply": false
+        },
+        {
+            "author": "YopY",
+            "date": "vrijdag 07 januari 2011 16:29",
+            "contentHtml": "<blockquote><div class=\"quote\">Voor het submitten van forms kun je prima de jquery form plugin gebruiken.</div></blockquote>Maar dan moet je:<br>\r\n<br>\r\n * JQuery laden &amp; uitvoeren<br>\r\n * JQuery form plugin laden &amp; uitvoeren<br>\r\n * onSubmit registreren op formulier (terwijl dat formulier niet altijd gesubmit wordt)<br>\r\n * Code dat onsubmit uitgevoerd wordt laden &amp; uitvoeren.",
+            "ownReply": false
+        },
+        {
+            "author": "vrijdag 07 januari 2011 16:34",
+            "date": "",
+            "contentHtml": "Lijkt een beetje op de postback manier van asp.net<br>\r\n<br>\r\nDaarnaast vind ik custom attributes in je href niet bepaald netjes en niet wc3 valid...",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 07 januari 2011 17:08",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html#r_78987\">Leon Vaandrager schreef op vrijdag 07 januari 2011 @ 16:34:</a><br>\r\nLijkt een beetje op de postback manier van asp.net<br>\r\n<br>\r\nDaarnaast vind ik custom attributes in je href niet bepaald netjes en niet wc3 valid...</div></blockquote>Custom attributes zijn beschrijvend, dus prima verdedigbaar hier. Sowieso moet je op een gegeven moment concessies doen aan je W3 validheid als je het uiterste uit je site wilt halen. Overigens zijn custom attributes ook <a href=\"http://icoloma.blogspot.com/2008/06/extend-html-with-your-own-metadata.html\" rel=\"external\">w&#xE9;l W3 valid toe te voegen</a>.<p class=\"edit\">[Reactie gewijzigd op vrijdag 07 januari 2011 17:09]</p>",
+            "ownReply": true
+        },
+        {
+            "author": "RobIII",
+            "date": "vrijdag 07 januari 2011 17:18",
+            "contentHtml": "En daarbij is &quot;w3c validity&quot; nou niet bepaald de heilige graal; soms moet je gewoon pragmatisch zijn.",
+            "ownReply": false
+        },
+        {
+            "author": "ZpAz",
+            "date": "vrijdag 07 januari 2011 17:35",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html#r_78987\">Leon Vaandrager schreef op vrijdag 07 januari 2011 @ 16:34:</a><br>\r\nLijkt een beetje op de postback manier van asp.net<br>\r\n<br>\r\nDaarnaast vind ik custom attributes in je href niet bepaald netjes en niet wc3 valid...</div></blockquote>Custom attributes kunnen prima met een HTML 5 doctype, wat ze op Facebook dan ook gebruiken.",
+            "ownReply": false
+        },
+        {
+            "author": "mcdronkz",
+            "date": "vrijdag 07 januari 2011 22:01",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html#r_78979\">Meijuh schreef op vrijdag 07 januari 2011 @ 14:34:</a><br>\r\nOok kun je in bijvoorbeeld symfony kijken of een request een ajax request is, om zo een andere response te sturen.</div></blockquote>Inderdaad, ik dacht precies hetzelfde. Dat stelt echt geen reet voor namelijk:<br>\r\n<br>PHP:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><code><br>1<br>2<br>3<br>4<br></code></td><td class=\"phphighlightcode\"><div><code><span class=\"code_preproc\">&lt;?php\n<br></span><span class=\"code_keyword\">function</span>&#xA0;<span class=\"code_method\">isAjax</span>()&#xA0;\n<br>{\n<br>&#xA0;&#xA0;&#xA0;&#xA0;<span class=\"code_keyword\">return</span>(<span class=\"code_keyword\">isset</span>(<span class=\"code_special\">$_SERVER</span>[<span class=\"code_string\">&quot;HTTP_X_REQUESTED_WITH&quot;</span>])&#xA0;&amp;&amp;&#xA0;(<span class=\"code_special\">$_SERVER</span>[<span class=\"code_string\">&quot;HTTP_X_REQUESTED_WITH&quot;</span>]&#xA0;==&#xA0;<span class=\"code_string\">&quot;XMLHttpRequest&quot;</span>));\n<br>}<span class=\"code_preproc\">\n<br>?&gt;</span></code></div></td></tr></table><br>\r\nIk heb er weinig verstand van, maar als ik dit zo zie, denk ik dat er op GoT meer talent zit dan bij het Facebook team....<p class=\"edit\">[Reactie gewijzigd op vrijdag 07 januari 2011 22:01]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "crisp",
+            "date": "vrijdag 07 januari 2011 23:21",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html#r_78982\">creator1988 schreef op vrijdag 07 januari 2011 @ 15:31:</a><br>\r\n[...]<br>\r\nDaarbij breken ze ook geen interacties; voordat de Javascript voor een bepaald gedeelte geladen is (of niet snel genoeg ondemand geladen kan worden) dan is er altijd een non-JS fallback.</div></blockquote>Je omschrijft het verkeerd <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"> Facebook heeft blijkbaar ingezien dat ze javascript behaviour beter als progressive enhancement konden implementeren dan als primaire requirement <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"><br>\r\n<br>\r\nHet is inderdaad slim om dan een bootloader te gebruiken in samenwerking met een kleine core die enkel puur ajax-functionaliteit uitvoert en waarbij de response eventuele extra benodigde logica bevat, hoewel dan wel een deel van je JS-functionaliteit weer decentraal in je serverside code verwerkt zit waardoor je afhankelijkheden cre&#xEB;ert die lastig te herkennen zijn.<p class=\"edit\">[Reactie gewijzigd op vrijdag 07 januari 2011 23:22]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "T i M",
+            "date": "maandag 10 januari 2011 09:05",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-facebook-omgaat-met-javascript.html#r_79018\">mcdronkz schreef op vrijdag 07 januari 2011 @ 22:01:</a><br>\r\n[...]<br>\r\n<br>\r\n<br>\r\nInderdaad, ik dacht precies hetzelfde. Dat stelt echt geen reet voor namelijk:<br>\r\n<br>PHP:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><code><br>1<br>2<br>3<br>4<br></code></td><td class=\"phphighlightcode\"><div><code><span class=\"code_preproc\">&lt;?php\n<br></span><span class=\"code_keyword\">function</span>&#xA0;<span class=\"code_method\">isAjax</span>()&#xA0;\n<br>{\n<br>&#xA0;&#xA0;&#xA0;&#xA0;<span class=\"code_keyword\">return</span>(<span class=\"code_keyword\">isset</span>(<span class=\"code_special\">$_SERVER</span>[<span class=\"code_string\">&quot;HTTP_X_REQUESTED_WITH&quot;</span>])&#xA0;&amp;&amp;&#xA0;(<span class=\"code_special\">$_SERVER</span>[<span class=\"code_string\">&quot;HTTP_X_REQUESTED_WITH&quot;</span>]&#xA0;==&#xA0;<span class=\"code_string\">&quot;XMLHttpRequest&quot;</span>));\n<br>}<span class=\"code_preproc\">\n<br>?&gt;</span></code></div></td></tr></table><br>\r\nIk heb er weinig verstand van, maar als ik dit zo zie, denk ik dat er op GoT meer talent zit dan bij het Facebook team....</div></blockquote>Dat is wel heel kort door de bocht. Ik ga het niet eens uitleggen, kijk het filmpje nog een keer opnieuw en misschien dat je het dan wel snapt.",
+            "ownReply": false
+        }
+    ]
+}

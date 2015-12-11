@@ -1,0 +1,84 @@
+{
+    "title": "Waarom je nooit mag toegeven dat je Ruby on Rails hebt bestudeerd",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/5978/waarom-je-nooit-mag-toegeven-dat-je-ruby-on-rails-hebt-bestudeerd.html",
+    "date": "2011-01-19T13:23:00.000Z",
+    "category": "Reacties (12)",
+    "views": 5955,
+    "articleHtml": "Vanochtend gevonden op mijn bureau n.a.v. <a href=\"http://glamour.tweakblogs.net/blog/5966/rails-respond_to-in-asp-punt-net-mvc.html#r_80156\" rel=\"external\">mijn comment gisteren</a> met de complimenten van een niet nader te noemen collega die mij al weken probeert lid te maken van de RoR fanclub.<br>\r\n<br>\r\n<a href=\"http://www.100procentjan.nl/tweakers/emilegroot.jpg\" rel=\"external\"><img src=\"http://www.100procentjan.nl/tweakers/emileklein.jpg\" title=\"http://www.100procentjan.nl/tweakers/emileklein.jpg\" alt=\"http://www.100procentjan.nl/tweakers/emileklein.jpg\"></a>",
+    "nextLink": "http://glamour.tweakblogs.net/blog/5966/rails-respond_to-in-asp-punt-net-mvc.html",
+    "comments": [
+        {
+            "author": "Spetsnaz",
+            "date": "woensdag 19 januari 2011 14:32",
+            "contentHtml": "Ik zie het verband met de crybaby foto niet helemaal.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 19 januari 2011 14:34",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5978/waarom-je-nooit-mag-toegeven-dat-je-ruby-on-rails-hebt-bestudeerd.html#r_80296\">Spetsnaz schreef op woensdag 19 januari 2011 @ 14:32:</a><br>\r\nIk zie het verband met de crybaby foto niet helemaal.</div></blockquote>Ik vermoed mijn lichte afkeurende reactie op alles wat met RoR te maken had de afgelopen weken  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\">",
+            "ownReply": true
+        },
+        {
+            "author": "himlims_",
+            "date": "woensdag 19 januari 2011 14:41",
+            "contentHtml": "dus &apos;t is rustig op de zaak?",
+            "ownReply": false
+        },
+        {
+            "author": "Tsurany",
+            "date": "woensdag 19 januari 2011 14:44",
+            "contentHtml": "Al snap ik niet zoveel waar het om gaat, toch is het epic en hard gepwned!",
+            "ownReply": false
+        },
+        {
+            "author": "temp00",
+            "date": "woensdag 19 januari 2011 15:30",
+            "contentHtml": "Lol grappig mannen  <img src=\"http://tweakimg.net/g/s/shiny.gif\" width=\"15\" height=\"15\" alt=\":*)\">",
+            "ownReply": false
+        },
+        {
+            "author": "analog_",
+            "date": "woensdag 19 januari 2011 17:05",
+            "contentHtml": "Jammer dat een taal je software patterns leert gebruiken. Zou omgekeerd moeten zijn.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 19 januari 2011 17:47",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5978/waarom-je-nooit-mag-toegeven-dat-je-ruby-on-rails-hebt-bestudeerd.html#r_80308\">analog_ schreef op woensdag 19 januari 2011 @ 17:05:</a><br>\r\nJammer dat een taal je software patterns leert gebruiken. Zou omgekeerd moeten zijn.</div></blockquote>Ik snap het pattern prima; maar RoR dwingt je heel erg gebruik te maken van een standaard set aan conventions, dat helpt op een aantal punten best om je code lean en mean te houden.",
+            "ownReply": true
+        },
+        {
+            "author": "TJHeuvel",
+            "date": "woensdag 19 januari 2011 18:07",
+            "contentHtml": "Misschien moet je emile een koekje geven, ze ziet er niet blij uit  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "YopY",
+            "date": "woensdag 19 januari 2011 19:00",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5978/waarom-je-nooit-mag-toegeven-dat-je-ruby-on-rails-hebt-bestudeerd.html#r_80308\">analog_ schreef op woensdag 19 januari 2011 @ 17:05:</a><br>\r\nJammer dat een taal je software patterns leert gebruiken. Zou omgekeerd moeten zijn.</div></blockquote>Euh. Ruby on Rails is geen taal, is een framework. Goed mogelijk dat hij hetzelfde zou zeggen als hij zich in een ander MVC framework verdiept zou hebben (ik noem een Struts (Java), Zend Framework (PHP, alhoewel die na RoR ontwikkeld werd dus mogelijk daarvan een afgeleide is), MonoRail (.NET), Django (Python), etc).",
+            "ownReply": false
+        },
+        {
+            "author": "sphere",
+            "date": "donderdag 20 januari 2011 08:46",
+            "contentHtml": "Leg je toch dit op zijn bureau?<br>\r\n<br>\r\n<a href=\"http://www.bash.org/?925050\" rel=\"external\" title=\"http://www.bash.org/?925050\">http://www.bash.org/?925050</a><br>\r\n<br>\r\n&lt; Andys&gt; oh dear<br>\r\n&lt; Andys&gt; in ruby, symbols are represented with a prepended colon<br>\r\n&lt; Andys&gt; eg.   :flag<br>\r\n&lt; Andys&gt; so some guy tshirt that said &quot;:sex&quot;<br>\r\n&lt; Andys&gt; which everyone at railscamp knew meant &quot;Sex symbol&quot;<br>\r\n&lt; Andys&gt; he wore it until someone pointed out that to non-rubyists it said &quot;Colon sex&quot;",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "donderdag 20 januari 2011 10:10",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5978/waarom-je-nooit-mag-toegeven-dat-je-ruby-on-rails-hebt-bestudeerd.html#r_80334\">sphere schreef op donderdag 20 januari 2011 @ 08:46:</a><br>\r\nLeg je toch dit op zijn bureau?<br>\r\n<br>\r\n<a href=\"http://www.bash.org/?925050\" rel=\"external\" title=\"http://www.bash.org/?925050\">http://www.bash.org/?925050</a><br>\r\n<br>\r\n&lt; Andys&gt; oh dear<br>\r\n&lt; Andys&gt; in ruby, symbols are represented with a prepended colon<br>\r\n&lt; Andys&gt; eg.   :flag<br>\r\n&lt; Andys&gt; so some guy tshirt that said &quot;:sex&quot;<br>\r\n&lt; Andys&gt; which everyone at railscamp knew meant &quot;Sex symbol&quot;<br>\r\n&lt; Andys&gt; he wore it until someone pointed out that to non-rubyists it said &quot;Colon sex&quot;</div></blockquote>Done <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\">",
+            "ownReply": true
+        },
+        {
+            "author": "Hobbles",
+            "date": "donderdag 20 januari 2011 12:19",
+            "contentHtml": "Haha, ik zag mijn username staan en dacht dat ik iets doms had gezegd  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\"> Gelukkig was dat niet het geval  <img src=\"http://tweakimg.net/g/s/yummie.gif\" width=\"15\" height=\"15\" alt=\":9\"><br>\r\n<br>\r\nMaar inderdaad zoals velen hier al zeggen is het jammer dat je een pattern leert adhv een taal en niet omgekeerd. RoR dwingt je welisweer meer om volgens dat patroon te denken, maar datzelfde gevoel heb ik bij ASP .NET MVC ook (hoewel het te customizen is).<p class=\"edit\">[Reactie gewijzigd op donderdag 20 januari 2011 12:58]</p>",
+            "ownReply": false
+        }
+    ]
+}

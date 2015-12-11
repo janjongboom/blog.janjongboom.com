@@ -1,0 +1,96 @@
+{
+    "title": "Video! On-the-fly zoeksuggesties: Levenshtein en Soundex in de praktijk",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/5813/video%21-on-the-fly-zoeksuggesties-levenshtein-en-soundex-in-de-praktijk.html",
+    "date": "2010-12-24T09:59:00.000Z",
+    "category": "Reacties (14)",
+    "views": 3506,
+    "articleHtml": "Naar aanleiding van mijn <a href=\"http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html\" rel=\"external\">eerdere post</a> over Levenshtein, Soundex en Burkhard-Keller trees, &#xE9;n omdat een video meer zegt dan duizend woorden: een korte impressie van het resultaat. Volgende week ga ik wat dieper in op de onderliggende algorithmes, met voorbeeldcode etc.<br>\r\n<br>\r\n<div id=\"swfobject_im1EQ7Msfw\"><a href=\"http://www.youtube.com/watch?v=Ruc2AJZUCko\" rel=\"external\" title=\"http://www.youtube.com/watch?v=Ruc2AJZUCko\">http://www.youtube.com/watch?v=Ruc2AJZUCko</a></div><script type=\"text/javascript\">//<!--\n(function(){var so=new SWFObject('http://www.youtube.com/v/Ruc2AJZUCko&fs=1','movie_im1EQ7Msfw',425,350,7);so.addParam('allowfullscreen','true');so.write('swfobject_im1EQ7Msfw')})();\n//--></script>",
+    "nextLink": "http://glamour.tweakblogs.net/blog/5807/going-solr%21.html",
+    "comments": [
+        {
+            "author": "CodeCaster",
+            "date": "vrijdag 24 december 2010 11:32",
+            "contentHtml": "Vet. <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "kipusoep",
+            "date": "vrijdag 24 december 2010 11:43",
+            "contentHtml": "Dit doet Google/Youtube toch ook al lang??",
+            "ownReply": false
+        },
+        {
+            "author": "Battle Bunny",
+            "date": "vrijdag 24 december 2010 11:44",
+            "contentHtml": "Impressive <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 24 december 2010 11:52",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5813/video!-on-the-fly-zoeksuggesties-levenshtein-en-soundex-in-de-praktijk.html#r_78013\">kipusoep schreef op vrijdag 24 december 2010 @ 11:43:</a><br>\r\nDit doet Google/Youtube toch ook al lang??</div></blockquote>Uiteraard. Helaas is mijn vriendelijke verzoek om van hun infrastructuur gebruik te maken voor deze functionaliteit nooit beantwoord.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5813/video!-on-the-fly-zoeksuggesties-levenshtein-en-soundex-in-de-praktijk.html#r_78014\">Battle Bunny schreef op vrijdag 24 december 2010 @ 11:44:</a><br>\r\nImpressive <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote><blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5813/video!-on-the-fly-zoeksuggesties-levenshtein-en-soundex-in-de-praktijk.html#r_78010\">CodeCaster schreef op vrijdag 24 december 2010 @ 11:32:</a><br>\r\nVet. <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Yay!  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": true
+        },
+        {
+            "author": "Jeroen Mulder",
+            "date": "vrijdag 24 december 2010 11:54",
+            "contentHtml": "Vooral met de grijze getallen er bij is het zeker indrukwekkend te noemen. Alleen het voorbeeld van specifiek adres laat je niet zien?",
+            "ownReply": false
+        },
+        {
+            "author": "t.coenraad",
+            "date": "vrijdag 24 december 2010 12:12",
+            "contentHtml": "Geweldig, dit is &#xE9;cht nuttig <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "Barleone",
+            "date": "vrijdag 24 december 2010 12:16",
+            "contentHtml": "Awesomeheid! <img src=\"http://tweakimg.net/g/s/pompom.gif\" width=\"41\" height=\"24\" alt=\"*O*\">",
+            "ownReply": false
+        },
+        {
+            "author": "Devilly",
+            "date": "vrijdag 24 december 2010 12:38",
+            "contentHtml": "Ik kijk nu al uit naar je volgende post, want die moet volgens mij toch wel heel interessant worden! <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><p class=\"edit\">[Reactie gewijzigd op vrijdag 24 december 2010 12:41]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Devilly",
+            "date": "vrijdag 24 december 2010 12:38",
+            "contentHtml": "Ik citeerde mijn eigen post in plaats van hem te bewerken. <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\"><p class=\"edit\">[Reactie gewijzigd op vrijdag 24 december 2010 12:40]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "ACM",
+            "date": "vrijdag 24 december 2010 12:53",
+            "contentHtml": "Voor de pricewatch heb ik destijds vergelijkbare functionaliteit gebouwd. En daardoor weet ik dat het inderdaad best lastig om goed te doen is. Al denk ik wel dat de namen van pricewatchproducten door de grote hoeveelheden leestekens e.d. nog wat lastiger zijn dan straatnamen/adressen.<br>\r\nJouw  voorbeelden zien er in ieder geval best goed uit <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 24 december 2010 13:27",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5813/video!-on-the-fly-zoeksuggesties-levenshtein-en-soundex-in-de-praktijk.html#r_78026\">ACM schreef op vrijdag 24 december 2010 @ 12:53:</a><br>\r\nVoor de pricewatch heb ik destijds vergelijkbare functionaliteit gebouwd. En daardoor weet ik dat het inderdaad best lastig om goed te doen is. Al denk ik wel dat de namen van pricewatchproducten door de grote hoeveelheden leestekens e.d. nog wat lastiger zijn dan straatnamen/adressen.<br>\r\nJouw  voorbeelden zien er in ieder geval best goed uit <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Wat je in de pricewatch niet hebt, maar hier wel is hierarchie. Bijvoorbeeld:<br>\r\n<br>\r\nwibautstraat, noord-holland -&gt; alle wibautstraten in noord-holland<br>\r\nkalf, zaanstreek -&gt; de wijk het kalf in de regio zaanstreek<br>\r\nadriaen, utrecht, utrecht -&gt; alles dat begint met adriaen en een parent utrecht, die ook een parent utrecht heeft. (bijv. plaats Utrecht ligt in provincie Utrecht).<br>\r\n<br>\r\nOok kan je bijvoorbeeld zeggen:<br>\r\n<br>\r\n&apos;Buurt Kalf&apos; -&gt; vind de buurt &apos;t Kalf<br>\r\n<br>\r\nMaar wat als je een buurt hebt die &apos;Buurt 42&apos; heet?<br>\r\n<br>\r\nInterpretatie van de zoekopdracht gaat dus verder dan alleen op naam, dat is best een uitdaging als je dat zowel snel als memoryeffici&#xEB;nt wilt doen. Daarnaast zijn sorteringen ook nog afhankelijk van het aantal woningen te koop in dat geografisch gebied (de grijze getallen). We gebruiken voor deze functionaliteit, inclusief de grijze getallen momenteel slechts 200 MB aan memory.",
+            "ownReply": true
+        },
+        {
+            "author": "vrijdag 24 december 2010 16:34",
+            "date": "",
+            "contentHtml": "Ziet er netjes uit Jan! Maar mag ik nog een suggestie geven?<br>\r\nWat ik vaak mis in zoekvelden om mijn tijd nuttiger te besteden is een OF functie. Stel dat je een woning zoekt in de Veluwe &#xF3;f ergens in Rotterdam, lijkt het mij fijn om te zoeken op &quot;Veluwe ; Rotterdam&quot; zodat ik gemakkelijker kan vergelijken of sorteren op prijs.",
+            "ownReply": false
+        },
+        {
+            "author": "postbus51",
+            "date": "vrijdag 24 december 2010 19:14",
+            "contentHtml": "Laan Europa ,, waarom wordt er geen europa laan aangeboden ?<p class=\"edit\">[Reactie gewijzigd op vrijdag 24 december 2010 19:14]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "donderdag 30 december 2010 10:20",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5813/video!-on-the-fly-zoeksuggesties-levenshtein-en-soundex-in-de-praktijk.html#r_78057\">Timo schreef op vrijdag 24 december 2010 @ 16:34:</a><br>\r\nZiet er netjes uit Jan! Maar mag ik nog een suggestie geven?<br>\r\nWat ik vaak mis in zoekvelden om mijn tijd nuttiger te besteden is een OF functie. Stel dat je een woning zoekt in de Veluwe &#xF3;f ergens in Rotterdam, lijkt het mij fijn om te zoeken op &quot;Veluwe ; Rotterdam&quot; zodat ik gemakkelijker kan vergelijken of sorteren op prijs.</div></blockquote>Ja, komt er wel in; maar alleen voor gebieden op hetzelfde geografisch niveau. Kan overigens al voor &apos;Uitgebreid zoeken&apos;.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5813/video!-on-the-fly-zoeksuggesties-levenshtein-en-soundex-in-de-praktijk.html#r_78065\">postbus51 schreef op vrijdag 24 december 2010 @ 19:14:</a><br>\r\nLaan Europa ,, waarom wordt er geen europa laan aangeboden ?</div></blockquote>Omdat het &apos;Europalaan&apos; is. We weten niet wanneer we een woord in twee&#xEB;n moeten splitsen; wordt het Europal aan of Euro pallaan? Je kan niet alles indexeren want dat is te traag / gebruikt te veel memory.",
+            "ownReply": true
+        }
+    ]
+}

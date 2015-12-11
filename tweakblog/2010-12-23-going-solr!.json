@@ -1,0 +1,54 @@
+{
+    "title": "Going Solr!",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/5807/going-solr%21.html",
+    "date": "2010-12-23T13:50:00.000Z",
+    "category": "Frontend",
+    "views": 4044,
+    "articleHtml": "Klik voor <a href=\"http://glamour.tweakblogs.net/blog/5948/solr-deel-1-introductie-tot-faceted-search.html\" rel=\"external\">meer informatie over de implementatie van Solr</a>.<br>\r\n<br>\r\nDe <a href=\"http://www.funda.nl/koop/groningen/\" rel=\"external\">filters in de linkerkolom</a> is een van de lastigste problemen die je tegenkomt als je een site als funda bouwt. Want hoe bereken je in 100 millisecondes hoeveel resultaten een gebruiker overhoudt als hij op een filter klikt? Dat zijn toch al snel 40 verschillende nieuwe queries!<br>\r\n<br>\r\nOp dit moment wordt bovenstaand probleem opgelost door z&#xE9;&#xE9;r brede tabellen te gebruiken waarin we bijvoorbeeld de volgende velden hebben:<br>\r\n<br>data:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><pre>1\n2\n3\n</pre></td><td class=\"phphighlightcode\"><div><pre>Adres  | ind_Opp_100_150 | ind_Opp_150_200 | ind_Zwembad |\r\nBla 1  | 1               | 0               | 1           |\r\nBla 2  | 0               | 1               | 0           |</pre></div></td></tr></table><br>\r\nDoor al dit soort velden te hebben kan je snel bepalen welk deel van je set een oppervlakte heeft tussen de 100 en 150 m2 ( COUNT(ind_Opp_100_150) ).<br><a name=\"more\"></a><br>\r\n<b>SOLR?</b><br>\r\nMet de opkomst van een sloot aan NoSQL oplossingen de afgelopen jaren zijn er w&#xE9;l constructieve oplossingen bedacht voor ons probleem; een daarvan is <a href=\"http://lucene.apache.org/solr/\" rel=\"external\">Apache SOLR</a>. Een &apos;blazing fast open source enterprise search platform&apos; dat faceted search (zoeken middels filters) als een van haar core taken beschouwt.<br>\r\n<br>\r\nDus na maanden voorbereiding, en enkele maanden bouwen is een deel van onze zoekarchitectuur overgegaan van MSSQL naar SOLR, waarmee we meteen de grootste gebruiker van SOLR op Windows ter wereld zijn. Mooi moment dus om ook nieuwe functionaliteit te introduceren. Vanaf vandaag live bij u thuis:<br>\r\n<br>\r\n<a href=\"http://www.funda.nl/koop/verkocht/heel-nederland/\" rel=\"external\">Al het verkochte woningaanbod</a> vanaf december 2009. 100% SOLR powered (en nog druk aan het indexen dus je ziet nog maar de helft)!",
+    "nextLink": "http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html",
+    "comments": [
+        {
+            "author": "truegrit",
+            "date": "donderdag 23 december 2010 15:11",
+            "contentHtml": "Dat is inderdaad mooi spul, wij gebruiken het ook (zonder SOLR dan, alleen Lucene) voor zoeken en het aantal resultaten bij een volgende filter uitrekenen.<br>\r\n<br>\r\nTevens leuk om te lezen hoe funda nou eigenlijk werkt!",
+            "ownReply": false
+        },
+        {
+            "author": "Apache",
+            "date": "donderdag 23 december 2010 15:44",
+            "contentHtml": "Ja, Lucene is redelijk common op de projecten die ik kenm meestal in combinatie met iets als hibernate search ofzo.<br>\r\n<br>\r\nDat jullie de grootste windows gebruikers zijn wil natuurlijk niet veel meer zeggen dan: grote apps draaien meestal op *nix <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"><br>\r\n<br>\r\nTot nu toe ben ik in de JEE bitter weinig windows tegengekomen op servers <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "YopY",
+            "date": "donderdag 23 december 2010 16:01",
+            "contentHtml": "SOLR is ook ge&#xEF;ntegreerd in een CMS die wij gebruiken (wij = boeken- en tijdschriftenuitgeverijen), maar met wisselend succes. Ik geloof niet dat dat echt aan SOLR zelf ligt, maar meer aan de implementatie en het niet specifiek genoeg zijn van de requirements, maar vooruit.<br>\r\n<br>\r\n/ervaring deelt.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "donderdag 23 december 2010 16:09",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5807/going-solr!.html#r_77936\">Apache schreef op donderdag 23 december 2010 @ 15:44:</a><br>\r\nJa, Lucene is redelijk common op de projecten die ik kenm meestal in combinatie met iets als hibernate search ofzo.<br>\r\n<br>\r\nDat jullie de grootste windows gebruikers zijn wil natuurlijk niet veel meer zeggen dan: grote apps draaien meestal op *nix <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"></div></blockquote>De consultants die hier kwamen om ons er alles over te vertellen begonnen ook wel een beetje te trillen toen we zeiden dat we op Windows wouden draaien  <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"> . Werkt overigens prima.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5807/going-solr!.html#r_77944\">YopY schreef op donderdag 23 december 2010 @ 16:01:</a><br>\r\nSOLR is ook ge&#xEF;ntegreerd in een CMS die wij gebruiken (wij = boeken- en tijdschriftenuitgeverijen), maar met wisselend succes. Ik geloof niet dat dat echt aan SOLR zelf ligt, maar meer aan de implementatie en het niet specifiek genoeg zijn van de requirements, maar vooruit.</div></blockquote>Ja, dit is voor ons wel pretty much core business; en dat zie je ook wel in het project. Ik geloof dat er in totaal zes maanden aan gewerkt is met gemiddeld twee FTE (inclusief architectuur, functioneel, technisch, implementatie, voortraject).",
+            "ownReply": true
+        },
+        {
+            "author": "flowerp",
+            "date": "vrijdag 24 december 2010 11:36",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5807/going-solr!.html#r_77945\">creator1988 schreef op donderdag 23 december 2010 @ 16:09:</a><br>\r\n[...]<br>\r\n<br>\r\nDe consultants die hier kwamen om ons er alles over te vertellen begonnen ook wel een beetje te trillen toen we zeiden dat we op Windows wouden draaien  <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"> . Werkt overigens prima.</div></blockquote>Het zou inderdaad wel prima moeten werken. SOLR is een Java applicatie en Windows is nog steeds een primair supported platform.<br>\r\n<br>\r\nNormaal is het wel <i>raar</i> om grote server side apps op Windows te draaien, maar dat geldt natuurlijk niet voor .NET shops <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"> Wel vraag ik me af of het OS echt uitmaakt in deze. In neem aan dat SOLR gewoon op z&apos;n eigen machine (waarschijnlijk machine<b>s</b> in een cluster) draait en dat het daadwerkelijk OS dus helemaal niet boeit voor de .NET code?<p class=\"edit\">[Reactie gewijzigd op vrijdag 24 december 2010 11:36]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "zondag 26 december 2010 15:12",
+            "date": "",
+            "contentHtml": "Nou, zo raar is het nu ook weer niet om Windows als server platform te gebruiken voor grote applicaties. De licentie kosten van de software vallen over het algemeen in het niet bij andere hosting kosten. Sites als myspace.com of stackoverflow.com draaien ook op Windows. Bij funda draait SOLR op Windows omdat onze beheerder daar beter in zijn.",
+            "ownReply": false
+        },
+        {
+            "author": "dionoid",
+            "date": "woensdag 29 december 2010 10:33",
+            "contentHtml": "Even mierenneuken: het is dus <b>Solr</b>, en niet SOLR, SOLr, sOlr, soLr of SoLR  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"> <br>\r\n<br>\r\nLeuk om te lezen dat Solr al op meerdere plekken ingezet wordt (maar nog niet vaak op Windows, blijkbaar). <br>\r\n<br>\r\nVoor wie wat technische achtergrondinformatie zoekt over de integratie van Solr met een drukbezochte ASP.NET website:<br>\r\n<a href=\"http://weblogs.asp.net/drnetjes/archive/2010/12/29/faceted-search-with-solr-on-windows.aspx\" rel=\"external\" title=\"http://weblogs.asp.net/drnetjes/archive/2010/12/29/faceted-search-with-solr-on-windows.aspx\">http://weblogs.asp.net/dr...with-solr-on-windows.aspx</a><p class=\"edit\">[Reactie gewijzigd op woensdag 29 december 2010 10:34]</p>",
+            "ownReply": false
+        }
+    ]
+}

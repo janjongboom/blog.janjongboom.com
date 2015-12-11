@@ -1,0 +1,89 @@
+{
+    "title": "Streetview ín je huis?",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/5707/streetview-in-je-huis.html",
+    "date": "2010-12-10T14:19:00.000Z",
+    "category": "Frontend",
+    "views": 3596,
+    "articleHtml": "Een paar duizend regels Javascript, een paar honderd regels in een obscuur KRPano taaltje, en een paar flash bestanden (waar ik wijselijk ben afgebleven) resulteren in een misschien wel het coolste project van de afgelopen twee jaar. 360 graden foto&apos;s nieuwe stijl! Koppeling met je interactieve plattegrond, infospots (niet in dit voorbeeld helaasch), hotspots en direct al 5.500 bruikbare foto&apos;s.<br>\r\n<br>\r\n<a href=\"http://www.funda.nl/koop/voorhout/huis-47971824-boerhaavestraat-1/360-fotos/\" rel=\"external\" title=\"http://www.funda.nl/koop/voorhout/huis-47971824-boerhaavestraat-1/360-fotos/\">http://www.funda.nl/koop/...rhaavestraat-1/360-fotos/</a><br>\r\n<br>\r\nOverigens is mijn inbreng voornamelijk in de (niet publieke) invoerschermen geweest. Voor een voorbeeld van wat ik dan allemaal zit in te tikken op zo&apos;n dag: <a href=\"http://www.funda.nl/js/pano/pano.app.js\" rel=\"external\">Klikken</a>!<br>\r\n<br><a name=\"more\"></a><br>\r\n<br>\r\n<b>Grootste uitdagingen</b><ul><li>Voor de invoer van &apos;spots&apos; was in eerste instantie gekozen voor Flash maar dit bleek lastiger dan gedacht; dus zijn we overgegaan naar Javascript hiervoor</li><li>In twee dagen, twee weken aan werk nabouwen is makkelijker dan het klinkt (zie punt 1)</li><li>Testen in IE 6 is verdomd lastig als VirtualPC je computer laat crashen</li><li>Een taal die niet doet aan &apos;return&apos; statements (KRPano) is behoorlijk klote. Lang leve temp variabelen!</li></ul><img src=\"http://sphotos.ak.fbcdn.net/hphotos-ak-snc4/hs965.snc4/75858_174866919197555_100000227432579_635425_2925166_n.jpg\" title=\"http://sphotos.ak.fbcdn.net/hphotos-ak-snc4/hs965.snc4/75858_174866919197555_100000227432579_635425_2925166_n.jpg\" alt=\"http://sphotos.ak.fbcdn.net/hphotos-ak-snc4/hs965.snc4/75858_174866919197555_100000227432579_635425_2925166_n.jpg\"><br>\r\n<br>\r\nAh well. Project klaar. En ik ben er trots op dat ik als eerste dev CSS heb mogen inchecken (normaal streng verboden door UX).",
+    "comments": [
+        {
+            "author": "Rhapsody",
+            "date": "vrijdag 10 december 2010 15:32",
+            "contentHtml": "Ziet er inderdaad wel supervet uit!",
+            "ownReply": false
+        },
+        {
+            "author": "veldmuis",
+            "date": "vrijdag 10 december 2010 15:35",
+            "contentHtml": "Is dit niet handig dan?<br>\r\n<a href=\"http://www.my-debugbar.com/wiki/IETester/HomePage\" rel=\"external\" title=\"http://www.my-debugbar.com/wiki/IETester/HomePage\">http://www.my-debugbar.com/wiki/IETester/HomePage</a>",
+            "ownReply": false
+        },
+        {
+            "author": "natasdiamon",
+            "date": "vrijdag 10 december 2010 15:36",
+            "contentHtml": "Werkt ook gewoon op een htc desire <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 10 december 2010 15:45",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5707/streetview-in-je-huis.html#r_76571\">veldmuis schreef op vrijdag 10 december 2010 @ 15:35:</a><br>\r\nIs dit niet handig dan?<br>\r\n<a href=\"http://www.my-debugbar.com/wiki/IETester/HomePage\" rel=\"external\" title=\"http://www.my-debugbar.com/wiki/IETester/HomePage\">http://www.my-debugbar.com/wiki/IETester/HomePage</a></div></blockquote>Mijn ervaring is in ieder geval dat dit soort workarounds nooit exact hetzelfde resultaat geven als een native versie van IE 6.",
+            "ownReply": true
+        },
+        {
+            "author": "muppet99",
+            "date": "vrijdag 10 december 2010 15:49",
+            "contentHtml": "Ziet er heel netjes uit. Echter krijg ik naar mijn gevoel wel een vertekend beeld van de keuken. Kan aan mij liggen, maar als ik de gewone foto&apos;s van de keuken bekijk dan lijkt deze groter.<br>\r\n<br>\r\nMaar never the less krijg ik nu wel een mooi beeld van de getoonde kamers.",
+            "ownReply": false
+        },
+        {
+            "author": "Deurges",
+            "date": "vrijdag 10 december 2010 16:00",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5707/streetview-in-je-huis.html#r_76577\">muppet99 schreef op vrijdag 10 december 2010 @ 15:49:</a><br>\r\nZiet er heel netjes uit. Echter krijg ik naar mijn gevoel wel een vertekend beeld van de keuken. Kan aan mij liggen, maar als ik de gewone foto&apos;s van de keuken bekijk dan lijkt deze groter.<br>\r\n<br>\r\nMaar never the less krijg ik nu wel een mooi beeld van de getoonde kamers.</div></blockquote>Denk dat het ook afhangt van de afmetingen van de kamer. Als de afstand van de camera verder is, krjjg je een beter overzicht lijkt me..",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 10 december 2010 16:03",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5707/streetview-in-je-huis.html#r_76585\">Deurges schreef op vrijdag 10 december 2010 @ 16:00:</a><br>\r\nDenk dat het ook afhangt van de afmetingen van de kamer. Als de afstand van de camera verder is, krjjg je een beter overzicht lijkt me..</div></blockquote>Nee, dat klopt niet. We gebruiken spherical projection om de afbeelding te mappen, zodat er geen vervormingen optreden (vandaar dat je ook met speciale lenzen deze foto&apos;s neemt). Bij deze foto lijkt nog iets niet helemaal goed gegaan waardoor er een lichte vervorming optreedt. Je ziet het volgens mij bij 99% van de foto&apos;s niet: <a href=\"http://www.funda.nl/koop/heel-nederland/360-fotos/\" rel=\"external\" title=\"http://www.funda.nl/koop/heel-nederland/360-fotos/\">http://www.funda.nl/koop/heel-nederland/360-fotos/</a>.",
+            "ownReply": true
+        },
+        {
+            "author": "BaRF",
+            "date": "vrijdag 10 december 2010 16:23",
+            "contentHtml": "geniaal! Denk dat mijn werkgever dit wel zou willen om zn winkel op de website te showen <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "Booster",
+            "date": "vrijdag 10 december 2010 16:24",
+            "contentHtml": "Heb me altijd verbaasd dat ze dit op Funda (of andere huizensites) niet eerder gemaakt hebben <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><br>\r\n<br>\r\nHet bestaat al sinds 1994 (<a href=\"http://www.youtube.com/watch?v=4XESSd28orc\" rel=\"external\">ST:TNG Interactive Manual</a>) en ik moet het nogsteeds een keer doen voor mijn eigen huis. Losse pano&apos;s met een plattegrondje heb ik al wel eerder gemaakt.<br>\r\n<br>\r\nQuicktime VR voorziet trouwens volledig in het maken van panos+hotspots+plattegrond in VR filmpjes, maar QT is jammergenoeg niet goed doorgedrongen om voor dit soort projecten te gebruiken. (en niet bruikbaar voor de webbackend, dus creatie van dit soort presentaties)<p class=\"edit\">[Reactie gewijzigd op vrijdag 10 december 2010 16:28]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Paultje3181",
+            "date": "vrijdag 10 december 2010 18:16",
+            "contentHtml": "Kan ik dit ook voor mijn eigen huis doen? Lijkt me wel erg tof...",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "zaterdag 11 december 2010 11:42",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5707/streetview-in-je-huis.html#r_76592\">Booster schreef op vrijdag 10 december 2010 @ 16:24:</a><br>\r\nHeb me altijd verbaasd dat ze dit op Funda (of andere huizensites) niet eerder gemaakt hebben <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Helemaal nieuw is het voor funda overigens niet, want we gebruikten al een jaar of zeven vergelijkbare techniek (IPIX); verouderde techniek met gigantische kosten voor het maken van een 360-foto; en ook nog eens een Java based viewer. De experience is nu gewoon zeer sterk verbeterd; met dus de nieuwe functies als hot/infospots en koppeling aan plattegronden. De oude IPIX foto&apos;s zijn geconverteerd, en kunnen door de makelaar verrijkt worden.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5707/streetview-in-je-huis.html#r_76609\">Paultje3181 schreef op vrijdag 10 december 2010 @ 18:16:</a><br>\r\nKan ik dit ook voor mijn eigen huis doen? Lijkt me wel erg tof...</div></blockquote>Te koop zetten? :-D",
+            "ownReply": true
+        },
+        {
+            "author": "lvanbreda",
+            "date": "zondag 12 december 2010 08:57",
+            "contentHtml": "Mooi project. Ook altijd leuk om rare dingen te zoeken op zulke foto&apos;s zoals hier : <br>\r\n<br>\r\n<a href=\"http://www.funda.nl/koop/roermond/appartement-47568926-minderbroederssingel-5-k/360-fotos/\" rel=\"external\" title=\"http://www.funda.nl/koop/roermond/appartement-47568926-minderbroederssingel-5-k/360-fotos/\">http://www.funda.nl/koop/...derssingel-5-k/360-fotos/</a><br>\r\n<br>\r\nOp de tafel zie je de floating bottle of death! =o",
+            "ownReply": false
+        },
+        {
+            "author": "Booster",
+            "date": "zondag 12 december 2010 15:29",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5707/streetview-in-je-huis.html#r_76638\">creator1988 schreef op zaterdag 11 december 2010 @ 11:42:</a><br>\r\nHelemaal nieuw is het voor funda overigens niet, want we gebruikten al een jaar of zeven vergelijkbare techniek (IPIX); verouderde techniek met gigantische kosten voor het maken van een 360-foto; en ook nog eens een Java based viewer.</div></blockquote>Ik hoop dat de lagere kosten ook gaan leiden tot meer gebruik, want ik heb het de afgelopen jaren nog nooit in werking gezien op Funda <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><br>\r\n<br>\r\nDat het nu echt een update gehad heeft is natuurlijk erg prettig <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "title": "Mobile device detection",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6158/mobile-device-detection.html",
+    "date": "2011-02-18T13:18:00.000Z",
+    "category": "Frontend",
+    "views": 3905,
+    "articleHtml": "Belangrijk onderdeel van <a href=\"http://glamour.tweakblogs.net/blog/6109/nieuwe-mobiele-website-deel-1-kickoff.html\" rel=\"external\">ons nieuwe mobiele platform</a> is uitvogelen welk device een gebruiker op dat moment gebruikt. Ben je mobiel met een viewport-breedte van &lt; 600 px dan willen we je doorsturen naar onze mobiele site. En dan kom je terecht in de wondere wereld van User Agent parsing.<br><a name=\"more\"></a><br>\r\n<b>WURFL</b><br>\r\nEen van de bekendste libraries met een gigantische lijst van devices, UA strings en capabilities is <a href=\"http://wurfl.sourceforge.net/\" rel=\"external\">WURFL</a>, an sich klinkt het prima, facebook zou het niet alleen gebruiken maar er ook aan bijdragen. Oordeel in 1 zin: &quot;what the hell!&quot; Na installatie van de Java library (die alleen in een web-omgeving wil draaien), omdat de .NET library dramatisch is, blijkt dat de &apos;intelligente&apos; matching van WURFL eigenlijk bijzonder zwak is. Firefox werd herkend als een Nokia N900, en van mijn <a href=\"http://techpatterns.com/forums/about304.html\" rel=\"external\">testset</a> werd een niet onaanzienlijk deel niet herkend. Wat me echter nog meer stoorde, was dat bij het ophogen van wat versienummers van de iPad UA er geen enkele herkenning meer was. Ben ik dan zo raar dat ik verwacht dat een library herkent dat iPad 4.3 wel zo&apos;n beetje compatible zal zijn met iPad 4.2?<br>\r\n<br>\r\n<b>En dan?</b><br>\r\nWURFL zou dus slimmer moeten worden, en het toeval wil dat we hier met een verzameling nerds in een grote open ruimte zitten. Een neuraal netwerk dat we trainen met een voorgedefinieerde set, dat gaat gokken of een niet herkende User Agent in een categorie kan worden ingedeeld. Of toch een genetisch algoritme dat vanzelf evolueert tot een alles-wetend mobiel deviceherkennend brein. Kan allemaal!<br>\r\n<br>\r\n<b>Uitkomst</b><br>\r\nWe gaan gewoon gebruik maken van een <a href=\"http://deviceatlas.com/\" rel=\"external\">commercieel pakket</a> dat het een stuk beter doet, praat bovendien ook nog standaard .NET  <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\">",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6152/bouw-eens-een-api-met-wcf-deel-4-beschikbaar-via-soap-xml-en-json.html",
+    "comments": [
+        {
+            "author": "MuddyMagical",
+            "date": "vrijdag 18 februari 2011 14:24",
+            "contentHtml": "Ik zou zeggen praat eens met crisp. Misschien wilt hij wel wat info delen over hoe de <a href=\"http://tweakers.net/devicedetect\" rel=\"external\" title=\"http://tweakers.net/devicedetect\">http://tweakers.net/devicedetect</a> werkt. Zij maken wel gebruik van WURFL.",
+            "ownReply": false
+        },
+        {
+            "author": "ACM",
+            "date": "vrijdag 18 februari 2011 14:31",
+            "contentHtml": "Wat je sowieso moet doen bij Wurfl is een patch voor desktop browsers (de &quot;Web Patch&quot;) installeren. Dat is geen standaardonderdeel van de lijst.<br>\r\n<br>\r\nZonder die lijst zal de herkenning van gewone browsers idd ietwat tegenvallen. Er is ook zo&apos;n soort patch voor bekende zoekmachines.<br>\r\n<br>\r\nDesalniettemin is Wurlf nou ook weer niet perfect, maar aangezien wij de php-library gebruiken hebben we iig niet te maken met quirks van .net en java.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 18 februari 2011 14:33",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6158/mobile-device-detection.html#r_82878\">ACM schreef op vrijdag 18 februari 2011 @ 14:31:</a><br>\r\nWat je sowieso moet doen bij Wurfl is een patch voor desktop browsers (de &quot;Web Patch&quot;) installeren. Dat is geen standaardonderdeel van de lijst.<br>\r\n<br>\r\nZonder die lijst zal de herkenning van gewone browsers idd ietwat tegenvallen. Er is ook zo&apos;n soort patch voor bekende zoekmachines.<br>\r\n<br>\r\nDesalniettemin is Wurlf nou ook weer niet perfect, maar aangezien wij de php-library gebruiken hebben we iig niet te maken met quirks van .net en java.</div></blockquote>Ja, ook met die patch viel het me best tegen. Overigens zijn de PHP en de Java libs juist de libs die officieel ondersteund worden, dus ik verwacht niet dat het met de PHP versie veel beter zou gaan worden.",
+            "ownReply": true
+        },
+        {
+            "author": "t.coenraad",
+            "date": "vrijdag 18 februari 2011 18:47",
+            "contentHtml": "Ik gebruik <a href=\"http://code.google.com/p/mobileesp/\" rel=\"external\" title=\"http://code.google.com/p/mobileesp/\">http://code.google.com/p/mobileesp/</a> dat het heel prima doet (denk ik, nog geen klachten) <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "crisp",
+            "date": "vrijdag 18 februari 2011 22:56",
+            "contentHtml": "Vorig jaar nog een reactie geschreven over onze WURFL ervaringen: <a href=\"http://gathering.tweakers.net/forum/list_message/35045153#35045153\" rel=\"external\" title=\"http://gathering.tweakers.net/forum/list_message/35045153#35045153\">http://gathering.tweakers...message/35045153#35045153</a><br>\r\n<br>\r\nOnze API is ook verre van origineel meer. De meeste van onze wijzigingen heb ik als patches gesubmit naar het WURFL team en een aantal daarvan zijn in de 1.2 versie van de PHP API ook opgenomen, maar die versie moet ik nog steeds een keer goed bekijken en testen.<br>\r\n<br>\r\nOok onze &apos;web patch&apos; is veel uitgebreider dan de versie die WURFL aanbiedt, en daarnaast hebben we nog een patchfile met zo&apos;n 78 fixes en toevoegingen. Waar het vaak op misgaat is het feit dat de UA-string vaak locale-aanduidingen bevat, en er dan vaak geen goede match kan worden gevonden van nl-localized devices met de en/us-versie die in de database staat... (feature-request om dat te normalizeren staat nog open).<br>\r\n<br>\r\nEen nieuwe versie Android of iOS is inderdaad ook vaak feest <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 21 februari 2011 13:58",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6158/mobile-device-detection.html#r_82899\">crisp schreef op vrijdag 18 februari 2011 @ 22:56:</a><br>\r\nOok onze &apos;web patch&apos; is veel uitgebreider dan de versie die WURFL aanbiedt, en daarnaast hebben we nog een patchfile met zo&apos;n 78 fixes en toevoegingen. Waar het vaak op misgaat is het feit dat de UA-string vaak locale-aanduidingen bevat, en er dan vaak geen goede match kan worden gevonden van nl-localized devices met de en/us-versie die in de database staat... (feature-request om dat te normalizeren staat nog open).<br>\r\n<br>\r\nEen nieuwe versie Android of iOS is inderdaad ook vaak feest <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"></div></blockquote>Waarom hebben jullie destijds niet voor DeviceAtlas gekozen? Bij mijn tests reageert DA prima op wijzigingen in versie / andere local.<br>\r\n<br>\r\nOnderhoud voor dit soort dingen is best duur; logfile analyse, patches maken, etc. Bij DA krijgen we dagelijks een nieuwe file, en ik hoop dat zij wat sneller zijn met patchen dan bij WURFL. Qua kosten maakt het niet zoveel uit, $300 per jaar, inclusief updates.",
+            "ownReply": true
+        },
+        {
+            "author": "crisp",
+            "date": "maandag 21 februari 2011 21:48",
+            "contentHtml": "<blockquote><div class=\"quote\">Waarom hebben jullie destijds niet voor DeviceAtlas gekozen?</div></blockquote>DA is toendertijd wel ter sprake gekomen, maar we hadden niet het idee (toen) dat de onderliggende data beter of uitgebreider was dan die van WURFL. We zijn dus eerst met WURFL aan de gang gegaan en zijn daar eigenlijk tot nu toe bij gebleven. Wellicht dat we dat nog wel eens gaan heroverwegen...",
+            "ownReply": false
+        }
+    ]
+}

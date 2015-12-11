@@ -1,0 +1,48 @@
+{
+    "title": "Nieuwe mobiele website, deel 1: Kickoff",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6109/nieuwe-mobiele-website-deel-1-kickoff.html",
+    "date": "2011-02-09T15:06:00.000Z",
+    "category": "Frontend",
+    "views": 2701,
+    "articleHtml": "In de komende weken wil ik aandacht besteden aan het project waar ik op dit moment de lead voor ben: de herbouw van ons mobiele platform. Niet alleen puur technisch, maar ook een kijkje achter de deur wat betreft project management, planning en bepaalde keuzes. Vandaag deel 1: de kickoff.<br>\r\n<br>\r\n<div style=\"text-align:center\"><a href=\"http://m.funda.nl\" rel=\"external\"><img src=\"http://www.100procentjan.nl/tweakers/mobiel_oud.png\" title=\"http://www.100procentjan.nl/tweakers/mobiel_oud.png\" alt=\"http://www.100procentjan.nl/tweakers/mobiel_oud.png\"></a></div><br>\r\n<br><a name=\"more\"></a><br>\r\n<b>Voortraject</b><br>\r\nIn de afgelopen maanden heeft ons UX-team nagedacht over de specs, design en ondersteunde devices; wat resulteert in een Functioneel Ontwerp (81 pagina&apos;s), een volledig functionele demo (HTML) en een stapel telefoons om op te testen:<br>\r\n<img src=\"http://www.100procentjan.nl/tweakers/mobiel_telefoons.png\" title=\"http://www.100procentjan.nl/tweakers/mobiel_telefoons.png\" alt=\"http://www.100procentjan.nl/tweakers/mobiel_telefoons.png\"><br>\r\n<br>\r\n<b>Kickoff meeting</b><br>\r\nWanneer het voortraject klaar is wordt het projectteam (1 UX&apos;er, 2 Devs, 1 Project Manager, 1 Tester) in een hok gestopt waarin er in een uur of twee door het FO en de demo wordt heengelopen. Vooral de demo is nogal prettig omdat alle interacties al zichtbaar zijn; bovendien is de opgeleverde HTML al productie-waardig (UX is verantwoordelijk voor de HTML en CSS) en kunnen we wat betreft de frontend-code al beginnen met knippen en plakken.<br>\r\n<br>\r\n<b>Architectuur</b><br>\r\nDe keuze qua architectuur ligt in handen van de developers in het team, in samenwerking met de Software Architect. Binnen dit project heb ik allereerst mijn plannen beschreven in samenwerking met mijn fellow dev, en hierna vrij snel accoord gekregen vanuit SA. We kiezen binnen dit project om verder te bouwen op de API die we toch al <a href=\"http://glamour.tweakblogs.net/blog/5983/bouw-eens-een-api-met-wcf-deel-1.html\" rel=\"external\">op de plank hebben liggen</a> en waarop momenteel de andere mobiele platformen die we hebben (iPhone, Layar) ook draaien. Voordeel hierbij is dat we ook voor deze platformen kunnen profiteren van de investeringen die we nu doen in onze service-laag.<br>\r\n<br>\r\n<b>Eh dus?</b><br>\r\nDus gaan we ervoor zorgen dat onze website zo min mogelijk code bevat. Neem je als voorbeeld de resultaatlijst, dan ziet deze er globaal zo uit:<br>\r\n<img src=\"http://www.100procentjan.nl/tweakers/mobiel_nieuw.png\" title=\"http://www.100procentjan.nl/tweakers/mobiel_nieuw.png\" alt=\"http://www.100procentjan.nl/tweakers/mobiel_nieuw.png\"><br>\r\nDat betekent dus dat de informatie over:<ul><li>Soort object dat je nu ziet (&apos;Koopwoningen&apos;)</li><li>Beschrijving van je zoekopdracht (&apos;Purmerend | &#xA4; 100.000 - &#xA4; 200.000 | etc.&apos;)</li><li>Vorige en volgende pagina (beschikbaar? nieuwe URL?)</li><li>Huidige pagina, en totaal aantal pagina&apos;s</li></ul>Als nieuwe metadata moet worden toegevoegd aan de API. Wanneer we dit doen hebben we nauwelijks logica in onze website. De code van onze resultaatlijst wordt globaal iets als:<br>\r\n<br>HTML:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br></code></td><td class=\"phphighlightcode\"><div><code><span class=\"code_ident\">&lt;h1</span><span class=\"code_ident\">&gt;</span>&lt;%=Model.ObjectType&#xA0;%&gt;<span class=\"code_ident\">&lt;/h1</span><span class=\"code_ident\">&gt;</span>\n<br><span class=\"code_ident\">&lt;a</span><span class=\"code_ident\">&gt;</span>&lt;%=Model.Omschrijving&#xA0;%&gt;<span class=\"code_ident\">&lt;/a</span><span class=\"code_ident\">&gt;</span>\n<br>\n<br><span class=\"code_ident\">&lt;div</span>&#xA0;<span class=\"code_method\">class</span>=<span class=\"code_string\">&quot;</span><span class=\"code_string\">results-list</span><span class=\"code_string\">&quot;</span><span class=\"code_ident\">&gt;</span>\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&lt;%&#xA0;foreach(var&#xA0;obj&#xA0;in&#xA0;Model.Objects)&#xA0;{&#xA0;%&gt;\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&lt;%&#xA0;Html.RenderPartial(&quot;ZoekresultaatItem&quot;,&#xA0;obj);&#xA0;%&gt;\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&lt;%&#xA0;}&#xA0;%&gt;\n<br><span class=\"code_ident\">&lt;/div</span><span class=\"code_ident\">&gt;</span>\n<br>\n<br><span class=\"code_ident\">&lt;a</span>&#xA0;<span class=\"code_method\">href</span>=<span class=\"code_string\">&quot;</span><span class=\"code_keyword\">&lt;%=Model.VorigeUrl%&gt;</span><span class=\"code_string\">&quot;</span><span class=\"code_ident\">&gt;</span>Vorige<span class=\"code_ident\">&lt;/a</span><span class=\"code_ident\">&gt;</span>\n<br>\n<br>Pagina&#xA0;&lt;%=Model.Paginanummer&#xA0;%&gt;&#xA0;van&#xA0;&lt;%=Model.PaginaTotaal&#xA0;%&gt;\n<br>\n<br><span class=\"code_ident\">&lt;a</span>&#xA0;<span class=\"code_method\">href</span>=<span class=\"code_string\">&quot;</span><span class=\"code_keyword\">&lt;%=Model.VolgendeUrl&#xA0;%&gt;</span><span class=\"code_string\">&quot;</span><span class=\"code_ident\">&gt;</span>Volgende<span class=\"code_ident\">&lt;/a</span><span class=\"code_ident\">&gt;</span></code></div></td></tr></table><br>\r\nWanneer onze iPhone app van dezelfde metadata gebruik gaat maken hebben we bovendien altijd een consistente weergave.<br>\r\n<br>\r\n<b>Next up?</b><br>\r\nNog geen idee, we zijn net begonnen :-)",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6103/msil-injection-met-postsharp.html",
+    "comments": [
+        {
+            "author": "Steffannnn",
+            "date": "woensdag 09 februari 2011 19:29",
+            "contentHtml": "Mobiele website .. <img src=\"http://tweakimg.net/g/s/biggrin.gif\" width=\"15\" height=\"15\" alt=\":D\"> Iedereen loopt nu rond met zijn eigen webserver?!",
+            "ownReply": false
+        },
+        {
+            "author": "TeeDee",
+            "date": "woensdag 09 februari 2011 23:38",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6109/nieuwe-mobiele-website-deel-1-kickoff.html#r_82139\">Steffannnn schreef op woensdag 09 februari 2011 @ 19:29:</a><br>\r\nMobiele website .. <img src=\"http://tweakimg.net/g/s/biggrin.gif\" width=\"15\" height=\"15\" alt=\":D\"> Iedereen loopt nu rond met zijn eigen webserver?!</div></blockquote>Hahahahahaha....  <img src=\"http://tweakimg.net/g/s/nosmile2.gif\" width=\"15\" height=\"15\" alt=\":|\"> <br>\r\n<br>\r\nMaar goed: een FO van 81 pagina&apos;s en een front-end waarbij de front-end al zo goed als klaar is. *doet me denken aan de uren waarbij ik zei; mijn ingecalculeerde uren * 3*.<br>\r\n<br>\r\nWaarom zou je trouwens buiten jullie eigen bestaande api&apos;s moeten gaan denken om iets voor elkaar te krijgen? Bouw het intern (het is tenslotte iets van funda) en kijk daarna of je het kan integreren. Zo niet, tough shit.",
+            "ownReply": false
+        },
+        {
+            "author": "Snowmiss",
+            "date": "donderdag 10 februari 2011 19:40",
+            "contentHtml": "Wat is een UX?",
+            "ownReply": false
+        },
+        {
+            "author": "SpaceK33z",
+            "date": "vrijdag 11 februari 2011 10:38",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6109/nieuwe-mobiele-website-deel-1-kickoff.html#r_82273\">Snowmiss schreef op donderdag 10 februari 2011 @ 19:40:</a><br>\r\nWat is een UX?</div></blockquote>User Experience (gebruikerservaring dus).<p class=\"edit\">[Reactie gewijzigd op vrijdag 11 februari 2011 10:38]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Atmosfeer",
+            "date": "maandag 18 april 2011 13:18",
+            "contentHtml": "Is het mogelijk om je FO in te kunnen zien? <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"> Mooi project verder!",
+            "ownReply": false
+        },
+        {
+            "author": "Jeroen Mulder",
+            "date": "maandag 18 april 2011 16:48",
+            "contentHtml": "@Atmosfeer, er valt weinig te zien. Onze FO&apos;s zijn grote Word documenten die alle data, functionaliteit en interactie nauwkeurig beschrijven. Aanvullend wordt door UX een interactieve demo (HTML, CSS en Javascript) ontwikkeld. Hierin is de HTML en CSS van productieniveau, maar de demo wordt voornamelijk gebruikt als prototype tijdens het ontwerpproces. Er is immers maar &#xE9;&#xE9;n manier om er achter te komen of iets goed genoeg werkt zoals je had bedacht en dat is door het te bouwen en uit te proberen. :-)",
+            "ownReply": false
+        }
+    ]
+}

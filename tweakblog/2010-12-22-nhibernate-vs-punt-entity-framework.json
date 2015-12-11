@@ -1,0 +1,96 @@
+{
+    "title": "NHibernate vs. Entity Framework",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html",
+    "date": "2010-12-22T14:19:00.000Z",
+    "category": "Backend",
+    "views": 4061,
+    "articleHtml": "We gebruiken sinds de laatste rewrite van onze codebase (2006) NHibernate als OR Mapper, maar na ruim vier jaar is nu het besef wel gekomen dat we eens zouden moeten upgraden, daar we nu nog op NHibernate 1.04 draaien (2.1.2 is nu uit, en 3.0 is in beta). Daarom gisteren een kennissessie [1] gehad waarin we eens bespraken welke richting we uit wilden. Bij NHibernate blijven of toch naar Entity Framework.<br>\r\n<i>[1] Gooi een sloot developers met eten en alcohol in een groen hok en wacht tot ze het eens zijn.</i><br><a name=\"more\"></a><br>\r\n<b>Huidige landschap</b><br>\r\nGrootste nadeel van NHibernate op dit moment in onze situatie:<ul><li>Zeer onduidelijke foutmeldingen</li><li>Runtime compilation van entities kost enorm veel tijd (30 sec. per compilatieslag)</li></ul><b>Waarom willen we niet naar NHibernate 2.1.2?</b><br>\r\nIn NHibernate 2.1.2 is op dit moment geen fatsoenlijke strong-typed LINQ support, en er zijn bovendien dezelfde bezwaren die ons nu soms ook opbreken als een gebrek aan goede documentatie, goede foutmeldingen en static compilation.<br>\r\n<br>\r\n<b>Dan naar NHibernate 3.0?</b><br>\r\nHet belooft in ieder geval een meer feature-rijke release te worden. Normale LINQ support, alhoewel er geen binding is tussen de DataContext waarin je draait en je entity (je kunt met LINQ een query uitvoeren op een type dat niet bestaat in de database waarop je queriet, dit merk je pas runtime); en in b&#xE8;ta 1 zijn de foutmeldingen nog niet verbeterd. Alhoewel hier beterschap voor is beloofd.<br>\r\n<br>\r\nDaarnaast is het voor mij eigenlijk onbegrijpelijk dat door het loskoppelen van het proxy-framework van de NHibernate core, &#xE1;lle classes die lazy-loading willen ondersteunen, alle properties als &apos;virtual&apos; gedefinieerd moeten hebben. Daarnaast zal er ook geen static compilation komen, waardoor we nog steeds lang moeten wachten totdat NHibernate alles runtime heeft gecompileerd.<br>\r\n<br>\r\nOverigens zijn er inmiddels extension-points in NHibernate waardoor je dit zou kunnen cachen, en deze slag zo&apos;n 50% sneller kan laten verlopen.<br>\r\n<br>\r\n<b>Waarom w&#xE9;l NHibernate?</b><br>\r\nAlles, van voor naar achter, van links naar rechts, van API tot aan Business Rules, alles draait NHibernate. Alle core components, mappers, etc. kunnen allemaal met HQL werken. Dat betekent een minimale impact op de code, maar wel een sloot aan nieuwe features. Daarnaast is NHibernate qua ORM zelf de beste (?) mapper at the moment. Wij gebruiken in ieder geval in een aantal entities methodes die niet ondersteund worden in EF (moeilijke complex types uit een rij mappen).<br>\r\n<br>\r\n<b>Waarom Entity Framework?</b><br>\r\nWe kunnen nu model-first werken, waarin we alle entities die nu met NHibernate praten; gewoon kunnen laten bestaan, maar ze &#xE9;n tegen NHibernate &#xE9;n tegen Entity Framework te laten mappen. Dat scheelt werk.<br>\r\n<br>\r\nDaarnaast is er een fantastische Visual Designer, die goed ge&#xEF;ntegreerd is in Visual Studio; en is EF4 een requirement voor het behalen van je MCPD (Microsoft Professional Developer) .NET 4, dus meer kennis aanwezig bij externe ontwikkelaars.<br>\r\n<br>\r\nDocumentatie en static compilation zijn daarnaast twee zaken die veel tijd kunnen gaan schelen bij het ontwikkelen, namelijk sneller foutmeldingen zien, en sneller doorwerken na een compilatieslag.<br>\r\n<br>\r\nOok prettig is dat er een sterke partij achter staat, want wanneer Ayende (lead dev van NHibernate) onder een bus zou komen, zou dat NHibernate ernstig schaden.<br>\r\n<br>\r\n<b>Waarom g&#xE9;&#xE9;n Entity Framework?</b><br>\r\nDe omzetting van NH naar EF gaat een best gevaarlijke stap worden, omdat alle code die communiceert met een database herschreven moet worden. Fouten worden snel gemaakt, en hoeven niet altijd direct op te vallen in een codebase van 2.000.000 regels code. Daarnaast is het minder &apos;proven technology&apos; dan Hibernate, dat veel langer op de markt is.<br>\r\n<br>\r\nOok heeft Entity Framework wat rare quirks die ook in NHibernate voorkomen, zoals het zomaar weggooien van data als je Primary Key&apos;s niet uniek zijn gedefinieerd. Tevens gemerkt bij een eerdere werkgever dat EF inline queries nogal in de hand werkt; omdat je valide C# aan het typen bent, en geen obscure taal als HQL, dus er moet goed nagedacht worden hoe we de DataContext&apos;es gaan afschermen.<br>\r\n<br>\r\n<b>Long story short</b><br>\r\nWe hebben nog geen flauw idee wat we gaan doen <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"> .",
+    "nextLink": "http://glamour.tweakblogs.net/blog/5788/custom-attributes-op-enums.html",
+    "comments": [
+        {
+            "author": "woensdag 22 december 2010 15:36",
+            "date": "",
+            "contentHtml": "Wat ook leuk is aan EF is dat het allemaal classes zijn die overerfbaar zijn. Hierdoor kan je op een generieke manier b.v. een log systeem maken.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 22 december 2010 15:48",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html#r_77812\">leon schreef op woensdag 22 december 2010 @ 15:36:</a><br>\r\nWat ook leuk is aan EF is dat het allemaal classes zijn die overerfbaar zijn. Hierdoor kan je op een generieke manier b.v. een log systeem maken.</div></blockquote>Kan in NHibernate ook, alleen de mappings zijn niet overerfbaar; dat is wel vervelend.",
+            "ownReply": true
+        },
+        {
+            "author": "RedHornet",
+            "date": "woensdag 22 december 2010 15:53",
+            "contentHtml": "&#x2022;Runtime compilation van entities kost enorm veel tijd (30 sec. per compilatieslag)<br>\r\n<br>\r\nDie is op te lossen met Fluent NHibernate <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"> <a href=\"http://fluentnhibernate.org/\" rel=\"external\" title=\"http://fluentnhibernate.org/\">http://fluentnhibernate.org/</a><br>\r\n<br>\r\nOverigens is die losse koppeling nujuist een kracht van NHibernate ten opzichte van andere O/R-mappers. Of je die kracht wenst te gebruiken en hem fijn vindt is dat natuurlijk een persoonlijke mening, maar het is zeker geen design fout.<br>\r\n<br>\r\nMogelijk long story short: Ik kan zowel bij EF als bij NH je pros en cons met tegen-argumenten beantwoorden, maar je conclusie is correct. Dit is geen makkelijke keuze, als je het al een keuze wil laten zijn qua techniek. Een goed startpunt is: Willen wij standaard MS-functionaliteit gaan gebruiken (EF)? Zo ja, wat ruilen we daarvoor in bij NH? Voor beide zijn diverse extensies beschikbaar die de minpunten wegpoetsen en je een fijne dev-omgeving geven. Ik zou in elk geval de vraag op hoger architectuur niveau stellen voordat je deze diepte in duikt. Als je het eigenlijk al niet boeit wat je gebruikt op architectuur niveau, blijf dan gewoon lekker bij NH. Upgraden breekt wel wat van je code, maar dat is minimaal.",
+            "ownReply": false
+        },
+        {
+            "author": "RedHornet",
+            "date": "woensdag 22 december 2010 15:54",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html#r_77816\">creator1988 schreef op woensdag 22 december 2010 @ 15:48:</a><br>\r\n[...]<br>\r\n<br>\r\nKan in NHibernate ook, alleen de mappings zijn niet overerfbaar; dat is wel vervelend.</div></blockquote>Met Fluent NHibernate zijn ook de mappings overerfbaar. En ook in de normale NH is dat mogelijk op een bepaalde wijze (Alleen raad ik die je niet aan <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\">)",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 22 december 2010 15:59",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html#r_77817\">RedHornet schreef op woensdag 22 december 2010 @ 15:53:</a><br>\r\n&#x2022;Runtime compilation van entities kost enorm veel tijd (30 sec. per compilatieslag)<br>\r\n<br>\r\nDie is op te lossen met Fluent NHibernate <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"> <a href=\"http://fluentnhibernate.org/\" rel=\"external\" title=\"http://fluentnhibernate.org/\">http://fluentnhibernate.org/</a></div></blockquote>Hmm, niet gerealiseerd; we gebruiken het al wel op een paar plekken, maar meer voor de simplicity of it. Dit zet het een en ander wel in een ander daglicht, want dat is voor mij een van de grootste nadelen.",
+            "ownReply": true
+        },
+        {
+            "author": "RedHornet",
+            "date": "woensdag 22 december 2010 16:17",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html#r_77819\">creator1988 schreef op woensdag 22 december 2010 @ 15:59:</a><br>\r\n[...]<br>\r\n<br>\r\n<br>\r\nHmm, niet gerealiseerd; we gebruiken het al wel op een paar plekken, maar meer voor de simplicity of it. Dit zet het een en ander wel in een ander daglicht, want dat is voor mij een van de grootste nadelen.</div></blockquote>Denk dat ik het wel verkeerd gelezen had, want je noemt twee dingen: Bedoel je de compilatie van de proxies of de check of de mappings correct zijn? Eerste is namelijk niet mogelijk met fluentnhibernate (zover ik weet).",
+            "ownReply": false
+        },
+        {
+            "author": "Jeroen Mulder",
+            "date": "woensdag 22 december 2010 16:44",
+            "contentHtml": "<blockquote><div class=\"quote\">[1] Gooi een sloot developers met eten en alcohol in een groen hok en wacht tot ze het eens zijn.</div></blockquote>En &#xE9;&#xE9;n UX designer! ;-)",
+            "ownReply": false
+        },
+        {
+            "author": "whoami",
+            "date": "woensdag 22 december 2010 17:14",
+            "contentHtml": "AFAIK is Ayende niet de lead-dev van NHibernate, maar zijn er meerdere &apos;lead devs&apos;.",
+            "ownReply": false
+        },
+        {
+            "author": "bastv",
+            "date": "woensdag 22 december 2010 17:54",
+            "contentHtml": "is echt een persoonlijke keuze, zelf gebruik ik al jaren NHibernate en heb een paar weken geleden opnieuw gekeken naar EF (CTP code-first) omdat ik die designer juist een enorm minpunt vind.<br>\r\nMijn conclusie was toen dat EF wel werkt maar nog heel ver achter loopt op NHibernate.<br>\r\nEn dat was vooral op het gebied van Integration en Extensibility.<br>\r\nFluentNHibernate is trouwens wel sterk aan te raden.<br>\r\n<br>\r\nPS: <br>\r\nNHibernate 3 GA is al uit <a href=\"http://sourceforge.net/projects/nhibernate/files/NHibernate/3.0.0.GA/\" rel=\"external\" title=\"http://sourceforge.net/projects/nhibernate/files/NHibernate/3.0.0.GA/\">http://sourceforge.net/pr...iles/NHibernate/3.0.0.GA/</a><br>\r\nDe foutmeldingen zijn een stuk duidelijk en de linq provider is ook prima",
+            "ownReply": false
+        },
+        {
+            "author": "woensdag 22 december 2010 19:40",
+            "date": "",
+            "contentHtml": "is llblgen niet iets voor jullie?",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "donderdag 23 december 2010 11:48",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html#r_77822\">RedHornet schreef op woensdag 22 december 2010 @ 16:17:</a><br>\r\nDenk dat ik het wel verkeerd gelezen had, want je noemt twee dingen: Bedoel je de compilatie van de proxies of de check of de mappings correct zijn? Eerste is namelijk niet mogelijk met fluentnhibernate (zover ik weet).</div></blockquote>Ah, nee ik bedoelde inderdaad de compilatie van de proxies.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html#r_77824\">whoami schreef op woensdag 22 december 2010 @ 17:14:</a><br>\r\nAFAIK is Ayende niet de lead-dev van NHibernate, maar zijn er meerdere &apos;lead devs&apos;.</div></blockquote>Op papier, maar ik krijg in de praktijk toch altijd de indruk dat Ayende chief NHibernate is. Wellicht klopt mijn perceptie hierin niet?<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html#r_77828\">bastv schreef op woensdag 22 december 2010 @ 17:54:</a><br>\r\nMijn conclusie was toen dat EF wel werkt maar nog heel ver achter loopt op NHibernate.<br>\r\nEn dat was vooral op het gebied van Integration en Extensibility.</div></blockquote>Heb je hier wat concrete voorbeelden bij? Ik vind het erg lastig om situaties te bedenken waarin we echt nat gaan met EF.<blockquote><div class=\"quote\">NHibernate 3 GA is al uit <a href=\"http://sourceforge.net/projects/nhibernate/files/NHibernate/3.0.0.GA/\" rel=\"external\" title=\"http://sourceforge.net/projects/nhibernate/files/NHibernate/3.0.0.GA/\">http://sourceforge.net/pr...iles/NHibernate/3.0.0.GA/</a><br>\r\nDe foutmeldingen zijn een stuk duidelijk en de linq provider is ook prima</div></blockquote>Cool. Ik ga er eens mee spelen.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5799/nhibernate-vs-punt-entity-framework.html#r_77834\">Victor schreef op woensdag 22 december 2010 @ 19:40:</a><br>\r\nis llblgen niet iets voor jullie?</div></blockquote>Ik kom LLBLGen de laatste tijd bijna niet meer in de praktijk tegen, en eerlijk gezegd heeft het hier bij een aantal mensen een vervelende bijsmaak, door de gigantische hoeveelheid code die vroeger werd gegenereerd.<br>\r\nWe willen als we naar EF gaan overigens wel een deel van het omzetten van .hbm naar .ef4 doen met LLBLGen omdat die vanaf 3.1 (althans dat zei Frans) ook model-first kan doen vanuit een set met .hbm files.<p class=\"edit\">[Reactie gewijzigd op donderdag 23 december 2010 11:50]</p>",
+            "ownReply": true
+        },
+        {
+            "author": "bastv",
+            "date": "vrijdag 24 december 2010 13:29",
+            "contentHtml": "hbm naar fluent is nog makkelijker <a href=\"https://github.com/mvba/hbm-to-fnh\" rel=\"external\" title=\"https://github.com/mvba/hbm-to-fnh\">https://github.com/mvba/hbm-to-fnh</a><br>\r\n<br>\r\ngoede vergelijking kan je hier vinden<br>\r\n<a href=\"http://dotnetslackers.com/articles/ado_net/A-Feature-driven-Comparison-of-Entity-Framework-and-NHibernate-Multiple-Databases.aspx\" rel=\"external\" title=\"http://dotnetslackers.com/articles/ado_net/A-Feature-driven-Comparison-of-Entity-Framework-and-NHibernate-Multiple-Databases.aspx\">http://dotnetslackers.com...e-Multiple-Databases.aspx</a><br>\r\n(5 delen)<br>\r\nals je de conclusies leest weet je al meer dan genoeg <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "alwinuzz",
+            "date": "vrijdag 24 december 2010 16:17",
+            "contentHtml": "Als ik zo de dev-list van NH lees, is Fabio Maulo de lead dev. Maar er zijn meerdere committers en NH is opensource natuurlijk.<br>\r\n<br>\r\nAyende heeft de NH profiler en ook EF profiler gemaakt, gebruiken jullie dat? Hij is de laatste tijd z&apos;n eigen document database aan het bouwen, erg leuk spul maar nog zo nieuw en veranderlijk dat ik zelf niet heel Funda erop zou bouwen <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"> <br>\r\n<br>\r\nZelf zou ik eerst NH upgraden, kijken hoe dat gaat, en eventueel de designer gebruiken van LLBLGen. Je kan altijd nog naar EF maar dat gaat een hoop werk/tijd/geld kosten denk ik. Dit advies gebaseerd op een beetje NH ervaring en 0,0 EF benul  <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\">",
+            "ownReply": false
+        },
+        {
+            "author": "bastv",
+            "date": "zaterdag 25 december 2010 13:19",
+            "contentHtml": "NHprof is echt wel een aanrader vooral in het begin, op het gegeven moment heb je hem steeds minder nodig.",
+            "ownReply": false
+        }
+    ]
+}

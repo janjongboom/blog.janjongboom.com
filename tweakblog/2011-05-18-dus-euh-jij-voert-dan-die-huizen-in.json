@@ -1,0 +1,246 @@
+{
+    "title": "\"Dus euh, jij voert dan die huizen in?\"",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html",
+    "date": "2011-05-18T13:37:00.000Z",
+    "category": "Reacties (39)",
+    "views": 7597,
+    "articleHtml": "&quot;Maar, dat funda dat is toch wel af?&quot;; &quot;En dat doe je dan in je eentje neem ik aan?&quot;; &quot;Maak jij dan de foto&apos;s ofzo?&quot;; zomaar een paar citaten die in de afgelopen 2,5 jaar zijn langsgekomen tijdens feestjes. Daarom het enige echte dev-overzicht van funda, met hopelijk een verklaring hoe we 20 man fulltime bezig kunnen houden met het knutselen aan de site. Kan ik daarna mooi bit.ly/neeikvoergeenhuizenin hierheen laten linken en op een t-shirt printen.<br>\r\n<br>\r\n<b>Dus, hoeveel man loopt daar nou rond?</b><br>\r\nIn totaal bestaan we uit een man/vrouw of 50, waarvan er ~ 20 zich bezig houden met techniek, verdeeld over de volgende disciplines:<ul><li>- 1 Groot leider</li><li>- 1 Software architect</li><li>- 2 Project managers</li><li>- 2 Testers</li><li>- 4 User experience designers (waarvan 1 groot leider)</li><li>- 1 Release manager / interne technisch applicatiebeheerder</li><li>- 10 Software developers, waarvan 7 intern, en 3 op locatie</li></ul>En daarnaast nog 3 applicatiebeheerders die voornamelijk voor ons werken, maar in dienst van onze applicatiebeheer-partij zijn.<br>\r\n<br>\r\n<b>Maar, die site verandert toch nooit?</b><br>\r\nWel dus! Maar naast werk aan de sites funda.nl en fundainbusiness.nl hebben we ook nog een mobiele site, een iPhone app, een API, etc. De meeste tijd gaat echter zitten in ons makelaarportaal, de <a href=\"http://www.funda.nl/help/?pagina=/nl/algemene-teksten-funda-sites/fundadesk/help/werken-met-de-funda-desk\" rel=\"external\">funda desk</a>, waar we tools hebben voor het beheer van alle panden, media en kantoorgegevens. Omdat er voor <a href=\"http://www.funda.nl/verkoop/\" rel=\"external\">producten</a> die we daar aanbieden betaald moet worden, hebben we tevens een grote set aan business rules + aanverwante programma&apos;s die dit allemaal in goede banen leiden.<br><a name=\"more\"></a><br>\r\n<b>En wie voert die huizen in?</b><br>\r\nDe makelaars. Woningen kunnen worden aangeleverd via het uitwisselsysteem <a href=\"http://nieuws.nvm.nl/over_nvm/nvm_lidmaatschap/kantoorautomatisering.aspx\" rel=\"external\">Tiara</a> van de NVM, waar ook andere verenigingen hun aanbod invoeren. Of ze doen het via een <a href=\"http://www.funda.nl/help/?pagina=/nl/algemene-teksten-funda-sites/fundanl/help/aanbod-andere-websites\" rel=\"external\">gestandaardiseerde XML-feed</a>.<br>\r\n<br>\r\n<b>En van invoer naar de website?</b><br>\r\nAlle huizen (of garageboxen, kantoorpanden, you name it) worden in &#xE9;&#xE9;n centrale database opgeslagen. Uiteraard met versioning, waarbij we de historie van een pand volledig kunnen terugvinden. Hierna wordt er voor het huis een event ingeschoten in onze &apos;<a href=\"http://nl.wikipedia.org/wiki/Enterprise_service_bus\" rel=\"external\">service bus</a>&apos; oplossing. Deze slaat alle data plat naar een andere database, wat zorgt voor veel redundante data, maar zoeken op de site wel lekker snel maakt (alle data die je wil hebben in 1 query). Deze data wordt vervolgens weer geindexeerd door <a href=\"http://glamour.tweakblogs.net/blog/5948/solr-deel-1-introductie-tot-faceted-search.html\" rel=\"external\">Lucene Solr</a>, waarmee je kan zoeken in al het aanbod.<br>\r\n<br>\r\n<b>Veel code?</b><br>\r\nZo&apos;n 2 miljoen regels bij elkaar. We proberen het wel te verminderen :-).<br>\r\n<br>\r\n<b>En wat doen al die developers nu dan?</b><br>\r\nMomenteel zit er 1 in de ziekenboeg, zitten er 3 op onderhoud (bugs, kleine nieuwe dingen), zijn er 3 bezig met het omzetten van &#xE1;l onze zoekfuncties naar Solr, is er 1 bezig met een nieuw Profielen systeem, 1 met verbeteringen voor het <a href=\"http://www.funda.nl/recreatie/\" rel=\"external\">recreatie</a> onderdeel en 1 met de implementatie van CRM. En dan zijn we alweer door al onze devs heen.<br>\r\n<br>\r\n<b>Toch nog niet overtuigd?</b><br>\r\nVragen mogen in de comments.",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6538/oauth-provider-in-net.html",
+    "comments": [
+        {
+            "author": "naarden 4ever",
+            "date": "woensdag 18 mei 2011 15:44",
+            "contentHtml": "Best mooie baan lijkt me dat toch. Ik moet er niets van hebben (als ik al javascript hoor haak ik al af) maar je hebt toch wel een stukje geholpen bij de keuze van een nieuw huis van mensen. Als een website niet werkt, is het niet interessant, de gebruiker is dom en wilt alleen maar dat het werkt. Dan vind ik Funda toch een geslaagd project. <br>\r\n<br>\r\nRespect voor je werk! En nu weer terug naar Duits... <img src=\"http://tweakimg.net/g/s/cry.gif\" width=\"15\" height=\"15\" alt=\":&apos;(\">",
+            "ownReply": false
+        },
+        {
+            "author": "Ventieldopje",
+            "date": "woensdag 18 mei 2011 15:45",
+            "contentHtml": "Groot leider <img src=\"http://tweakimg.net/g/s/worshippy.gif\" width=\"29\" height=\"15\" alt=\"_/-\\o_\">  Klinkt als een secte daar bij jullie <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\">",
+            "ownReply": false
+        },
+        {
+            "author": "BeerenburgCola",
+            "date": "woensdag 18 mei 2011 15:50",
+            "contentHtml": "Ik kijk wel eens op funda en heb de veranderingen de afgelopen jaren zeker gezien hoor. <br>\r\nE&#xE9;n van de betere sites. Kun je ook iets aan de Amsterdamse Huizenprijzen doen ?  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><p class=\"edit\">[Reactie gewijzigd op woensdag 18 mei 2011 15:50]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "CodeCaster",
+            "date": "woensdag 18 mei 2011 15:53",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88710\">Ventieldopje schreef op woensdag 18 mei 2011 @ 15:45:</a><br>\r\nKlinkt als een secte daar bij jullie <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\"></div></blockquote>Met die &quot;groot leider&quot; wel een beetje ja. <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 18 mei 2011 15:57",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88713\">CodeCaster schreef op woensdag 18 mei 2011 @ 15:53:</a><br>\r\n[...]<br>\r\n<br>\r\nMet die &quot;groot leider&quot; wel een beetje ja. <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"></div></blockquote>We hoeven hem alleen op vrijdagen zo te noemen  <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\">",
+            "ownReply": true
+        },
+        {
+            "author": "Puc van S.",
+            "date": "woensdag 18 mei 2011 16:07",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88715\">creator1988 schreef op woensdag 18 mei 2011 @ 15:57:</a><br>\r\n[...]<br>\r\n<br>\r\nWe hoeven hem alleen op vrijdagen zo te noemen  <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"></div></blockquote>Want? De rest van de week is die er niet en noemen jullie hem &quot;Kleine bemoeial&quot;? <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\">",
+            "ownReply": false
+        },
+        {
+            "author": "CopyCatz",
+            "date": "woensdag 18 mei 2011 16:12",
+            "contentHtml": "Met de huidige huizenmarkt kan een statische excel tabel toch ook wel?  <img src=\"http://tweakimg.net/g/s/devil.gif\" width=\"15\" height=\"15\" alt=\"}&gt;\">",
+            "ownReply": false
+        },
+        {
+            "author": "RobIII",
+            "date": "woensdag 18 mei 2011 16:17",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88715\">creator1988 schreef op woensdag 18 mei 2011 @ 15:57:</a><br>\r\n[...]<br>\r\n<br>\r\nWe hoeven hem alleen op vrijdagen zo te noemen  <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"></div></blockquote><span class=\"me\">* RobIII checkt kalender; nope: het is woensdag <img src=\"http://tweakimg.net/g/s/vork.gif\" width=\"20\" height=\"15\" alt=\":Y)\"></span><p class=\"edit\">[Reactie gewijzigd op woensdag 18 mei 2011 16:17]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "BillsGate",
+            "date": "woensdag 18 mei 2011 16:19",
+            "contentHtml": "Oke, maar voer jij nou die huizen in of niet?<br>\r\n<br>\r\n<sub>Serieus: Het lijkt me een leuk team en een leuk project om aan te mogen werken. En het resultaat mag er zijn!</sub>",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 18 mei 2011 16:25",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88717\">CopyCatz schreef op woensdag 18 mei 2011 @ 16:12:</a><br>\r\nMet de huidige huizenmarkt kan een statische excel tabel toch ook wel?  <img src=\"http://tweakimg.net/g/s/devil.gif\" width=\"15\" height=\"15\" alt=\"}&gt;\"></div></blockquote><a href=\"http://www.dumpert.nl/mediabase/766601/9e02460b/wondere_wereld_over_funda.html\" rel=\"external\" title=\"http://www.dumpert.nl/mediabase/766601/9e02460b/wondere_wereld_over_funda.html\">http://www.dumpert.nl/med...re_wereld_over_funda.html</a>",
+            "ownReply": true
+        },
+        {
+            "author": "Blasterxp",
+            "date": "woensdag 18 mei 2011 16:40",
+            "contentHtml": "ik heb dr mijn huis weg .... hips hoor <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "Leader98",
+            "date": "woensdag 18 mei 2011 16:40",
+            "contentHtml": "Nu nog een mooie iPhone app....",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 18 mei 2011 16:50",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88722\">Leader98 schreef op woensdag 18 mei 2011 @ 16:40:</a><br>\r\nNu nog een mooie iPhone app....</div></blockquote>Tadaaa:<br>\r\n<a href=\"http://itunes.apple.com/nl/app/funda/id367593127?mt=8\" rel=\"external\" title=\"http://itunes.apple.com/nl/app/funda/id367593127?mt=8\">http://itunes.apple.com/nl/app/funda/id367593127?mt=8</a><br>\r\n<a href=\"http://m.funda.nl/\" rel=\"external\" title=\"http://m.funda.nl/\">http://m.funda.nl/</a>",
+            "ownReply": true
+        },
+        {
+            "author": "Apache",
+            "date": "woensdag 18 mei 2011 17:00",
+            "contentHtml": "Ik zit met een gelijkaardig issue als ik zoiets moet uitleggen aan mensen die vragen wat ik nu eigenlijk voor job doe ... de business komt neer op een bank maar in een speciale context (namelijk treasury center voor grote multinational) waarbij de &quot;klant&quot; dus een onderaanneming is.<br>\r\n<br>\r\nMaar derover bloggen ga ik niet riskeren met betrekking tot NDA&apos;s enz <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\"><br>\r\n<br>\r\nMeestal beperk ik het zelfs tot &quot;Ik ben programmeur&quot;, software developer dekt de lading al veel beter want ik doe uiteraard veel meer dan programmeren, maar dan word het voor de gemiddelde persoon al te moeilijk om een beeld te krijgen wat je doet.<br>\r\n<br>\r\n1 van mijn beste vrienden dacht jaren lang dat ik websites maakte  <img src=\"http://tweakimg.net/g/s/nosmile.gif\" width=\"15\" height=\"15\" alt=\":/\">",
+            "ownReply": false
+        },
+        {
+            "author": "troxx",
+            "date": "woensdag 18 mei 2011 17:29",
+            "contentHtml": "<blockquote><div class=\"quote\">Tadaaa:<br>\r\n<a href=\"http://itunes.apple.com/nl/app/funda/id367593127?mt=8\" rel=\"external\" title=\"http://itunes.apple.com/nl/app/funda/id367593127?mt=8\">http://itunes.apple.com/nl/app/funda/id367593127?mt=8</a><br>\r\n<a href=\"http://m.funda.nl/\" rel=\"external\" title=\"http://m.funda.nl/\">http://m.funda.nl/</a></div></blockquote>Zit er ook een iPad app aan te komen? Dat zou helemaal briljant zijn. de funda iPhone app op de iPad werkt toch niet helemaal lekker.<br>\r\n<br>\r\nAnyway, nice job!",
+            "ownReply": false
+        },
+        {
+            "author": "pcprutser",
+            "date": "woensdag 18 mei 2011 17:38",
+            "contentHtml": "Die video mogelijkheid is toch nog redelijk nieuw? Wordt er al veel gebruik van gemaakt?<p class=\"edit\">[Reactie gewijzigd op woensdag 18 mei 2011 17:44]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 18 mei 2011 17:44",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88726\">troxx schreef op woensdag 18 mei 2011 @ 17:29:</a><br>\r\n[...]<br>\r\nZit er ook een iPad app aan te komen? Dat zou helemaal briljant zijn. de funda iPhone app op de iPad werkt toch niet helemaal lekker.</div></blockquote>Ja, deze is wel in ontwikkeling; maar ik kan geen tijdsindicatie geven.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88727\">pcprutser schreef op woensdag 18 mei 2011 @ 17:38:</a><br>\r\nDie video&apos;s zijn redelijk nieuw toch? Wordt er al veel gebruik van gemaakt?</div></blockquote>Er zijn inmiddels ruim 7.000 objecten voorzien van een video. Ongeveer 3% van al onze koopwoningen. Zit wel een duidelijke stijgende lijn in.",
+            "ownReply": true
+        },
+        {
+            "author": "pcprutser",
+            "date": "woensdag 18 mei 2011 17:57",
+            "contentHtml": "Ook regio Apeldoorn?",
+            "ownReply": false
+        },
+        {
+            "author": "EvilWhiteDragon",
+            "date": "woensdag 18 mei 2011 18:19",
+            "contentHtml": "Zijn jullie ook al bezig met een Windows Phone app bezig, of is die markt momenteel nog te klein? <br>\r\nIk verwacht dat zodra het officieel in NL gelanceerd wordt, het namelijk snel geadopteerd wordt.",
+            "ownReply": false
+        },
+        {
+            "author": "Appesteijn",
+            "date": "woensdag 18 mei 2011 18:46",
+            "contentHtml": "En Scrummen jullie ook?",
+            "ownReply": false
+        },
+        {
+            "author": "sbmuc",
+            "date": "woensdag 18 mei 2011 20:31",
+            "contentHtml": "Ik vind Funda geweldig. Nu nog een optie om ook huizen met erfpacht te filteren!  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "Jrz",
+            "date": "woensdag 18 mei 2011 21:18",
+            "contentHtml": "Idd..  mot geen pacht <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><br>\r\n<br>\r\niPad ontwikkeling duurt m.i. veel telang.<br>\r\nAl die makelaartjes vinden dat toch bloedje geil om te laten zien?",
+            "ownReply": false
+        },
+        {
+            "author": "woensdag 18 mei 2011 21:55",
+            "date": "",
+            "contentHtml": "Interessant hoor daar komt meer bij kijken dan de meeste mensen denken. Maar uh kan jij de huizen prijzen niet wat verlagen, levert gegarandeerd meer bezoekers op <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 18 mei 2011 23:04",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88734\">EvilWhiteDragon schreef op woensdag 18 mei 2011 @ 18:19:</a><br>\r\nZijn jullie ook al bezig met een Windows Phone app bezig, of is die markt momenteel nog te klein? <br>\r\nIk verwacht dat zodra het officieel in NL gelanceerd wordt, het namelijk snel geadopteerd wordt.</div></blockquote>In principe kiezen we voor de mobiele site als kanaal voor alle devices die niet iOS zijn. Naar mijn mening ook een van de beste sites van Nederland. Nu ook al bruikbaar op je WP7 device. <a href=\"http://m.funda.nl\" rel=\"external\" title=\"http://m.funda.nl\">http://m.funda.nl</a><blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88739\">sbmuc schreef op woensdag 18 mei 2011 @ 20:31:</a><br>\r\nIk vind Funda geweldig. Nu nog een optie om ook huizen met erfpacht te filteren!  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Er komen, na de implementatie van Solr voor alle zoekonderdelen, betere filters aan; dat zorgt bijvoorbeeld voor het selecteren van meerdere bouwperiodes, of het juist niet selecteren van parkeerplaatsen bij het zoeken naar goedkope huur. Of erfpacht hier onderdeel van gaat zijn durf ik niet te zeggen.",
+            "ownReply": true
+        },
+        {
+            "author": "Hennie-M",
+            "date": "woensdag 18 mei 2011 23:15",
+            "contentHtml": "En hoe doen jullie het systeem beheer? Wie onderhoud jullie werkplekken en de servers? Of kopen jullie webruimte in?",
+            "ownReply": false
+        },
+        {
+            "author": "NitroX infinity",
+            "date": "donderdag 19 mei 2011 00:29",
+            "contentHtml": "Ik hoop dat bij die nieuwe filters er ook voor zorgen dat je naar huizen met een plat dak kunt zoeken.<br>\r\n<br>\r\nOok zouden jullie eens met de verhuurders van sociale huurwoningen om de tafel moeten gaan zitten. Ik vind het verdomd lastig om een huurhuis in een ander gebied te vinden en het vergelijken van huizen tussen corporaties is ook verdoemd moeilijk. Funda zou hier een zeer overzichtelijk geheel van kunnen maken.<p class=\"edit\">[Reactie gewijzigd op donderdag 19 mei 2011 00:30]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "macnerd",
+            "date": "donderdag 19 mei 2011 00:42",
+            "contentHtml": "Vooropgesteld: Funda.nl is een van de betere websites/webapplicaties.<br>\r\n<br>\r\nToch heb ik nog wel 1 ding: ik vind het niet handig dat je geen combinaties kunt maken binnen dezelfde eigenschappengroep. Dus dat je in plaats van 1 wijk er een paar kunt opgeven die je interessant vindt. Of dat je kunt zoeken naar een woonhuis of appartement in 1 zoekopdracht. <br>\r\n<br>\r\nWat er verder echt nog wel in mag is een filter voor recreatiewoningen. Daar mag je namelijk zelden doorlopend wonen en het is daarmee niet interessant voor een zoektocht naar woonruimte. Andersom kunnen mensen die specifiek op zoek zijn naar zo&apos;n woning deze ook makkelijker vinden.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "donderdag 19 mei 2011 07:26",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88756\">Hennie-M schreef op woensdag 18 mei 2011 @ 23:15:</a><br>\r\nEn hoe doen jullie het systeem beheer? Wie onderhoud jullie werkplekken en de servers? Of kopen jullie webruimte in?</div></blockquote>We hebben intern twee systeembeheerders (geen onderdeel van &apos;ons&apos; team) en 1 technisch applicatiebeheerder zitten. Intern hebben we bovendien 5 test-omgevingen voor projecten, trunk en de release builds, die vallen hier ook onder. Onze acceptatieomgeving draait bij Terramark in de cloud, waar ook onze <a href=\"http://axicombnl.blogspot.com/2011/05/fundanl-vertrouwt-op-terremark-voor.html\" rel=\"external\">disaster recovery</a> draait. Onze productieservers staan gewoon in een datacenter, en worden beheerd door Bluedome. Al het systeem- en applicatiebeheer wordt gedaan door Mirabeau Applicatiemanagement.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88762\">macnerd schreef op donderdag 19 mei 2011 @ 00:42:</a><br>\r\nVooropgesteld: Funda.nl is een van de betere websites/webapplicaties.<br>\r\n<br>\r\nToch heb ik nog wel 1 ding: ik vind het niet handig dat je geen combinaties kunt maken binnen dezelfde eigenschappengroep. Dus dat je in plaats van 1 wijk er een paar kunt opgeven die je interessant vindt. Of dat je kunt zoeken naar een woonhuis of appartement in 1 zoekopdracht. <br>\r\n<br>\r\nWat er verder echt nog wel in mag is een filter voor recreatiewoningen. Daar mag je namelijk zelden doorlopend wonen en het is daarmee niet interessant voor een zoektocht naar woonruimte. Andersom kunnen mensen die specifiek op zoek zijn naar zo&apos;n woning deze ook makkelijker vinden.</div></blockquote>Staat allemaal op de planning. Het recreatieverhaaltje binnen enkele maanden, de filters voor wanneer het Solr project is afgerond.",
+            "ownReply": true
+        },
+        {
+            "author": "donderdag 19 mei 2011 08:51",
+            "date": "",
+            "contentHtml": "Welke ESB leverancier gebruiken jullie/funda?",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "donderdag 19 mei 2011 09:22",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88770\">eskiya schreef op donderdag 19 mei 2011 @ 08:51:</a><br>\r\nWelke ESB leverancier gebruiken jullie/funda?</div></blockquote>Gebruiken een intern ontwikkeld systeem. Niet helemaal ESB volgens het boekje, maar het is wel event-driven, en je kan er subscribers aan hangen in C# en SQL.",
+            "ownReply": true
+        },
+        {
+            "author": "onok",
+            "date": "donderdag 19 mei 2011 11:42",
+            "contentHtml": "Heb mijn huis onlangs ook via Funda gekocht. Prima site <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "kipusoep",
+            "date": "donderdag 19 mei 2011 11:49",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88774\">onok schreef op donderdag 19 mei 2011 @ 11:42:</a><br>\r\nHeb mijn huis onlangs ook via Funda gekocht. Prima site <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>+1! <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "densoN",
+            "date": "donderdag 19 mei 2011 15:42",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88774\">onok schreef op donderdag 19 mei 2011 @ 11:42:</a><br>\r\nHeb mijn huis onlangs ook via Funda gekocht. Prima site <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Idem, bedankt jongens  <img src=\"http://tweakimg.net/g/s/worshippy.gif\" width=\"29\" height=\"15\" alt=\"_/-\\o_\">",
+            "ownReply": false
+        },
+        {
+            "author": "Strunkie",
+            "date": "donderdag 19 mei 2011 18:18",
+            "contentHtml": "Alleen jammer dat je niet met iDeal kan betalen!  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\">",
+            "ownReply": false
+        },
+        {
+            "author": "L0we",
+            "date": "vrijdag 20 mei 2011 10:35",
+            "contentHtml": "- 10 Software developers, waarvan 7 intern, <b>en 3 op locatie</b><br>\r\n<br>\r\n<sub>Aan de keukentafel?  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"12\" height=\"12\" alt=\":+\"></sub> <br>\r\n<br>\r\nWat voor locaties zijn dat dan?",
+            "ownReply": false
+        },
+        {
+            "author": "Roytoch",
+            "date": "vrijdag 20 mei 2011 18:04",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88830\">L0we schreef op vrijdag 20 mei 2011 @ 10:35:</a><br>\r\n- 10 Software developers, waarvan 7 intern, <b>en 3 op locatie</b><br>\r\n<br>\r\n<sub>Aan de keukentafel?  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"12\" height=\"12\" alt=\":+\"></sub> <br>\r\n<br>\r\nWat voor locaties zijn dat dan?</div></blockquote>Bij makelaars toch? Als ik dat zo lees...",
+            "ownReply": false
+        },
+        {
+            "author": "_Apache_",
+            "date": "maandag 24 oktober 2011 14:16",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_88830\">L0we schreef op vrijdag 20 mei 2011 @ 10:35:</a><br>\r\n- 10 Software developers, waarvan 7 intern, <b>en 3 op locatie</b><br>\r\n<br>\r\n<sub>Aan de keukentafel?  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"12\" height=\"12\" alt=\":+\"></sub> <br>\r\n<br>\r\nWat voor locaties zijn dat dan?</div></blockquote>Bij de koffieautomaat! <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 24 oktober 2011 14:26",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6577/dus-euh-jij-voert-dan-die-huizen-in.html#r_97871\">_Apache_ schreef op maandag 24 oktober 2011 @ 14:16:</a><br>\r\n[...]<br>\r\n<br>\r\nBij de koffieautomaat! <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\"></div></blockquote><img src=\"http://tweakimg.net/g/s/devil.gif\" width=\"15\" height=\"15\" alt=\"}&gt;\"> nee, er zat een permanent dev team van 3 Mirabeau&apos;ers bij Mirabeau op locatie. Inmiddels heeft funda een tweede kantoor geopend (op 20 meter van HQ) dus nu is er weer ruimte.",
+            "ownReply": true
+        },
+        {
+            "author": "donderdag 10 januari 2013 16:14",
+            "date": "",
+            "contentHtml": "Beste,<br>\r\n<br>\r\nGraag zou ik voor ons hypotheekforum (<a href=\"http://www.hypotheek-forum.info\" rel=\"external\" title=\"http://www.hypotheek-forum.info\">www.hypotheek-forum.info</a>) enkele cijfers willen ontvangen over woningen welke voorheen te koop stonden, en nu te huur staan op jullie site. Dit in het licht van de huidige ontwikkelingen; het zou een zeer interessant artikel voor het forum kunnen opleveren! <br>\r\n<br>\r\nIk heb deze vraag reeds per e-mail gesteld, maar heb tot op heden nog geen antwoord mogen ontvangen. Hopelijk lukt het via deze wijze.<br>\r\n<br>\r\nMvg.,<br>\r\nBitmap",
+            "ownReply": false
+        }
+    ]
+}

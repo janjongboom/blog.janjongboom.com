@@ -1,0 +1,102 @@
+{
+    "title": "Meningen gezocht: Versioning binnen de API",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6240/meningen-gezocht-versioning-binnen-de-api.html",
+    "date": "2011-03-07T13:00:00.000Z",
+    "category": "Frontend",
+    "views": 3898,
+    "articleHtml": "Nu onze API een jaar of twee operationeel is beginnen we steeds beter een beeld te krijgen hoe we bepaalde zaken willen oplossen. Het hernoemen van API functies, of van je entities die je gebruikt is echter niet mogelijk omdat er allerlei partijen zijn die gebruik maken van de huidige versie van de API. Hoe zouden we dit moeten gaan oplossen? We kunnen bijvoorbeeld:<ul><li>Nieuwe versie van de API lanceren, maar wel zorgen dat de oude versie blijft werken. Extra werk.</li><li>Functies hernoemen, maar ook laten bestaan onder de oude naam.</li><li>Bepaalde onderdelen &apos;deprecaten&apos;, en ze na een half jaar verwijderen.</li></ul>Zie ik nog iets eenvoudigs over het hoofd, en wie heeft hier al eens serieus over nagedacht?",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6214/zoekbox-live%21.html",
+    "comments": [
+        {
+            "author": "YopY",
+            "date": "maandag 07 maart 2011 14:09",
+            "contentHtml": "* Nieuwe functies (die in bijvoorbeeld versie 1.1 van de API verschijnen) documenteren met een &apos;@since&apos;-tag (Javadoc notatie) met daarbij de versie.<br>\r\n<br>\r\n * Oude functies die je wilt verwijderen herschrijven zodat ze de nieuwe functies gebruiken, aanmerken als @deprecated met daarbij een opmerking als &apos;Word in versie 2.0 van de API verwijderd, gebruik *verwijzing naar die-en-die functie* svp&apos;. En dan met versie 2.0 verwijderen.<br>\r\n<br>\r\nEigenlijk wat je al aangeeft, alle drie functies in &#xE9;&#xE9;n. Je behoudt de oude functies, maar herschrijft hun implementaties zodat ze de nieuwe functies gebruiken en markeert ze als deprecated, zodat je de gebruikers van de API de kans geeft om ze te vervangen.<br>\r\n<br>\r\nNatuurlijk als je een nieuwe versie van je API uitgeeft wel aangeven welke functies deprecated zijn geworden. En bij major versies, ofwel de versies die niet meer backwards compatible zijn, netjes aangeven d&#xE1;t ze niet meer backwards compatible zijn zoals in versie &lt;zoveel&gt; aangegeven, en evt. upgrade instructies voor zover die nog niet aangegeven zijn bijvoegen.<br>\r\n<br>\r\nEn d&apos;r zijn genoeg die hier al eens serieus over nagedacht hebben, <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":p\">. Google eens naar termen als &apos;API versioning&apos;, &apos;deprecation&apos;, &apos;API release / version management&apos;, dat soort zaken.",
+            "ownReply": false
+        },
+        {
+            "author": "CodeCaster",
+            "date": "maandag 07 maart 2011 14:20",
+            "contentHtml": "Microsoft <a href=\"http://msdn.microsoft.com/en-us/library/ms733832.aspx\" rel=\"external\">heeft</a> hier ook wel een aardig lijstje do&apos;s en don&apos;ts voor.",
+            "ownReply": false
+        },
+        {
+            "author": "crisp",
+            "date": "maandag 07 maart 2011 14:40",
+            "contentHtml": "Toevallig las ik over dit onderwerp onlangs deze blogpost: <a href=\"http://www.nczonline.net/blog/2011/02/22/the-importance-of-being-versioned/\" rel=\"external\" title=\"http://www.nczonline.net/blog/2011/02/22/the-importance-of-being-versioned/\">http://www.nczonline.net/...tance-of-being-versioned/</a> <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 07 maart 2011 14:48",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6240/meningen-gezocht-versioning-binnen-de-api.html#r_83889\">YopY schreef op maandag 07 maart 2011 @ 14:09:</a><br>\r\n* Nieuwe functies (die in bijvoorbeeld versie 1.1 van de API verschijnen) documenteren met een &apos;@since&apos;-tag (Javadoc notatie) met daarbij de versie.<br>\r\n<br>\r\n * Oude functies die je wilt verwijderen herschrijven zodat ze de nieuwe functies gebruiken, aanmerken als @deprecated met daarbij een opmerking als &apos;Word in versie 2.0 van de API verwijderd, gebruik *verwijzing naar die-en-die functie* svp&apos;. En dan met versie 2.0 verwijderen.<br>\r\n<br>\r\nEigenlijk wat je al aangeeft, alle drie functies in &#xE9;&#xE9;n. Je behoudt de oude functies, maar herschrijft hun implementaties zodat ze de nieuwe functies gebruiken en markeert ze als deprecated, zodat je de gebruikers van de API de kans geeft om ze te vervangen.<br>\r\n<br>\r\nNatuurlijk als je een nieuwe versie van je API uitgeeft wel aangeven welke functies deprecated zijn geworden. En bij major versies, ofwel de versies die niet meer backwards compatible zijn, netjes aangeven d&#xE1;t ze niet meer backwards compatible zijn zoals in versie &lt;zoveel&gt; aangegeven, en evt. upgrade instructies voor zover die nog niet aangegeven zijn bijvoegen.</div></blockquote>Probleem is toch wel een beetje dat we elke twee weken een nieuwe versie pushen, en daar zitten ook wijzigingen in de API bij. Dat betekent elke 2 weken een nieuwe versie van de API, en daar kunnen dingen inzitten die niet breaking zijn voor gebruikers van de API maar wel voor bijv. de database. Dus versie 7.5.1 kan niet meer werken omdat we in de DB wat hebben gewijzigd; hoe ga je daar dan mee om? Met een JS library die nergens op depend is dat makkelijker, maar het is haast onmogelijk om de werking van oude versies te garanderen zonder ze constant bij te moeten houden.",
+            "ownReply": true
+        },
+        {
+            "author": "Apache",
+            "date": "maandag 07 maart 2011 15:04",
+            "contentHtml": "@creator1988: dan is je coupling imo gewoon te hoog je publieke api mag niet gebonden zijn aan hoe de zaken gepersist worden.<br>\r\n<br>\r\nAls je echt elke 2 weken api changes hebt (niet in de achterliggende implementatie) zou ik me toch ernstig vragen beginnen stellen of jullie wel genoeg nadenken over de publiek interface.<br>\r\n<br>\r\nVerder zou ik dan gewoon verschillende api versies naast elkaar aanbieden waarbij de oude versies worden omgebouwd tot facades op de laatste versie. Hoeveel oude versies je dan blijft supporten is een andere non-it vraag <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><br>\r\n<br>\r\nWanneer api&apos;s wijzigen om functionaliteit toe te voegen zou ik eerder eens beginnen nadenken over de modulariteit in de api en misschien een opdeling maken om bepaalde updates minder frequent te moeten maken.",
+            "ownReply": false
+        },
+        {
+            "author": "Sgreehder",
+            "date": "maandag 07 maart 2011 15:12",
+            "contentHtml": "Waarom pak je niet nieuwe versies van een API om de oude heen? Als het dan om een nieuwe functie gaat, passeer je de oude API toch automagisch. Dat &apos;extra&apos; werk is maar hoe je het bekijkt.",
+            "ownReply": false
+        },
+        {
+            "author": "Jogai",
+            "date": "maandag 07 maart 2011 15:13",
+            "contentHtml": "<a href=\"http://semver.org/\" rel=\"external\" title=\"http://semver.org/\">http://semver.org/</a>",
+            "ownReply": false
+        },
+        {
+            "author": "bredend",
+            "date": "maandag 07 maart 2011 15:40",
+            "contentHtml": "Als je een functie deprecated maakt kan je er ook een korte sleep() inbouwen. Als ontmoedigingsbeleid zeg maar <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\">",
+            "ownReply": false
+        },
+        {
+            "author": "maandag 07 maart 2011 16:32",
+            "date": "",
+            "contentHtml": "Adapter pattern toepassen?",
+            "ownReply": false
+        },
+        {
+            "author": "Afvalzak",
+            "date": "maandag 07 maart 2011 16:37",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6240/meningen-gezocht-versioning-binnen-de-api.html#r_83909\">bredend schreef op maandag 07 maart 2011 @ 15:40:</a><br>\r\nAls je een functie deprecated maakt kan je er ook een korte sleep() inbouwen. Als ontmoedigingsbeleid zeg maar <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"></div></blockquote>Lol, en een paar pop-ups, dan zijn ze zo overgeschakeld. <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 07 maart 2011 16:51",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6240/meningen-gezocht-versioning-binnen-de-api.html#r_83900\">Apache schreef op maandag 07 maart 2011 @ 15:04:</a><br>\r\n@creator1988: dan is je coupling imo gewoon te hoog je publieke api mag niet gebonden zijn aan hoe de zaken gepersist worden.<br>\r\n<br>\r\nAls je echt elke 2 weken api changes hebt (niet in de achterliggende implementatie) zou ik me toch ernstig vragen beginnen stellen of jullie wel genoeg nadenken over de publiek interface.</div></blockquote>Nee, er zijn niet elke 2 weken changes in de API interface, maar wel in de achterliggende codebase. Lijkt me vrij logisch dat je versies vanzelf niet meer gaan werken als het achterliggende datamodel wijzigt, en geen voorbeeld van te thighte coupling.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6240/meningen-gezocht-versioning-binnen-de-api.html#r_83902\">Sgreehder schreef op maandag 07 maart 2011 @ 15:12:</a><br>\r\nWaarom pak je niet nieuwe versies van een API om de oude heen? Als het dan om een nieuwe functie gaat, passeer je de oude API toch automagisch. Dat &apos;extra&apos; werk is maar hoe je het bekijkt.</div></blockquote>Ja, dat werkt wel voor functies, maar niet voor entiteiten?<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6240/meningen-gezocht-versioning-binnen-de-api.html#r_83916\">Cagalli schreef op maandag 07 maart 2011 @ 16:32:</a><br>\r\nAdapter pattern toepassen?</div></blockquote>We gebruiken al <a href=\"http://glamour.tweakblogs.net/blog/6005/bouw-eens-een-api-met-wcf-deel-3-domain-entities-converteren-naar-api-entities.html\" rel=\"external\">zoiets</a>, maar ik zie niet hoe dit me gaat helpen met versioning?",
+            "ownReply": true
+        },
+        {
+            "author": "-RetroX-",
+            "date": "maandag 07 maart 2011 17:00",
+            "contentHtml": "Ligt ook aan hoe goed je basis is opgebouwd. Als versiebeheer echt een probleem is dan moet je overwegen om de basis eens opnieuw te zetten met een versie-systeem. En dan uitbrengen onder 2.0 (en de orginele/huidige api) laten verlopen in 3 maanden.",
+            "ownReply": false
+        },
+        {
+            "author": "YopY",
+            "date": "maandag 07 maart 2011 21:18",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6240/meningen-gezocht-versioning-binnen-de-api.html#r_83895\">creator1988 schreef op maandag 07 maart 2011 @ 14:48:</a><br>\r\n[...]<br>\r\n<br>\r\n<br>\r\nProbleem is toch wel een beetje dat we elke twee weken een nieuwe versie pushen, en daar zitten ook wijzigingen in de API bij. Dat betekent elke 2 weken een nieuwe versie van de API, en daar kunnen dingen inzitten die niet breaking zijn voor gebruikers van de API maar wel voor bijv. de database. Dus versie 7.5.1 kan niet meer werken omdat we in de DB wat hebben gewijzigd; hoe ga je daar dan mee om? Met een JS library die nergens op depend is dat makkelijker, maar het is haast onmogelijk om de werking van oude versies te garanderen zonder ze constant bij te moeten houden.</div></blockquote>Voor elke versie die je vrijgeeft (elke release) lever je ook een upgrade script om van de vorige release naar deze release te upgraden (een update script, effectief). Stel je hebt een versie 1.0 en een versie 1.5, met 20 tussenliggende versies. Voor elke versie voer je dan het upgrade script uit - versie 1.0 legt de originele database neer, versie 1.0.1 voegt er indexes aan toe, versie 1.1 doet er een tabel en haalt een paar oude kolommen weg, etc. Zie ook bijvoorbeeld <a href=\"http://martinfowler.com/articles/evodb.html\" rel=\"external\">Evolutionary database design</a>.<br>\r\n<br>\r\nEen database migratiescript, dus. Natuurlijk moet je dan wel voor elke release een soort van &apos;test&apos; database bijhouden waarmee je die upgrades kunt testen. Maar als het goed is is dat gewoon onderdeel van je codebase (zit ergens bij je tests), en groeit dat mee met je releases.<br>\r\n<br>\r\nIk zal maar aannemen dat jullie op dit moment ook al zoiets toepassen, daar ik niet geloof dat jullie bij elke nieuwe release de klant(en) hun data weg laten gooien.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 07 maart 2011 22:23",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6240/meningen-gezocht-versioning-binnen-de-api.html#r_83930\">YopY schreef op maandag 07 maart 2011 @ 21:18:</a><br>\r\nIk zal maar aannemen dat jullie op dit moment ook al zoiets toepassen, daar ik niet geloof dat jullie bij elke nieuwe release de klant(en) hun data weg laten gooien.</div></blockquote>Doen we ook, maar dat zou betekenen dat we voor elke versie een kopie van de database hebben die niet meer wordt bijgewerkt; want de applicaties die de updates verzorgen op de data werken ook alleen tegen de nieuwe versie aan?",
+            "ownReply": true
+        },
+        {
+            "author": "dinsdag 08 maart 2011 20:21",
+            "date": "",
+            "contentHtml": "Gebruik een <a href=\"http://en.wikipedia.org/wiki/Representational_State_Transfer#Guiding_principles_of_a_REST_interface\" rel=\"external\">uniforme interface</a>",
+            "ownReply": false
+        }
+    ]
+}

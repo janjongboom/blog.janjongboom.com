@@ -1,0 +1,108 @@
+{
+    "title": "Mobiele website live",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.html",
+    "date": "2011-04-29T09:46:00.000Z",
+    "category": "Frontend",
+    "views": 3090,
+    "articleHtml": "Voor een ieder die benieuwd was naar de touch-photogallery in <a href=\"http://glamour.tweakblogs.net/blog/6282/video!-preview-van-touch-based-mobile-photo-gallery.html\" rel=\"external\">deze post</a>: we zijn live!<br>\r\n<a href=\"http://m.funda.nl\" rel=\"external\"><img src=\"http://100procentjan.nl/tweakers/mobiellive.png\" title=\"http://100procentjan.nl/tweakers/mobiellive.png\" alt=\"http://100procentjan.nl/tweakers/mobiellive.png\"></a><br>\r\n<br>\r\nBeschikbaar op <a href=\"http://m.funda.nl\" rel=\"external\">m.funda.nl</a>, als je op je desktop kijkt is het aan te raden Chrome of een andere Webkit browser te gebruiken.<br>\r\n<br>\r\n<b>De Nota Bene&apos;s</b><br>\r\n1. Wellicht is de DNS server van je provider nog niet bijgewerkt, in dat geval zie je nog de oude site.<br>\r\n2. Koppeling met je profiel op Mijn funda wordt over enkele weken toegevoegd. Samen met ondersteuning voor plattegronden en 360 foto&apos;s.",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6431/mix-rollup-deel-1.html",
+    "comments": [
+        {
+            "author": "WeeJeWel",
+            "date": "vrijdag 29 april 2011 11:49",
+            "contentHtml": "Wat vindt je werkgever er eigenlijk van dat je zoveel &apos;inside&apos; informatie (deze post is dan weer de uitzondering <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\">) plaatst?<p class=\"edit\">[Reactie gewijzigd op vrijdag 29 april 2011 11:49]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 29 april 2011 11:59",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.html#r_87257\">WeeJeWel schreef op vrijdag 29 april 2011 @ 11:49:</a><br>\r\nWat vindt je werkgever er eigenlijk van dat je zoveel &apos;inside&apos; informatie (deze post is dan weer de uitzondering <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\">) plaatst?</div></blockquote>Ze zijn op de hoogte, en ik beperk me hier tot techniek, en ga niet in op politieke keuzes; dat scheelt.",
+            "ownReply": true
+        },
+        {
+            "author": "Tazzios",
+            "date": "vrijdag 29 april 2011 12:04",
+            "contentHtml": "Op basis van je lokatie huizen tonen  komt er ook nog bij neem ik aan.  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><br>\r\n<br>\r\n<br>\r\nEdit:<br>\r\ndan weet ik verder niks wat ontbreekt.  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\"><p class=\"edit\">[Reactie gewijzigd op vrijdag 29 april 2011 13:09]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 29 april 2011 12:08",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.html#r_87260\">Tazzios schreef op vrijdag 29 april 2011 @ 12:04:</a><br>\r\nOp basis van je lokatie huizen tonen  komt er ook nog bij neem ik aan.  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Als je een browser hebt die de HTML5 Location API ondersteunt heb je op de homepage een knopje met een kompas. Klik daar eens op :-)",
+            "ownReply": true
+        },
+        {
+            "author": "T.H. Lassche",
+            "date": "vrijdag 29 april 2011 12:18",
+            "contentHtml": "<a href=\"http://m.funda.nl/Privacybeleid/\" rel=\"external\" title=\"http://m.funda.nl/Privacybeleid/\">http://m.funda.nl/Privacybeleid/</a><br>\r\n<br>\r\nDe image links daar zijn stuk.<br>\r\n<br>\r\nEn de locatiebepaling hangt hier in  de Chrome beta  release. Blijft hangen op &apos;Uw locatie wordt bepaald&apos;<p class=\"edit\">[Reactie gewijzigd op vrijdag 29 april 2011 12:19]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "orf",
+            "date": "vrijdag 29 april 2011 12:42",
+            "contentHtml": "Ik vind het &#xE9;&#xE9;n van de best uitgevoerde mobiele websites die ik tot nu gezien heb. Top!<br>\r\nDe navigatie werkt goed en intu&#xEF;tief. Het scrollen van de foto&apos;s werkt zo goed als een native app.<br>\r\n<br>\r\nIets om trots op te zijn . <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 29 april 2011 12:52",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.html#r_87263\">T.H. Lassche schreef op vrijdag 29 april 2011 @ 12:18:</a><br>\r\nDe image links daar zijn stuk.</div></blockquote>Zal er naar kijken, dank :-)<blockquote><div class=\"quote\">En de locatiebepaling hangt hier in  de Chrome beta  release. Blijft hangen op &apos;Uw locatie wordt bepaald&apos;</div></blockquote>Hm, ik krijg hier gewoon direct een &apos;Locatie niet gevonden&apos; melding in de laatste stable van Chrome (vanwege te lage nauwkeurigheid).<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.html#r_87265\">orf schreef op vrijdag 29 april 2011 @ 12:42:</a><br>\r\nIk vind het &#xE9;&#xE9;n van de best uitgevoerde mobiele websites die ik tot nu gezien heb. Top!<br>\r\nDe navigatie werkt goed en intu&#xEF;tief. Het scrollen van de foto&apos;s werkt zo goed als een native app.<br>\r\n<br>\r\nIets om trots op te zijn . <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Dank!<p class=\"edit\">[Reactie gewijzigd op vrijdag 29 april 2011 12:52]</p>",
+            "ownReply": true
+        },
+        {
+            "author": "truegrit",
+            "date": "vrijdag 29 april 2011 13:15",
+            "contentHtml": "In opera werkt de locatiebepaling in de desktopversie ook niet, maar voor de rest ziet en werkt het top! Sowieso is funda een hele mooie site",
+            "ownReply": false
+        },
+        {
+            "author": "Hahn",
+            "date": "vrijdag 29 april 2011 13:18",
+            "contentHtml": "Ik vind het vooral leuk dat de mobiele versie op een desktop browser goed schaalt en dus ook prima bruikbaar is <img src=\"http://tweakimg.net/g/s/thumbsup.gif\" width=\"33\" height=\"15\" alt=\"d:)b\">",
+            "ownReply": false
+        },
+        {
+            "author": "Mental",
+            "date": "vrijdag 29 april 2011 13:22",
+            "contentHtml": "Ziet er goed uit, maar de volgende url levert een server error op:<br>\r\n<br>\r\n<a href=\"http://m.funda.nl/koop/heerhugowaard/huis-47077739-oberonlaan-7/\" rel=\"external\" title=\"http://m.funda.nl/koop/heerhugowaard/huis-47077739-oberonlaan-7/\">http://m.funda.nl/koop/he...is-47077739-oberonlaan-7/</a><br>\r\n<br>\r\n<br>code:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><pre>1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n</pre></td><td class=\"phphighlightcode\"><div><pre>Server Error in &apos;/&apos; Application.\r\n--------------------------------------------------------------------------------\r\n\r\nValue cannot be null.\r\nParameter name: source \r\nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \r\n\r\nException Details: System.ServiceModel.FaultException`1[[System.ServiceModel.ExceptionDetail, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]: Value cannot be null.\r\nParameter name: source\r\n\r\nSource Error: \r\n\r\nAn unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.</pre></div></td></tr></table><br>\r\n<br>\r\nedit; nice, zie dat er nu een nette foutmelding komt; dat is al een stuk beter <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><p class=\"edit\">[Reactie gewijzigd op vrijdag 29 april 2011 13:55]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Soggney",
+            "date": "vrijdag 29 april 2011 16:19",
+            "contentHtml": "Is een leuke site, maar op m&apos;n phone kan ik niet scrollen tussen de foto&apos;s.<br>\r\nErger zelfs, ik kan niet eens van foto veranderen.<br>\r\nIk krijg 1 grote foto, en daaronder thumbnails van alle andere foto&apos;s. En de grote foto blijft foto 1 ook al zit ik op foto 19/32.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 29 april 2011 16:27",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.html#r_87278\">Soggney schreef op vrijdag 29 april 2011 @ 16:19:</a><br>\r\nIs een leuke site, maar op m&apos;n phone kan ik niet scrollen tussen de foto&apos;s.<br>\r\nErger zelfs, ik kan niet eens van foto veranderen.<br>\r\nIk krijg 1 grote foto, en daaronder thumbnails van alle andere foto&apos;s. En de grote foto blijft foto 1 ook al zit ik op foto 19/32.</div></blockquote>Welke telefoon?",
+            "ownReply": true
+        },
+        {
+            "author": "Jeroen Mulder",
+            "date": "vrijdag 29 april 2011 16:32",
+            "contentHtml": "Voor deze versie van de website voor mobiel hebben we er voor gekozen om op technisch gebied alles te optimaliseren voor moderne browsers (voornamelijk dus WebKit) van de laatste jaren. IE7 Mobile, Firefox Mobile of Opera Mobile hebben vooralsnog zeer weinig testuren gezien. iOS3 en 4, Android 2.2+ en Blackberry OS6 daarentegen wel.<br>\r\n<br>\r\nWat betreft locatiebepaling, zoals Jan zei, we gebruiken de standaard HTML5 Geolocation API en vragen om hoge nauwkeurigheid. Op de door ons geteste telefoons werkt dit best goed, maar vaker niet dan wel op de desktop.<br>\r\n<br>\r\nVerdere feedback is altijd van harte welkom! Al is de verwachting op korte termijn nog meer functionaliteit te lanceren... ;-)",
+            "ownReply": false
+        },
+        {
+            "author": "Marientjuh",
+            "date": "vrijdag 29 april 2011 16:48",
+            "contentHtml": "Als je op de foto&apos;s (in een desktop browser) de foto helemaal naar rechts trekt dan zie je nog een laad icoontje... <br>\r\n<br>\r\nVerder ziet het er inderdaad indrukwekkend uit.",
+            "ownReply": false
+        },
+        {
+            "author": "Soggney",
+            "date": "vrijdag 29 april 2011 17:14",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.html#r_87279\">creator1988 schreef op vrijdag 29 april 2011 @ 16:27:</a><br>\r\n[...]<br>\r\n<br>\r\nWelke telefoon?</div></blockquote>samsung gt-s5560 met samsung mobile browser v1.0 gebaseerd op webkit (staat er zelfs mooi bij <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">)<br>\r\nDit kon je ook achterhalen door m&apos;n inventaris te doorzoeken  <img src=\"http://tweakimg.net/g/s/coool.gif\" width=\"15\" height=\"15\" alt=\"8-)\">  (is 1 van de vele zaken die bij Tweakers.net  handig zijn)<p class=\"edit\">[Reactie gewijzigd op vrijdag 29 april 2011 17:23]</p>",
+            "ownReply": false
+        },
+        {
+            "author": "Eagle Creek",
+            "date": "zondag 01 mei 2011 18:47",
+            "contentHtml": "Werk jij voor Funda, of?",
+            "ownReply": false
+        }
+    ]
+}

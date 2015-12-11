@@ -1,0 +1,78 @@
+{
+    "title": "Video! Preview van touch-based mobile photo gallery",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/6282/video%21-preview-van-touch-based-mobile-photo-gallery.html",
+    "date": "2011-03-16T13:28:00.000Z",
+    "category": "Frontend",
+    "views": 3144,
+    "articleHtml": "<div id=\"swfobject_A3Qcqf3dr4\"><a href=\"http://www.youtube.com/watch?v=WjpauZnEm7g\" rel=\"external\" title=\"http://www.youtube.com/watch?v=WjpauZnEm7g\">http://www.youtube.com/watch?v=WjpauZnEm7g</a></div><script type=\"text/javascript\">//<!--\n(function(){var so=new SWFObject('http://www.youtube.com/v/WjpauZnEm7g&fs=1','movie_A3Qcqf3dr4',580,350,7);so.addParam('allowfullscreen','true');so.write('swfobject_A3Qcqf3dr4')})();\n//--></script>",
+    "nextLink": "http://glamour.tweakblogs.net/blog/6271/mapreducejs-een-educatief-map-reduce-framework.html",
+    "comments": [
+        {
+            "author": "ZpAz",
+            "date": "woensdag 16 maart 2011 14:41",
+            "contentHtml": "Leuk! Vind je posts over Funda altijd wel interessant. <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "dionoid",
+            "date": "woensdag 16 maart 2011 14:56",
+            "contentHtml": "Respect! Ziet er goed uit.<br>\r\nIk vraag me af: is die specifieke funda-app dan nog wel nodig als de mobiele site dit ook kan?",
+            "ownReply": false
+        },
+        {
+            "author": "kipusoep",
+            "date": "woensdag 16 maart 2011 15:41",
+            "contentHtml": "Zijn wij momenteel ook mee bezig <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><br>\r\nWil je ook delen of je naast jQuery ook andere kant-en-klare lib&apos;s/plugins hebt gebruikt? Of heb je het zelf geschreven?",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 16 maart 2011 15:54",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6282/video!-preview-van-touch-based-mobile-photo-gallery.html#r_84495\">kipusoep schreef op woensdag 16 maart 2011 @ 15:41:</a><br>\r\nZijn wij momenteel ook mee bezig <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><br>\r\nWil je ook delen of je naast jQuery ook andere kant-en-klare lib&apos;s/plugins hebt gebruikt? Of heb je het zelf geschreven?</div></blockquote>Nee, jQuery om een beetje DOM manipulatie te doen; maar de swipe plugin en de photogallery zijn allemaal custom.",
+            "ownReply": true
+        },
+        {
+            "author": "himlims_",
+            "date": "woensdag 16 maart 2011 16:12",
+            "contentHtml": "beste wonderboy, die swipe en photogallery zijn wel ganz geil, gaan we daar nog een blogpost over krijgen?",
+            "ownReply": false
+        },
+        {
+            "author": "t.coenraad",
+            "date": "woensdag 16 maart 2011 18:06",
+            "contentHtml": "En de source? Ik zie hier voor eigen gebruik nog wel nuttige dingen in <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "Ulster Seedling",
+            "date": "woensdag 16 maart 2011 18:12",
+            "contentHtml": "Wat mij een handige toevoeging lijkt: zodra je een veegbeweging maakt om naar een volgende afbeelding te gaan, scrollt het document zodat de afbeelding volledig in beeld is en er niet stukken missen. Dit zie je ook wel in andere apps. Is dit begrijpelijk? <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\">",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "woensdag 16 maart 2011 18:36",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6282/video!-preview-van-touch-based-mobile-photo-gallery.html#r_84502\">t.coenraad schreef op woensdag 16 maart 2011 @ 18:06:</a><br>\r\nEn de source? Ik zie hier voor eigen gebruik nog wel nuttige dingen in <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote><blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6282/video!-preview-van-touch-based-mobile-photo-gallery.html#r_84498\">himlims_ schreef op woensdag 16 maart 2011 @ 16:12:</a><br>\r\nbeste wonderboy, die swipe en photogallery zijn wel ganz geil, gaan we daar nog een blogpost over krijgen?</div></blockquote>Eerst maar eens productie-waardig krijgen, dan kom ik er nog eens op terug  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\"><blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6282/video!-preview-van-touch-based-mobile-photo-gallery.html#r_84503\">jhogervorst schreef op woensdag 16 maart 2011 @ 18:12:</a><br>\r\nWat mij een handige toevoeging lijkt: zodra je een veegbeweging maakt om naar een volgende afbeelding te gaan, scrollt het document zodat de afbeelding volledig in beeld is en er niet stukken missen. Dit zie je ook wel in andere apps. Is dit begrijpelijk? <img src=\"http://tweakimg.net/g/s/wink.gif\" width=\"15\" height=\"15\" alt=\";)\"></div></blockquote>Ja, we zitten nog even te spelen hoe we dat gaan doen zonder dat je de hele tijd door het hele document wordt gegooid. Is even experimenteren.",
+            "ownReply": true
+        },
+        {
+            "author": "orf",
+            "date": "woensdag 16 maart 2011 19:10",
+            "contentHtml": "De homepage van <a href=\"http://www.eyeworks.tv\" rel=\"external\">Eyeworks.tv</a> is ook wel leuk om op een iPhone / iPad te bekijken. Daar draait een aparte lib voor iOS. In een browser heb je een ander soort cover flow dan op de iPhone.<br>\r\n<br>\r\nIk ben benieuwd naar het eindresultaat. Ik had best wat problemen om het goed te laten performen op mobile devices. DOM manipulatie is niet zo snel als op een desktop natuurlijk.",
+            "ownReply": false
+        },
+        {
+            "author": "riddles",
+            "date": "donderdag 17 maart 2011 20:25",
+            "contentHtml": "En inzoomen? Dat lijkt me juist op Funda foto&apos;s (en al helemaal op een klein schermpje als de iPhone) wel erg handig.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "vrijdag 18 maart 2011 11:04",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/6282/video!-preview-van-touch-based-mobile-photo-gallery.html#r_84529\">riddles schreef op donderdag 17 maart 2011 @ 20:25:</a><br>\r\nEn inzoomen? Dat lijkt me juist op Funda foto&apos;s (en al helemaal op een klein schermpje als de iPhone) wel erg handig.</div></blockquote>Gaan we (nog) niet doen op dit moment. We kiezen bewust voor een interface die schaalt naar het formaat dat de gebruiker gebruikt, en waarop hij zelf geen invloed heeft. Als je je device draait kan je de foto in more-or-less fullscreen bekijken.",
+            "ownReply": true
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "title": "Typfouten, Levenshtein en Burkhard-Keller trees",
+    "language": "nl",
+    "link": "http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html",
+    "date": "2010-12-20T14:25:00.000Z",
+    "category": "Algoritmes",
+    "views": 3600,
+    "articleHtml": "Momenteel nog aan het werk aan een project waar ik al eerder <a href=\"http://glamour.tweakblogs.net/blog/5759/single-byte-string-in-c.html\" rel=\"external\">helemaal</a> <a href=\"http://glamour.tweakblogs.net/blog/5732/diakritische-tekens-en-soundex-in-net.html\" rel=\"external\">los</a> op ging, alwaar ik vandaag aankwam op de mogelijkheid van typfouten.<br>\r\n<br>\r\n<b>Levenshtein distance</b><br>\r\nDe levenshtein distance is het minimale aantal bewerkingen dat nodig is om van het ene woord naar het andere woord te komen.<br>\r\n<br>code:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><pre>1\n2\n3\n4\n5\n6\n</pre></td><td class=\"phphighlightcode\"><div><pre>1: Amsterdam\r\n2: Amsteldam\r\n\r\nA m s t e r d a m\r\n          ^\r\nA m s t e   d a m</pre></div></td></tr></table><br>\r\nIn bovenstaand geval dus &#xE9;&#xE9;n mutatie. Netjes van <a href=\"http://en.wikipedia.org/wiki/Levenshtein_Distance\" rel=\"external\">wikipedia</a> gejat is dit voorbeeld, van kitten -&gt; sitting:<br>\r\n<br>code:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><pre>1\n2\n3\n</pre></td><td class=\"phphighlightcode\"><div><pre>1. kitten -&gt; sitten (substitution of &apos;k&apos; with &apos;s&apos;)\r\n2. sitten -&gt; sittin (substitution of &apos;e&apos; with &apos;i&apos;)\r\n3. sittin -&gt; sitting (insert &apos;g&apos; at the end).</pre></div></td></tr></table><br>\r\n<br>\r\n<b>Waar is het goed voor?</b><br>\r\nWe kunnen veel met <a href=\"http://glamour.tweakblogs.net/blog/5732/diakritische-tekens-en-soundex-in-net.html\" rel=\"external\">Soundex</a> en alternatieve woorden, maar fuzzy matching is daarmee niet mogelijk. Door alle plaatsen / straten / etc. te vinden die een afstand van &#xE9;&#xE9;n hebben tot de zoekterm kan je vrij eenvoudig een lijst met alternatieven geven (natuurlijk samen met Soundex).<br><a name=\"more\"></a><br>\r\n<b>Snelheid</b><br>\r\nMijn eerste, naieve implementatie van dit algoritme voor een afstand van 1 was ongeveer:<br>\r\n<br>C#:<br><table class=\"phphighlight\"><tr><td class=\"phphighlightline\"><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></code></td><td class=\"phphighlightcode\"><div><code><span class=\"code_keyword\">string</span>&#xA0;<span class=\"code_ident\">query</span>&#xA0;=&#xA0;<span class=\"code_string\">&quot;amsterdam&quot;</span>;\n<br><span class=\"code_keyword\">foreach</span>(<span class=\"code_ident\">var</span>&#xA0;<span class=\"code_ident\">key</span>&#xA0;<span class=\"code_keyword\">in</span>&#xA0;<span class=\"code_ident\">eenIndex</span>)&#xA0;{\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class=\"code_comment\">//&#xA0;Levenshtein&#xA0;distance&#xA0;is&#xA0;altijd&#xA0;minimaal&#xA0;het&#xA0;verschil&#xA0;in&#xA0;lengte</span>\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class=\"code_keyword\">if</span>(<span class=\"code_ident\">Math</span>.<span class=\"code_method\">Abs</span>(<span class=\"code_ident\">key</span>.<span class=\"code_ident\">Length</span>&#xA0;-&#xA0;<span class=\"code_ident\">query</span>.<span class=\"code_ident\">Length</span>)&#xA0;&gt;&#xA0;<span class=\"code_number\">1</span>)&#xA0;<span class=\"code_keyword\">continue</span>;\n<br>\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class=\"code_keyword\">if</span>(<span class=\"code_ident\">Levenshtein</span>.<span class=\"code_method\">Compute</span>(<span class=\"code_ident\">key</span>,&#xA0;<span class=\"code_ident\">query</span>)&#xA0;&lt;=&#xA0;<span class=\"code_number\">1</span>)&#xA0;{\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class=\"code_comment\">//&#xA0;doe&#xA0;iets</span>\n<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}\n<br>}</code></div></td></tr></table><br>\r\nOver een half miljoen strings doet dit stuk alleen 500 ms. wat veel te veel is, dus optimalisatietijd.<br>\r\n<br>\r\n<b>Burkhard-Keller trees</b><br>\r\nSpecifiek voor dit probleem is er de <a href=\"http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees\" rel=\"external\">BK-tree</a> (leestip!) waarbij woorden in afstand ten opzichte van elkaar worden opgeslagen in een boomstructuur. Zou het querien een stuk sneller moeten maken. Wordt ongetwijfeld vervolgd.",
+    "nextLink": "http://glamour.tweakblogs.net/blog/5764/generic-retry.html",
+    "comments": [
+        {
+            "author": "-RetroX-",
+            "date": "maandag 20 december 2010 15:49",
+            "contentHtml": "Ik ben benieuwd naar de uitkomst. Ik worstel al een tijd met een vergelijkbaar probleem. Een werkende oplossing bleek een combinatie van de levenshtein en de similar_text functies in php. Had slechts 1 nadeel: elke uitvoering duurde enkele seconden.... niet zo praktisch... <br>\r\n<br>\r\nVeel succes in ieder geval!",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 20 december 2010 15:55",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html#r_77648\">-RetroX- schreef op maandag 20 december 2010 @ 15:49:</a><br>\r\nIk ben benieuwd naar de uitkomst. Ik worstel al een tijd met een vergelijkbaar probleem. Een werkende oplossing bleek een combinatie van de levenshtein en de similar_text functies in php. Had slechts 1 nadeel: elke uitvoering duurde enkele seconden.... niet zo praktisch... <br>\r\n<br>\r\nVeel succes in ieder geval!</div></blockquote>Grazie. Ja enkele seconden is veel. Mijn doel hiervoor is om in een set van 500.000 woorden alle matches met een distance van &#xE9;&#xE9;n in 10 ms. te vinden. Lekker ambitieus  <img src=\"http://tweakimg.net/g/s/yummie.gif\" width=\"15\" height=\"15\" alt=\":9\"> , mijn implementatie post ik hier sowieso.",
+            "ownReply": true
+        },
+        {
+            "author": "abeker",
+            "date": "maandag 20 december 2010 15:56",
+            "contentHtml": "Tijd voor een <b>Typex </b> algortime <img src=\"http://tweakimg.net/g/s/puh2.gif\" width=\"15\" height=\"15\" alt=\":P\">",
+            "ownReply": false
+        },
+        {
+            "author": "Jeoh",
+            "date": "maandag 20 december 2010 16:07",
+            "contentHtml": "Ik vind dit soort blogs dus echt geweldig, al klop ik zelf geen code. Ga zo door <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">",
+            "ownReply": false
+        },
+        {
+            "author": "hyptonize",
+            "date": "maandag 20 december 2010 16:50",
+            "contentHtml": "Ben ik de enige die meteen aan <a href=\"http://www.imdb.com/character/ch0002453/\" rel=\"external\">Mr. Levenstein</a> moest denken bij het lezen van de titel? <img src=\"http://tweakimg.net/g/s/biggrin.gif\" width=\"15\" height=\"15\" alt=\":D\">",
+            "ownReply": false
+        },
+        {
+            "author": "sebastius",
+            "date": "maandag 20 december 2010 17:08",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html#r_77649\">creator1988 schreef op maandag 20 december 2010 @ 15:55:</a><br>\r\n[...]<br>\r\n<br>\r\nGrazie. Ja enkele seconden is veel. Mijn doel hiervoor is om in een set van 500.000 woorden alle matches met een distance van &#xE9;&#xE9;n in 10 ms. te vinden. Lekker ambitieus  <img src=\"http://tweakimg.net/g/s/yummie.gif\" width=\"15\" height=\"15\" alt=\":9\"> , mijn implementatie post ik hier sowieso.</div></blockquote>Sowieso kun je alle woorden die meer dan 1 teken korter of langer zijn af laten vallen, toch?",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "maandag 20 december 2010 17:13",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html#r_77654\">sebastius schreef op maandag 20 december 2010 @ 17:08:</a><br>\r\n[...]<br>\r\nSowieso kun je alle woorden die meer dan 1 teken korter of langer zijn af laten vallen, toch?</div></blockquote>Ja, deed ik al (zie pseudocode), maar dit heeft te weinig effect. Ik hoop met een effici&#xEB;nte tree wel wat meer snelheid eruit te persen.<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html#r_77651\">Jeoh schreef op maandag 20 december 2010 @ 16:07:</a><br>\r\nIk vind dit soort blogs dus echt geweldig, al klop ik zelf geen code. Ga zo door <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"></div></blockquote>Grazie  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"><blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html#r_77652\">hyptonize schreef op maandag 20 december 2010 @ 16:50:</a><br>\r\nBen ik de enige die meteen aan <a href=\"http://www.imdb.com/character/ch0002453/\" rel=\"external\">Mr. Levenstein</a> moest denken bij het lezen van de titel? <img src=\"http://tweakimg.net/g/s/biggrin.gif\" width=\"15\" height=\"15\" alt=\":D\"></div></blockquote>Ik wil niet weten wat ik me van een American Pie Algorithm moet voorstellen  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\">",
+            "ownReply": true
+        },
+        {
+            "author": "MMaI",
+            "date": "maandag 20 december 2010 20:57",
+            "contentHtml": "[quote<br>\r\nIk wil niet weten wat ik me van een American Pie Algorithm moet voorstellen  <img src=\"http://tweakimg.net/g/s/clown.gif\" width=\"15\" height=\"15\" alt=\":+\"><br>\r\n[/quote]<br>\r\n<br>\r\nif(math.pi = &quot;American&quot;) {}",
+            "ownReply": false
+        },
+        {
+            "author": "RedHornet",
+            "date": "dinsdag 21 december 2010 08:23",
+            "contentHtml": "Hmm, dit is wel een interessante manier inderdaad voor data deduplicatie. Ik heb eerder iets soortgelijks met een ander algortime gebruikt. Deze was net iets complexer en kon wat meer, maar was rete traag en is in 99% van de situatie overkill. Dit lijkt een goede snelle vervanger daarvoor <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">.",
+            "ownReply": false
+        },
+        {
+            "author": "creator1988",
+            "date": "dinsdag 21 december 2010 11:28",
+            "contentHtml": "<blockquote><div class=\"quote\"><a href=\"http://glamour.tweakblogs.net/blog/5780/typfouten-levenshtein-en-burkhard-keller-trees.html#r_77687\">RedHornet schreef op dinsdag 21 december 2010 @ 08:23:</a><br>\r\nHmm, dit is wel een interessante manier inderdaad voor data deduplicatie. Ik heb eerder iets soortgelijks met een ander algortime gebruikt. Deze was net iets complexer en kon wat meer, maar was rete traag en is in 99% van de situatie overkill. Dit lijkt een goede snelle vervanger daarvoor <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\">.</div></blockquote>Bovendien kan je deze tree ook misbruiken voor exacte matches (met een afstand van &apos;0&apos;), scheelt weer memory  <img src=\"http://tweakimg.net/g/s/smile.gif\" width=\"15\" height=\"15\" alt=\":)\"> . Ik schop mijn implementatie met timings etc. hier neer als ik het idee heb dat hij stabiel is.",
+            "ownReply": true
+        },
+        {
+            "author": "donderdag 23 december 2010 23:35",
+            "date": "",
+            "contentHtml": "Goede blog, man!<br>\r\nAls jullie toch ook met Solr bezig, kijk dan ook eens naar de spellcheck mogelijkheden die Solr biedt: <a href=\"http://wiki.apache.org/solr/SpellCheckComponent\" rel=\"external\" title=\"http://wiki.apache.org/solr/SpellCheckComponent\">http://wiki.apache.org/solr/SpellCheckComponent</a>",
+            "ownReply": false
+        }
+    ]
+}
