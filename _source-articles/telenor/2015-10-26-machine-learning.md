@@ -35,9 +35,9 @@ Just plotting the gyro data into Excel already gives us some interesting insight
 
 ## Training the model
 
-The problem we are solving is a classification problem: Given some data, we must determine which label in a list of labels best describes the data. 
+The problem we are solving is a classification problem: Given some data, we must determine which label in a list of labels best describes the data.
 
-Bjørn's summary  of the machine learning courses he has taken  is that machine learning is  very glamorous and all, but here are also a list of dirty secrets that one have to keep in mind:  The first is that any almost halfway decent  algorithm can give results that  are useful if they are given a proper learning set (the classical  on this issue is [Brillo and Bank's paper from 2001](http://ucrel.lancs.ac.uk/acl/P/P01/P01-1005.pdf), which shows that for small training sets there is great difference between algorithm performance, for large datasets the difference is much less).  The second is that there are a bunch of different algorithms, and they all have their own peculiarities that it can easily take months to get a grip on. The third is that it'a very easy to get lost in all of this variation.  
+Bjørn's summary  of the machine learning courses he has taken  is that machine learning is  very glamorous and all, but here are also a list of dirty secrets that one have to keep in mind:  The first is that any almost halfway decent  algorithm can give results that  are useful if they are given a proper learning set (the classical  on this issue is [Brillo and Bank's paper from 2001](http://ucrel.lancs.ac.uk/acl/P/P01/P01-1005.pdf), which shows that for small training sets there is great difference between algorithm performance, for large datasets the difference is much less).  The second is that there are a bunch of different algorithms, and they all have their own peculiarities that it can easily take months to get a grip on. The third is that it'a very easy to get lost in all of this variation.
 
 So based on this our overall plan was:
 
@@ -81,7 +81,7 @@ thing we care about when we do feature extraction and analysis.
 * We chopped the data into three second segments, and then performed a discrete fourier transform (using the fast fourier transform "FFT"), chunking into buckets and removing all components with higher frequencies than 5 Hz (by inspection it didn't seem to be much of interest in higher frequency parts of the spectrum anyway).  These truncated and chunked  FFT spectra were then used as feature vectors by the machine learning algorithm.
 
 The feature vectors are simply FFT power spectra:
-            
+
 {% highlight python %}
 transformed = fft.fft(slice)
 absolute = [abs(complex) for complex in transformed]
@@ -97,7 +97,7 @@ for i in range(1, len(absolute)):
         break;
     buckets[index] += absolute[i]
     sum_of_buckets += absolute[i]
-          
+
 if arguments['--normalize']:
     buckets = map(lambda x: x/sum_of_buckets, buckets)
 {% endhighlight %}
@@ -119,7 +119,7 @@ with open("../logs/precision-recall-time-evolution.csv", "a") as myfile:
 
 <img src="{{ site.baseurl }}/assets/hackathon-2015-precision-recall.jpg" title="Precision/recall time evolution">
 
-The x-axis is time in seconds since epoch (because, unix).  The plot starts right after we got the first data in, and we ran it through the classifier and found that it was amazingly good. Unfortunately we were looking at 30 second samples, not three second samples so we were in all likelihood overfitting.  When we chopped things into 3 seconds samples performance got a lot worse. Then it improved a little as we removed some trivial bugs. Then we went home to sleep (which shows up as the  straight line in the plot). 
+The x-axis is time in seconds since epoch (because, unix).  The plot starts right after we got the first data in, and we ran it through the classifier and found that it was amazingly good. Unfortunately we were looking at 30 second samples, not three second samples so we were in all likelihood overfitting.  When we chopped things into 3 seconds samples performance got a lot worse. Then it improved a little as we removed some trivial bugs. Then we went home to sleep (which shows up as the  straight line in the plot).
 
 ### Improving the model
 
@@ -128,7 +128,7 @@ When we got to work the day after, we had a long list of clever tricks we wanted
 We are pretty certain that the  classifier  we produced can be improved a lot: It only uses one channel out of six; it doesn't use any of the fancy techniques that are supposed to tease information out of multidimensional datasets (e.g. PCA); it doesn't use know best practices (e.g. normalisation of feature vectors); and it still uses the SVM classifier for no other reason that being the first (and only) one we tried.  Most likely there are other classifiers that work as well or better than that.  Given all this, we're certain that this result can be improved significantly. However, there are at least two really good things to be said about our classifier:
 
  1. It actually works.
- 2. We have the numbers (and a graph) that indicates how well it works so 
+ 2. We have the numbers (and a graph) that indicates how well it works so
     if/when a better way is found, it will be evident that it has been found.
 
 ## Live classifying the data
@@ -147,7 +147,7 @@ if data_feed:
 
             sample = sample_file(data_file)
             # get 6 seconds * 30 samples
-            sample.keep_last_lines(180) 
+            sample.keep_last_lines(180)
             samples = sample.get_samples()
 
             # dump the classification into a file
@@ -196,10 +196,3 @@ Based on that we can create a simple [web page](https://github.com/la3lma/moveme
 We were incredibly surprised how far we managed to get in 36 hours. The classifier is rough around the edges, and more training data probably helps, it's surprising to see how well the classifier already manages to distinguish movement. It's even more surprising to see that we even managed to get proper results by just using one out of the six axes. Just imagine how much better this can get with more data. Machine learning is really maturing.
 
 I'd like to encourage everyone reading this to actually try our project. We already trained the model, and all code and instructions are listed in [this GitHub repo](https://github.com/la3lma/movement-analysis). You'll just need a phone. Of course you can just throw away our model and use our code to train a completely new one. To get you started we already included some data of people walking up the stairs. Try feeding that data into the model, and see what happens. We'd love to see your results!
-
----
-
-*Jan Jongboom is a Strategic Engineer for Telenor Digital, working on the Internet of Things. He's also a Google Developer Expert for web.*
-
-<a href="https://twitter.com/janjongboom" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @janjongboom</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

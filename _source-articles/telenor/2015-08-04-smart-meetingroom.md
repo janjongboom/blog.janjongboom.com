@@ -120,6 +120,3 @@ On the gateway I run Semtech's [packet-forwarder](https://github.com/Lora-net/pa
 It took me about three days to do this whole setup from scratch, including building the gateway and the web app, and it shows how easy it is to build connected devices that actually solve a problem in the office.
 
 The coolest thing for me however, is that it'd be possible to run the entire setup on a small battery. Both BLE and LoRa are made to be very, very power efficient, and we only need readings from the PIR sensor every few seconds. Combine that with sending data over LoRa, and we have a device that does not need cables, and just needs to swap the coin cell every few months. Awesomness.
-
-<a href="https://twitter.com/janjongboom" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @janjongboom</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

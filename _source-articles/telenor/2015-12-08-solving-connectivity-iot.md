@@ -50,7 +50,7 @@ If you don't like video, the slides and outline are listed below.
     - Available today for relative low cost. Gateways 1200, end-device chips 6, complete PIR sensor we bought is 30.
 - First project: Telenor Eiendom
     - Making Fornebu smart with 400 sensors
-        * It's a pilot with internal customer. Let's build some own sensors. 
+        * It's a pilot with internal customer. Let's build some own sensors.
         * 100 of these developed internally. 300 bought from external party.
         * Build up hardware competency in Digital.
     - Flex-desk availability rates, monitoring temperature, counting toilet usage, push button to indicate problems
@@ -92,10 +92,3 @@ If you don't like video, the slides and outline are listed below.
     - Trondheim team happy to help out when you want to take it further.
 - Get your data out of the system and start hacking something cool!
 - Thank you
-
----
-
-*Jan Jongboom is a Strategic Engineer for Telenor Digital, working on the Internet of Things.*
-
-<a href="https://twitter.com/janjongboom" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @janjongboom</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
