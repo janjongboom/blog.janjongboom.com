@@ -15,36 +15,67 @@ function process(file) {
 
    var replacements = [];
 
-   var $ = cheerio.load(html);
+   var $ = cheerio.load('<p class="article">' + html + '</p>');
    $('.phphighlight').each(function(ix, el) {
+      var x = el;
+      var c = $('.article').contents();
+
+      var typeIx;
+      c.each(function(ix, el) { if (el === x) typeIx = ix-2; });
+
+      var typeName = typeIx ? $(c[typeIx]).text().replace(/:$/, '') : 'text';
+
+      switch (typeName) {
+         case 'HTML': typeName = 'html'; break;
+         case 'JavaScript': typeName = 'js'; break;
+         case 'C#': typeName = 'csharp'; break;
+         case 'ASP.NET': typeName = 'asp'; break;
+         case 'ASP': typeName = 'asp'; break;
+         case 'XML': typeName = 'xml'; break;
+         case 'bash': typeName = 'bash'; break;
+         case 'SQL': typeName = 'sql'; break;
+         default: typeName = 'text'; break;
+      }
+
+      $(c[typeIx]).remove();
+      $(c[typeIx - 1]).remove();
+
       var code = $(el).find('.phphighlightcode').text();
       code = code.replace(/ /g, ' ');
 
-      replacements.push(code);
+      replacements.push([ code, typeName ]);
 
-      $(this).replaceWith('$' + (replacements.length -1) );
+      $(this).replaceWith('AAA' + (replacements.length -1) );
    });
 
    html = HTML.prettyPrint($.html(), { indent_size: 2 });
 
-   replacements.forEach(function(r, ix) {
-      html = html.replace('$' + ix, `
-   {% highlight text %}
-   ${r}
-   {%endhighlight %}`);
+   replacements.forEach(function(re, ix) {
+      var r = re[0];
+      // weird shit in the jekyll md thing, cant handle empty lines, need to fix later
+      r = r.replace(/\n\n/g, '\n');
+      r = r.replace(/\n\n/g, '\n');
+
+      html = html.replace('AAA' + ix, `
+{% highlight ${re[1]} %}
+${r}
+{% endhighlight %}`);
    });
 
+   var title = data.title;
+   title = title.replace(/"/g, '\\"');
+
    var newdata = `---
-   layout:         post-tweakers
-   title:          "${data.title}"
-   date:           ${data.date}
-   categories:     ${data.category}
-   originalUrl:    ${data.link}
-   originalName:   Coding Glamour
-   language:       ${data.language}
-   commentCount:   ${data.commentCount || data.comments.length}
-   commentUrl:     ${data.link}#reacties
-   ---
+layout:         post-tweakers
+title:          "${title}"
+date:           ${data.date}
+categories:     ${data.category}
+originalUrl:    ${data.link}
+originalName:   Coding Glamour
+language:       ${data.language}
+commentCount:   ${data.commentCount || data.comments.length}
+commentUrl:     ${data.link}#reacties
+---
 
    ${html}
    `
