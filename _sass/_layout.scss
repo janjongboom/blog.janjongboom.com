@@ -98,8 +98,9 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 1px solid $grey-color;
     padding: $spacing-unit 0;
+    background-color: #eee;
 }
 
 .footer-heading {
@@ -157,6 +158,11 @@
     }
 }
 
+hr {
+    border: 0;
+    border-bottom: solid 1px $grey-color;
+    margin-bottom: 15px;
+}
 
 
 /**
@@ -176,6 +182,7 @@
 
     > li {
         margin-bottom: $spacing-unit;
+        border-bottom: solid 1px $grey-color-light;
     }
 }
 

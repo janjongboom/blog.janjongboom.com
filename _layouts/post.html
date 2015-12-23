@@ -22,5 +22,13 @@ layout: default
 
     {{ content }}
   </div>
+  
+  {% if page.commentCount %}
+  <hr>
+  <p>
+    <em>There are {{ page.commentCount }} comments on this article, read them on 
+      <a href="{{page.commentUrl || page.originalUrl}}">{{page.originalName}}</a>.</em>
+  </p>
+  {% endif %}
 
 </article>
