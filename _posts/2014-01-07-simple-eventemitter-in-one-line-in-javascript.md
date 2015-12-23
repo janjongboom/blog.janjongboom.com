@@ -17,6 +17,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/9765/simple-eventemitter-in-o
   library, extra risk, etc. Especially if you&apos;re testing some simple
   scenario or small app that&apos;s a lot of boilerplate. Behold: a dependency-less
   event emitter (1 line of javascript!):
+  <!--more-->
   <br>
   <br>
 {% highlight js %}
@@ -45,4 +46,3 @@ ee.dispatchEvent(new CustomEvent('awesome', { detail: 1337 }))
 // omg omg omg, 1337 /* output from the console.log */
 // true /* event did not get canceled */
 {% endhighlight %}</p>
-   

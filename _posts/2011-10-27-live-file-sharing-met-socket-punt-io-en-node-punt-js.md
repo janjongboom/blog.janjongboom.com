@@ -18,6 +18,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/7238/live-file-sharing-met-so
   <br>
   <br>
 <a href="http://www.screenr.com/C04s" rel="external">Video</a>
+<!--more-->
   <br>
   <br>
 <b>Zit daar in dan?</b>
@@ -70,4 +71,3 @@ npm install socket.io
   <br>
 <b>Wat een baggercode</b>
   <br>Klopt!</p>
-   

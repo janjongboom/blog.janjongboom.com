@@ -27,6 +27,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/5842/intelligente-suggesties-
   </ul>Na gisteren in te zijn gegaan op de basis van de applicatie, vandaag gaan
   we dieper in op Burkhard-Keller trees voor effici&#xEB;nte volledige matching,
   en het ondervangen van typfouten.
+  <!--more-->
   <br>
   <br>
 <b>Burkhard-Keller tree</b>

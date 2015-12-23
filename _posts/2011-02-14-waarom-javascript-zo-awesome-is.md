@@ -25,4 +25,4 @@ commentUrl:     http://glamour.tweakblogs.net/blog/6143/waarom-javascript-zo-awe
   je ge&#xEF;nteresseerd bent in beveiliging tegen dit soort aanvallen, kijk
   dan eens naar dit paper van Ryan Barnett: <a href="https://media.blackhat.com/bh-dc-11/Barnett/BlackHat_DC_2011_Barnett_XSS%20Streetfight-wp.pdf"
   rel="external">XSS Street Fight</a>.</p>
-   
+  <!--more-->

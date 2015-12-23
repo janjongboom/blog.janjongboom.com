@@ -19,6 +19,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/10565/i-wrote-a-book-firefox-
   especially the start was though; but during the process I actually had
   more and more fun. The fruit of the labour has now been bundled in an early
   access version of my book &quot;Firefox OS in Action&quot;.
+  <!--more-->
   <br>
   <br>
 <a href="http://manning.com/jongboom/" rel="external nofollow"><img src="http://manning.com/jongboom/jongboom_cover150.jpg" class="rml" alt="http://manning.com/jongboom/jongboom_cover150.jpg" title="http://manning.com/jongboom/jongboom_cover150.jpg"></a>
@@ -41,4 +42,3 @@ commentUrl:     http://glamour.tweakblogs.net/blog/10565/i-wrote-a-book-firefox-
   <br>
   <br>Plus it&apos;s the deal of the day so you get 50% off today with code:
   dotd072914au</p>
-   

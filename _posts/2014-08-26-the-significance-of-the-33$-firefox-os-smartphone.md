@@ -27,6 +27,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/10747/the-significance-of-the
   source of information that humankind has ever created. There are more people
   that do not have access to the internet, than those who do. One of the
   main goals (for me *the* main goal) of Firefox OS is to change this.
+  <!--more-->
   <br>
   <br>Working as an evangelist for Telenor, a telco that has a number of subsidiaries
   in poor countries, this directly affects me. I have the opportunity to
@@ -173,4 +174,3 @@ href="http://manning.com/jongboom/" rel="external nofollow">my book</a>(remember
   series me, Sergi Mansilla and Christian Heilmann made called <a href="https://developer.mozilla.org/en-US/Firefox_OS/Screencast_series:_App_Basics_for_Firefox_OS"
   rel="external nofollow">App Basics for Firefox OS</a>.
   <p></p>
-   

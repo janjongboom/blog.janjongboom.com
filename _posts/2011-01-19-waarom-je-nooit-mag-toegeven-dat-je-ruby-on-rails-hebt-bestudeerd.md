@@ -14,8 +14,8 @@ commentUrl:     http://glamour.tweakblogs.net/blog/5978/waarom-je-nooit-mag-toeg
   rel="external">mijn comment gisteren</a> met de complimenten van een niet
   nader te noemen collega die mij al weken probeert lid te maken van de RoR
   fanclub.
+  <!--more-->
   <br>
   <br>
 <a href="http://www.100procentjan.nl/tweakers/emilegroot.jpg" rel="external"><img src="http://www.100procentjan.nl/tweakers/emileklein.jpg" title="http://www.100procentjan.nl/tweakers/emileklein.jpg" alt="http://www.100procentjan.nl/tweakers/emileklein.jpg"></a>
 </p>
-   

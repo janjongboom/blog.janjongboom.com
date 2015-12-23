@@ -18,4 +18,4 @@ commentUrl:     http://glamour.tweakblogs.net/blog/5904/video-primer-hoe-faceboo
   <br>
 <a href="http://blip.tv/file/3839676/" rel="external">Videolink</a>
 </p>
-   
+ <!--more-->

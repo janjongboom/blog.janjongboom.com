@@ -17,6 +17,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/8717/getting-started-on-firef
   rel="external">using emscripten to cross compile C code into javascript</a>,
   or just the ease of reusing jQuery within your Firefox OS app; something
   that I would have killed for back in the days when doing WPF.
+  <!--more-->
   <br>
   <br>Development in JavaScript frameworks has exploded since the mid-2000s,
   with new players emerging every other day, and application frameworks like
@@ -67,4 +68,3 @@ commentUrl:     http://glamour.tweakblogs.net/blog/8717/getting-started-on-firef
       <br>
 <i>Comments on <a href="http://news.ycombinator.com/item?id=5249739" rel="external">Hacker News</a></i>
 </p>
-   

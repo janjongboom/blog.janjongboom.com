@@ -10,13 +10,14 @@ commentCount:   11
 commentUrl:     http://glamour.tweakblogs.net/blog/6282/video%21-preview-van-touch-based-mobile-photo-gallery.html#reacties
 ---
 
-   <p class="article">
+<p class="article">
   <div id="swfobject_A3Qcqf3dr4"><a href="http://www.youtube.com/watch?v=WjpauZnEm7g" rel="external" title="http://www.youtube.com/watch?v=WjpauZnEm7g">http://www.youtube.com/watch?v=WjpauZnEm7g</a>
   </div>
+</p>
+<!--more-->
   <script type="text/javascript">
     //<!--
     (function(){var so=new SWFObject('http://www.youtube.com/v/WjpauZnEm7g&fs=1','movie_A3Qcqf3dr4',580,350,7);so.addParam('allowfullscreen','true');so.write('swfobject_A3Qcqf3dr4')})();
     //-->
   </script>
-</p>
-   
+

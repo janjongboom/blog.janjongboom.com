@@ -13,10 +13,11 @@ commentUrl:     http://glamour.tweakblogs.net/blog/9745/simple-async-queue-in-ja
    <p class="article">Normally I fall back to caolan&apos;s async module, but I&apos;m not in
   a node.js environment and I needed a simple async queue with concurrency
   1; which can be done in a one liner.
+  <!--more-->
   <br>
   <br>
 {% highlight js %}
-var q = [ 
+var q = [
   function a(n) { console.log('a'), setTimeout(n, 30); },
   function b(n) { console.log('b'), setTimeout(n, 10); }
 ];
@@ -41,4 +42,3 @@ var q = input.split('').map(function(c) {
 });
 queue(q, function() { console.log('done') });
 {% endhighlight %}</p>
-   

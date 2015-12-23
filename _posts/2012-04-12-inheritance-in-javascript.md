@@ -25,6 +25,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/7779/inheritance-in-javascrip
   laten erven, sla er dus geen state in op want dan loop je tegen scoping
   issues aan. Je kunt meerdere mixin&apos;s in 1 object mixen voor multiple-inheritance-like
   behavior.
+  <!--more-->
   <br>
   <br>
 <b>Inheritance</b>
@@ -36,13 +37,13 @@ commentUrl:     http://glamour.tweakblogs.net/blog/7779/inheritance-in-javascrip
   <br>
   <br>
 {% highlight js %}
- Object.create = function (o) {  
-    if (arguments.length > 1) {  
-        throw new Error('Object.create implementation only accepts the first parameter.');  
-    }  
-    function F() {}  
-    F.prototype = o;  
-    return new F();  
+ Object.create = function (o) {
+    if (arguments.length > 1) {
+        throw new Error('Object.create implementation only accepts the first parameter.');
+    }
+    function F() {}
+    F.prototype = o;
+    return new F();
 };
 var inherits = function (ctor, superCtor) {
     ctor.super_ = superCtor;
@@ -53,7 +54,7 @@ var inherits = function (ctor, superCtor) {
     };
 };
 {% endhighlight %}
-  <!--more-->Nu kunnen we een object hierarchie bouwen, waarin we een Parent en een
+  Nu kunnen we een object hierarchie bouwen, waarin we een Parent en een
   Client hebben:
   <br>
   <br>
@@ -133,4 +134,3 @@ console.log(person instanceof Person, person instanceof greeter);
 <b>Conclusie</b>
   <br>Wil je <i>state</i> inheriten: inheritance. Wil je <i>behavior</i> inheriten:
   mixins.</p>
-   

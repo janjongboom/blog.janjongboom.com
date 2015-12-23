@@ -18,6 +18,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.htm
   <br>Beschikbaar op <a href="http://m.funda.nl" rel="external">m.funda.nl</a>,
   als je op je desktop kijkt is het aan te raden Chrome of een andere Webkit
   browser te gebruiken.
+  <!--more-->
   <br>
   <br>
 <b>De Nota Bene&apos;s</b>
@@ -25,4 +26,3 @@ commentUrl:     http://glamour.tweakblogs.net/blog/6476/mobiele-website-live.htm
   geval zie je nog de oude site.
   <br>2. Koppeling met je profiel op Mijn funda wordt over enkele weken toegevoegd.
   Samen met ondersteuning voor plattegronden en 360 foto&apos;s.</p>
-   

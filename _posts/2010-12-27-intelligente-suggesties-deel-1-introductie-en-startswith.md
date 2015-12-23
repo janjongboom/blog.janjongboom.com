@@ -30,6 +30,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/5832/intelligente-suggesties-
   rel="external">dit het resultaat</a>. Vandaag deel 1 in een serie over
   de techniek die het mogelijk maakt om in fracties van een seconde intelligente
   suggesties te geven.
+  <!--more-->
   <br>
   <br>
 <b>Doelen</b>

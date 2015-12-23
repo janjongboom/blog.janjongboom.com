@@ -15,6 +15,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/9761/simple-function-logger-i
   that we&apos;re developing for Firefox OS. To see whether the flow is actually
   sane I plug in a simple function logger that allows me to see which functions
   are called and with what arguments.
+  <!--more-->
   <br>
   <br>
 {% highlight js %}
@@ -28,9 +29,9 @@ commentUrl:     http://glamour.tweakblogs.net/blog/9761/simple-function-logger-i
          result = [];
       return result;
     }
-    console.log(args.callee.name, getParamNames(args.callee).reduce(function(obj, k, ix) { 
-      obj[k] = args[ix]; 
-      return obj; 
+    console.log(args.callee.name, getParamNames(args.callee).reduce(function(obj, k, ix) {
+      obj[k] = args[ix];
+      return obj;
     }, {}));
   }
 {% endhighlight %}
@@ -51,4 +52,3 @@ a(4, 5);
 {% endhighlight %}
   <br>Remember to disable &quot;use strict&quot; because accessing callee is
   not permitted anymore.</p>
-   

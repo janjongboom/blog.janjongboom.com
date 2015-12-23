@@ -15,6 +15,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/8564/a-decent-terminal-experi
   that had a decent terminal underneath I soon became a command line junky.
   Time to improve the retarded beast that they call &apos;cmd.exe&apos; in
   Windows by adding some real terminal experience.
+  <!--more-->
   <br>
   <br>
 <i>Yes, I&apos;m aware of PowerShell. But the &apos;yet another syntax&apos; is not for me.</i>
@@ -80,4 +81,3 @@ commentUrl:     http://glamour.tweakblogs.net/blog/8564/a-decent-terminal-experi
   <img src="https://c9.io/janjongboom/dropbox/workspace/cmd2.PNG" title="https://c9.io/janjongboom/dropbox/workspace/cmd2.PNG"
   alt="https://c9.io/janjongboom/dropbox/workspace/cmd2.PNG">
 </p>
-   

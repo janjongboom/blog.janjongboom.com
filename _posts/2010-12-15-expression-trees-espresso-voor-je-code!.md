@@ -21,6 +21,7 @@ commentUrl:     http://glamour.tweakblogs.net/blog/5747/expression-trees-espress
   ze delen van je code tot honderd keer sneller kunnen maken. Laten we bij
   het begin beginnen: wat zijn expressions eigenlijk? Wellicht het meest
   eenvoudige stuk code demonstreert dit het beste:
+  <!--more-->
   <br>
   <br>
 {% highlight csharp %}
