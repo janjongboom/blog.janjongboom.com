@@ -30,5 +30,19 @@ layout: default
       <a href="{{page.commentUrl || page.originalUrl}}">{{page.originalName}}</a>.</em>
   </p>
   {% endif %}
+  
+  <hr>
+  <div id="page-nav">
+    {% if page.next.url %}
+    <p>
+      &#x25B2; <label>Next: </label> <a class="next" href="{{page.next.url}}">{{page.next.title}}</a>
+    </p>
+    {% endif %} 
+    {% if page.previous.url %}
+    <p>
+      &#x25BC; <label>Prev: </label> <a class="prev" href="{{page.previous.url}}">{{page.previous.title}}</a>
+    </p>
+    {% endif %} 
+  </div>
 
 </article>
