@@ -3,7 +3,7 @@ layout:   post
 title:    "Physical Web and Web Bluetooth on mbed os"
 date:     2016-01-11 14:00:00
 tags:     iot bluetooth
-originalUrl: http://blog.mbed.com
+originalUrl: http://blog.mbed.com/post/137093070607/physical-web-and-web-bluetooth-on-mbed-os
 originalName: "mbed Developer Blog"
 ---
 
@@ -103,7 +103,7 @@ void app_start(int, char**) {
 
 To verify that everything works, you'll need a phone that runs Android 6 or higher, and install [Chrome Dev](https://play.google.com/store/apps/details?id=com.chrome.dev&hl=en_GB). After installation, navigate to chrome://flags#enable-physical-web and chrome://flags/#enable-web-bluetooth to enable both features. Now, when you pull down the drawer you'll see that there are Physical Web beacons nearby and see the URL listed.
 
-![Look ma, I have a URL!]({{ site.baseurl }}/assets/physical3.jpg)
+![Look ma, I have a URL!]({{ site.baseurl }}/assets/physical3.png)
 
 We can now write a small web application that utilizes Web Bluetooth to verify that we can connect to the device.
 
@@ -141,11 +141,11 @@ We can now write a small web application that utilizes Web Bluetooth to verify t
 
 When we navigate to the page and hit 'Go Bluetooth' we'll be presented with a list of available Bluetooth peripherals that implement service 0x8765, and among those we can see our device.
 
-![Not just an Eddystone beacon, we're also a legit BLE device]({{ site.baseurl }}/assets/physical1.jpg)
+![Not just an Eddystone beacon, we're also a legit BLE device]({{ site.baseurl }}/assets/physical1.png)
 
 After we hit 'Pair', a connection is made and we can start reading and writing characteristics.
 
-![We're paired and ready to go]({{ site.baseurl }}/assets/physical2.jpg)
+![We're paired and ready to go]({{ site.baseurl }}/assets/physical2.png)
 
 I expect that the Pairing step will no longer be necessary when connecting via a Physical Web URL when everything is ready, but for now this is necessary.
 
