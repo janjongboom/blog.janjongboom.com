@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    "Physical Web and Web Bluetooth on mbed os"
+title:    "Physical Web and Web Bluetooth on mbed OS"
 date:     2016-01-11 14:00:00
 tags:     iot bluetooth
 originalUrl: http://blog.mbed.com/post/137093070607/physical-web-and-web-bluetooth-on-mbed-os
