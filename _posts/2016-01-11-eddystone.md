@@ -153,6 +153,6 @@ I expect that the Pairing step will no longer be necessary when connecting via a
 
 From here the opportunities are endless. We have a proper BLE connection to the device and we can read and write characteristics just like we would when building a native Android application. If you're ready to take the next step, we have some code ready that exposes an accelerometer service over Bluetooth and has a web application that plots movement of multiple BLE devices over time, which can be found on [GitHub](http://github.com/web-bluetooth/juggling). Enjoy!
 
-<video autoplay loop>
+<video autoplay loop muted>
   <source src="{{ site.baseurl }}/assets/devicemotion.mp4" type="video/mp4">
 </video>
