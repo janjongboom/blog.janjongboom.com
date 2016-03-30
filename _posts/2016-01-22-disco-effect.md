@@ -3,7 +3,7 @@ layout:   post
 title:    "A disco effect: Looping and wait() in mbed OS"
 date:     2016-01-22 11:21:00
 tags:     iot
-originalUrl: http://blog.mbed.com/
+originalUrl: http://blog.mbed.com/post/137808406402/a-disco-effect-looping-and-wait-in-mbed-os
 originalName: "mbed Developer Blog"
 ---
 

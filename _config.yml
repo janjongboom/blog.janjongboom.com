@@ -19,3 +19,5 @@ github_username:  janjongboom
 markdown: kramdown
 paginate: 10
 gems: [ jekyll-paginate ]
+kramdown:
+    input: GFM
