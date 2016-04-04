@@ -3,8 +3,8 @@ layout:   post
 title:    "Building your own LoRa network"
 date:     2016-04-04 11:00:00
 tags:     iot lora
-originalUrl: http://blog.mbed.com/post/139539984822/debugging-a-crashed-device-with-cmsis-dap
-originalName: "mbed Developer Blog"
+originalUrl: https://docs.mbed.com/docs/lora-with-mbed/en/latest/intro-to-lora/
+originalName: "mbed Docs"
 ---
 
 There is a lot of buzz around [LoRa](https://www.lora-alliance.org), a wide-area network solution that promises kilometers of range with very low power consumption; a perfect fit for the Internet of Things. A number of telecom operators are currently rolling out networks, but because LoRa operates in the [open spectrum](https://en.wikipedia.org/wiki/ISM_band) you don't need to wait for them. In this article we'll go over all the pieces required to build a private LoRa network, and how to use the network to send data from an ARM mbed end-node to the cloud.
