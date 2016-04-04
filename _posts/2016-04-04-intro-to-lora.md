@@ -1,13 +1,22 @@
-# Building your own LoRa network
+---
+layout:   post
+title:    "Building your own LoRa network"
+date:     2016-04-04 11:00:00
+tags:     iot lora
+originalUrl: http://blog.mbed.com/post/139539984822/debugging-a-crashed-device-with-cmsis-dap
+originalName: "mbed Developer Blog"
+---
 
 There is a lot of buzz around [LoRa](https://www.lora-alliance.org), a wide-area network solution that promises kilometers of range with very low power consumption; a perfect fit for the Internet of Things. A number of telecom operators are currently rolling out networks, but because LoRa operates in the [open spectrum](https://en.wikipedia.org/wiki/ISM_band) you don't need to wait for them. In this article we'll go over all the pieces required to build a private LoRa network, and how to use the network to send data from an ARM mbed end-node to the cloud.
+
+<!--more-->
 
 ## Requirements
 
 A typical LoRa network consists of four parts: devices, gateways, a network service and an application:
 
 
-![Topology of a LoRa network](assets/lora1.png)
+![Topology of a LoRa network]({{ site.baseurl }}/assets/lora1.png)
 
 On the hardware side we need devices and gateways, similar to how we set up a WiFi network. Gateways are very simple: they just scan the spectrum and capture LoRa packets. There is also no gateway pinning here; all gateways within range of a device will receive the signal. The gateways then forward their data to a network service that handles the actual packet. 
 
@@ -24,7 +33,7 @@ There's quite some [choice in the gateways](https://www.loriot.io/gateways.html)
 * Building your own with a Raspberry Pi and an [IMST iC880A](http://www.wireless-solutions.de/products/long-range-radio/ic880a) concentrator. At around 300 euros, this is the most cost-efficient option.
 
 
-![Self built gateway using a Raspberry Pi and an IMST iC880A](assets/lora5.jpg)
+![Self built gateway using a Raspberry Pi and an IMST iC880A]({{ site.baseurl }}/assets/lora5.jpg)
 
 *Self built LoRa gateway based on Raspberry Pi 2 and IMST iC880A. Total cost about 300 euros.*
 
@@ -123,14 +132,14 @@ Now that we have set up the gateways and they can reach the internet, it's time 
 1. Click the link to register a new gateway.
 
 
-![First step to registering a new gateway](assets/lora2.png)
+![First step to registering a new gateway]({{ site.baseurl }}/assets/lora2.png)
 
 1. You're now taken through a wizard. Just pick the gateway you have and follow the steps. 
 1. You're taken to the gateway page where you'll find the LORIOT binary for your platform, and a link to set up documentation.
 
 
 
-![Almost there...](assets/lora3.png)
+![Almost there...]({{ site.baseurl }}/assets/lora3.png)
 
 **Tip:** Use a tool like scp to copy the binary from your computer to the gateway. For example:
 
@@ -141,7 +150,7 @@ scp ~/Downloads/loriot_pi_2_iC880A_USB_1.0.1.tar pi@192.168.2.7:~/`
 1. The gateway now shows as connected on the LORIOT gateway page and we're ready to work on the device.
 
 
-![Connected!](assets/lora4.png)
+![Connected!]({{ site.baseurl }}/assets/lora4.png)
 
 **Tip:** LORIOT has a 'Gateway Tap', which you can access from your gateway page. This allows you to see what messages are being picked up by the gateway - very useful when debugging.
 
@@ -151,7 +160,7 @@ Now off to the interesting work: building a device that can send sensor data ove
 
 
 
-![nRF51-DK, LoRa shield and a PIR sensor](assets/lora6.jpg)
+![nRF51-DK, LoRa shield and a PIR sensor]({{ site.baseurl }}/assets/lora6.jpg)
 
 *PIR sensor hooked up to a Nordic Semiconductor nRF51-DK with a LoRa shield*
 
@@ -173,7 +182,7 @@ To generate a new key pair:
 1. At the bottom of the page, find *Seqno checking* and change this setting to *Relax* (call `setRelax()` from the JS console if the button does not show up).
 
 
-![Relax, take it easy](assets/lora9.png)
+![Relax, take it easy]({{ site.baseurl }}/assets/lora9.png)
 
 Now that we have the keys we can start writing some software.
 
@@ -190,12 +199,12 @@ Now that we have the keys we can start writing some software.
 1. You're redirected to the online compiler, where you can give the program a name.
 
 
-![Importing a program to get started](assets/lora7.png)
+![Importing a program to get started]({{ site.baseurl }}/assets/lora7.png)
 
 **Note:** Make sure that you select the right board in the top right corner of the compiler.
 
 
-![Selecting the right board is kinda important](assets/lora8.png)
+![Selecting the right board is kinda important]({{ site.baseurl }}/assets/lora8.png)
 
 
 #### Setting shield frequency 
@@ -246,7 +255,7 @@ Now we can verify whether our setup works, by clicking the *Compile* button.
 
 
 
-![Compile button](assets/lora10.png)
+![Compile button]({{ site.baseurl }}/assets/lora10.png)
 
 When compilation succeeds a file is downloaded. 
 
@@ -257,7 +266,7 @@ Once the device mounts, drag the compiled file onto the board. This causes the d
 
 
 
-![We've got data!](assets/lora11.png)
+![We've got data!]({{ site.baseurl }}/assets/lora11.png)
 
 
 #### Switching to manual sending
@@ -327,13 +336,13 @@ Change the content of the `prepareTxFrame` function to change which data you're 
 
 
 
-![Importing a program to get started](assets/lora12.png)
+![Importing a program to get started]({{ site.baseurl }}/assets/lora12.png)
 
 **Note:** Make sure that you select the right board in the top right corner of the compiler.
 
 
 
-![Selecting the right board is kinda important](assets/lora13.png)
+![Selecting the right board is kinda important]({{ site.baseurl }}/assets/lora13.png)
 
 
 #### Adding LORIOT keys
@@ -353,7 +362,7 @@ static const char LORIOT_APP_S_KEY[] = "BE8EF84E745D0AB14D4507B0BA600555"; // AP
 Now we can verify whether our setup works, by clicking the *Compile* button.
 
 
-![Compile button](assets/lora10.png)
+![Compile button]({{ site.baseurl }}/assets/lora10.png)
 
 When compilation succeeds a file is downloaded. 
 
@@ -362,7 +371,7 @@ Plug your development board into the computer (over micro-USB) to mount it as a 
 Once the device mounts, drag the compiled file onto the board. This causes the device to boot up. You can then see messages coming in to the LORIOT device page:
 
 
-![We've got data!](assets/lora11.png)
+![We've got data!]({{ site.baseurl }}/assets/lora11.png)
 
 
 #### Switching to manual sending
@@ -378,12 +387,12 @@ Now that we have the first three parts of our network up and running, it's time 
 
 
 
-![Websocket](assets/lora14.png)
+![Websocket]({{ site.baseurl }}/assets/lora14.png)
 
 1. Copy the URL and the token under *Current output setup* and paste them in the code sample below:
 
 
-![Retrieving the API parameters from the output tab in LORIOT](assets/lora16.png)
+![Retrieving the API parameters from the output tab in LORIOT]({{ site.baseurl }}/assets/lora16.png)
 
 ```html
 <!DOCTYPE html>
@@ -422,13 +431,8 @@ And done! We now have a fully functioning LoRa network with a device, a gateway 
 
 
 
-![Full circle](assets/lora15.png)
+![Full circle]({{ site.baseurl }}/assets/lora15.png)
 
 ## Conclusion
 
 LoRa is a great technology with a lot of potential, especially because anyone can set up a network and get started building long range IoT devices with a relatively small investment. I hope that this guide will help you get started, and would love to see what you build with LoRa and ARM mbed!
-
----
-
-*[Jan Jongboom](http://twitter.com/janjongboom) is Developer Evangelist IoT at ARM, and a vivid LoRa enthusiast.*
-
