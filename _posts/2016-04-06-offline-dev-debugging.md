@@ -1,4 +1,11 @@
-# Offline development and debugging with mbed
+---
+layout:   post
+title:    "Offline development and debugging with mbed"
+date:     2016-04-06 11:00:00
+tags:     iot mbed
+originalUrl: https://docs.mbed.com/docs/debugging-on-mbed/en/latest/Debugging/offline/
+originalName: "mbed Docs"
+---
 
 At the heart of mbed we have an online compiler. While that is incredibly convenient for getting a project started or while prototyping, chances are that at some point you'll miss a debugger, or you'll want to develop while not having an active internet connection. Fortunately, we support exporting applications to a number of toolchains - including GCC, uVision and Eclipse - and committing source code back to the online environment. Combining the best of both the online and offline world.
 
@@ -7,6 +14,8 @@ In this article we'll:
 * Cover ways to set up your local toolchain.
 * Show how to debug applications with your favourite IDE.
 * Explain how to sync online and offline code and libraries.
+
+<!--more-->
 
 To follow along you'll need to have the following software installed on your local machine:
 
@@ -50,17 +59,17 @@ Before we can take our application offline, we first want to publish our project
 In the online IDE, right click on your project name and select *Publish*:
 
 
-![Publish button](assets/offline1.png)
+![Publish button]({{ site.baseurl }}/assets/offline1.png)
 
 You can choose to publish this project privately to prevent others from seeing it. Your repository is always write-protected, regardless of the setting you choose:
 
 
-![Publication settings](assets/offline2.png)
+![Publication settings]({{ site.baseurl }}/assets/offline2.png)
 
 After publication you get a link to your project page, which has a *Clone repository to desktop* button. While this will indeed clone your repository, we would be  missing build files for your toolchain, so we don't want to click this just yet:
 
 
-![Clone to desktop](assets/offline3.png)
+![Clone to desktop]({{ site.baseurl }}/assets/offline3.png)
 
 ### Step 2: Exporting 
 
@@ -69,12 +78,12 @@ To get the build files we need, we use the online IDE to export a project to our
 For simplicity we'll be using GCC. Go back to the online compiler, right click on the project and select *Export*:
 
 
-![Exporting to desktop](assets/offline4.png)
+![Exporting to desktop]({{ site.baseurl }}/assets/offline4.png)
 
 This generates a ZIP file that contains our source code, a Makefile and all the libraries we depend on (just one for now: `mbed`):
 
 
-![Content of the ZIP file](assets/offline5.png)
+![Content of the ZIP file]({{ site.baseurl }}/assets/offline5.png)
 
 Open a terminal window and navigate to the folder to which you extracted the project. You can verify whether we can build locally by running:
 
@@ -91,7 +100,7 @@ We can now debug our application using [GDB](https://docs.mbed.com/docs/debuggin
 For instance, here I used the same approach to export to uVision 4 and start a debug session:
 
 
-![Debugging with uVision](assets/offline8.png)
+![Debugging with uVision]({{ site.baseurl }}/assets/offline8.png)
 
 *Debugging with uVision 4 on the left, and syncing changes back to the online compiler on the right*
 
@@ -156,12 +165,12 @@ $ hg push
 Now go back to the online compiler, right click on your project and select *Update* to pull in the changes you made locally:
 
 
-![Updating your application](assets/offline6.png)
+![Updating your application]({{ site.baseurl }}/assets/offline6.png)
 
 When you open `main.cpp` in the online compiler you'll see that our changes have made it back online:
 
 
-![Yay](assets/offline7.png)
+![Yay]({{ site.baseurl }}/assets/offline7.png)
 
 ### Retrieving changes made in the online compiler
 
@@ -185,7 +194,7 @@ Let's add a library in the online compiler:
 1. Enter the URL https://developer.mbed.org/teams/Nespresso-RGB-Sensor/code/GroveColourSensor/.
 
 
-![Import library](assets/offline10.png)
+![Import library]({{ site.baseurl }}/assets/offline10.png)
 
 1. In `main.cpp`, add a line to reference the library:
 
@@ -307,7 +316,7 @@ $ hg push
 To update the library in the online compiler, we right click on the project and select 'Update all...'.
 
 
-![Upload all](assets/offline11.png)
+![Upload all]({{ site.baseurl }}/assets/offline11.png)
 
 The library is now updated, and we can continue working in the online compiler.
 
