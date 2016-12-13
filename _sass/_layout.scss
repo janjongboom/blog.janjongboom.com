@@ -270,7 +270,7 @@ hr {
     p {
         margin-bottom: 7px;
     }
-    
+
     label {
         width: 40px;
         display: inline-block;
@@ -280,8 +280,25 @@ hr {
 .pagination {
     text-align: center;
     font-size: 1.2rem;
-    
+
     * {
         padding: 0 10px;
+    }
+}
+
+.archived {
+    background: red;
+    border-color: #dd0000;
+    border: solid 1px #dd0000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: italic;
+    font-style: italic;
+    margin-bottom: 20px;
+    
+    a {
+        color: white;
+        text-decoration: underline;
     }
 }

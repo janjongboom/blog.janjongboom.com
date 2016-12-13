@@ -11,6 +11,12 @@ There is a lot of buzz around [LoRa](https://www.lora-alliance.org), a wide-area
 
 <!--more-->
 
+<div class="archived">
+    This is an archived copy. 
+    For the latest version of this article, see 
+    <a href="https://docs.mbed.com/docs/lora-with-mbed/en/latest/intro-to-lora/">docs.mbed.com</a>.
+</div>
+
 ## Requirements
 
 A typical LoRa network consists of four parts: devices, gateways, a network service and an application:
@@ -18,7 +24,7 @@ A typical LoRa network consists of four parts: devices, gateways, a network serv
 
 ![Topology of a LoRa network]({{ site.baseurl }}/assets/lora1.png)
 
-On the hardware side we need devices and gateways, similar to how we set up a WiFi network. Gateways are very simple: they just scan the spectrum and capture LoRa packets. There is also no gateway pinning here; all gateways within range of a device will receive the signal. The gateways then forward their data to a network service that handles the actual packet. 
+On the hardware side we need devices and gateways, similar to how we set up a WiFi network. Gateways are very simple: they just scan the spectrum and capture LoRa packets. There is also no gateway pinning here; all gateways within range of a device will receive the signal. The gateways then forward their data to a network service that handles the actual packet.
 
 The network service de-duplicates data when multiple gateways receive the same packet, decrypts the message (everything is end-to-end encrypted), handles LoRa features like adaptive data rating, and so on. It then forwards the decrypted data to your application.
 
@@ -38,7 +44,7 @@ There's quite some [choice in the gateways](https://www.loriot.io/gateways.html)
 *Self built LoRa gateway based on Raspberry Pi 2 and IMST iC880A. Total cost about 300 euros.*
 
 
-For development purposes one gateway will be enough, but in a production deployment you'll want at least two, as there will always be dark spots in your network. 
+For development purposes one gateway will be enough, but in a production deployment you'll want at least two, as there will always be dark spots in your network.
 
 ### Getting a device
 
@@ -62,7 +68,7 @@ As a network server just processes your data - it doesn't store it - you'll need
 
 ## Setting up the gateway
 
-We now need to configure our gateway by installing some software that will scan the spectrum and forward all LoRa packets to LORIOT. To do this we'll need to log into the gateway. Here are setup instructions for the three gateways mentioned earlier. 
+We now need to configure our gateway by installing some software that will scan the spectrum and forward all LoRa packets to LORIOT. To do this we'll need to log into the gateway. Here are setup instructions for the three gateways mentioned earlier.
 
 **Note:** This section assumes that you're familiar with SSH.
 
@@ -72,9 +78,9 @@ We now need to configure our gateway by installing some software that will scan 
 
 To configure the Kerlink:
 
-1. Connect the gateway to your network over Ethernet. 
-1. The gateway gets an IP through DHCP. 
-1. To quickly find the gateway you can look in the DHCP table on your router, or use [nmap](http://nmap.org) via `nmap -p 22 192.168.2.*` (if that's your subnet). 
+1. Connect the gateway to your network over Ethernet.
+1. The gateway gets an IP through DHCP.
+1. To quickly find the gateway you can look in the DHCP table on your router, or use [nmap](http://nmap.org) via `nmap -p 22 192.168.2.*` (if that's your subnet).
 1. You can now log into the gateway through SSH, with the username `root` and password `root`.
 
 
@@ -88,25 +94,25 @@ __Using Ethernet__
 
 1. Connect to the Conduit over Ethernet (from the Conduit to your computer).
 1. Set a static IP address of 192.168.2.2 for your computer.
-1. Set a static IP address of 192.168.2.1 as your router. 
+1. Set a static IP address of 192.168.2.1 as your router.
 1. Log in through SSH to 192.168.2.1, with the username `root` and password `root`.
 
 
 __Over micro-USB__
 
 1. Connect to the Conduit using a micro-USB cable.
-1. The gateway appears as a serial device. 
+1. The gateway appears as a serial device.
 1. You can use a program like [GNU screen](https://www.gnu.org/software/screen/) or [PuTTY](http://putty.org) to log into the gateway.
 
 Now that we are connected we can set up the gateway:
 
-1.  Enable DHCP by following Step 4 in [this document](http://www.multitech.net/developer/software/mlinux/getting-started-with-conduit-mlinux/). 
+1.  Enable DHCP by following Step 4 in [this document](http://www.multitech.net/developer/software/mlinux/getting-started-with-conduit-mlinux/).
 1. Connect the gateway over Ethernet to your router.
 1. Follow the steps under 'Kerlink IoT station' to find the IP address and log in over SSH.
 
 ### Raspberry Pi and IMST iC880A
 
-First make sure that the Raspberry Pi is connected to the internet, and that you connected the IMST iC880A over USB (if you have the SPI version, take a look at the [IMST website](http://www.wireless-solutions.de/products/radiomodules/ic880a)). 
+First make sure that the Raspberry Pi is connected to the internet, and that you connected the IMST iC880A over USB (if you have the SPI version, take a look at the [IMST website](http://www.wireless-solutions.de/products/radiomodules/ic880a)).
 
 Log into the Pi over SSH, and follow Steps 3.1 - 3.5 in [this document](http://www.wireless-solutions.de/images/stories/downloads/Radio%20Modules/iC880A/iC880A_QuickStartGuide.pdf).
 
@@ -125,16 +131,16 @@ After following these steps:
 
 ## Installing the LORIOT software
 
-Now that we have set up the gateways and they can reach the internet, it's time to install the LORIOT software on them, so they have a place to send the LoRa packets. 
+Now that we have set up the gateways and they can reach the internet, it's time to install the LORIOT software on them, so they have a place to send the LoRa packets.
 
 1. [Sign up](https://eu1.loriot.io/register.html) for an account.
-1. You're redirected to the dashboard page. 
+1. You're redirected to the dashboard page.
 1. Click the link to register a new gateway.
 
 
 ![First step to registering a new gateway]({{ site.baseurl }}/assets/lora2.png)
 
-1. You're now taken through a wizard. Just pick the gateway you have and follow the steps. 
+1. You're now taken through a wizard. Just pick the gateway you have and follow the steps.
 1. You're taken to the gateway page where you'll find the LORIOT binary for your platform, and a link to set up documentation.
 
 
@@ -156,7 +162,7 @@ scp ~/Downloads/loriot_pi_2_iC880A_USB_1.0.1.tar pi@192.168.2.7:~/`
 
 ## Building a device
 
-Now off to the interesting work: building a device that can send sensor data over the LoRa network. For example, you can create a simple motion sensor using a [PIR sensor](https://www.adafruit.com/products/189) (under 10 euros at your local hardware store, and 2 euros when ordering from China). Of course, you are free to hook up a different sensor. 
+Now off to the interesting work: building a device that can send sensor data over the LoRa network. For example, you can create a simple motion sensor using a [PIR sensor](https://www.adafruit.com/products/189) (under 10 euros at your local hardware store, and 2 euros when ordering from China). Of course, you are free to hook up a different sensor.
 
 
 
@@ -171,12 +177,12 @@ Now off to the interesting work: building a device that can send sensor data ove
 
 ### Registering the device on LORIOT
 
-LoRa is end-to-end encrypted, with two sets of keys. We'll need to program these keys, plus a device ID, into the device firmware. We use these keys to sign our messages and be verified by the network server. 
+LoRa is end-to-end encrypted, with two sets of keys. We'll need to program these keys, plus a device ID, into the device firmware. We use these keys to sign our messages and be verified by the network server.
 
 To generate a new key pair:
 
 1. Go to the LORIOT dashboard.
-1. Click *Applications > Sample App > Manage Devices > Generate New Device*. 
+1. Click *Applications > Sample App > Manage Devices > Generate New Device*.
 1. A device is added to the list.
 1. Click the device to go to the device page.
 1. At the bottom of the page, find *Seqno checking* and change this setting to *Relax* (call `setRelax()` from the JS console if the button does not show up).
@@ -191,11 +197,11 @@ Now that we have the keys we can start writing some software.
 
 #### Importing the boilerplate program into the online IDE
 
-1. [Sign up](https://developer.mbed.org/account/signup/?next=%2F) for an account on ARM mbed, which hosts the online compiler we'll be using. 
+1. [Sign up](https://developer.mbed.org/account/signup/?next=%2F) for an account on ARM mbed, which hosts the online compiler we'll be using.
 1. Find your microcontroller on [the Platforms page](https://developer.mbed.org/platforms/).
-1. Click *Add to your mbed compiler*. 
+1. Click *Add to your mbed compiler*.
 1. Go to [LoRaWAN-lmic-app](https://developer.mbed.org/teams/Semtech/code/LoRaWAN-lmic-app/).
-1. Click *Import this program*. 
+1. Click *Import this program*.
 1. You're redirected to the online compiler, where you can give the program a name.
 
 
@@ -207,9 +213,9 @@ Now that we have the keys we can start writing some software.
 ![Selecting the right board is kinda important]({{ site.baseurl }}/assets/lora8.png)
 
 
-#### Setting shield frequency 
+#### Setting shield frequency
 
-We need to set the right frequency for the version of the shield you have (and where you are in the world). 
+We need to set the right frequency for the version of the shield you have (and where you are in the world).
 
 Open ``LMiC/lmic.h``, and find the following lines:
 
@@ -224,22 +230,22 @@ Make sure the right line is uncommented, depending on the shield version that yo
 
 #### Adding LORIOT keys
 
-Now let's program the keys from LORIOT into the device firmware. 
+Now let's program the keys from LORIOT into the device firmware.
 
 Open ``main.cpp``, and change the following lines:
 
 ```cpp
 #define LORAWAN_DEV_ADDR                            ( uint32_t )0x12345678
 
-static uint8_t NwkSKey[] = 
-{ 
+static uint8_t NwkSKey[] =
+{
     0x2B, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6,
     0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, 0x3C
 };
 
 // application session key
-static uint8_t ArtSKey[] = 
-{ 
+static uint8_t ArtSKey[] =
+{
     0x2B, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6,
     0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, 0x3C
 };
@@ -257,7 +263,7 @@ Now we can verify whether our setup works, by clicking the *Compile* button.
 
 ![Compile button]({{ site.baseurl }}/assets/lora10.png)
 
-When compilation succeeds a file is downloaded. 
+When compilation succeeds a file is downloaded.
 
 Plug your development board into the computer (over micro-USB) to mount it as a USB mass storage device. In most cases no drivers should be needed, but they are [here](https://developer.mbed.org/handbook/Windows-serial-configuration) just in case.
 
@@ -280,7 +286,7 @@ By default the application sends data automatically. If you want to change this,
         os_setTimedCallback( &sendFrameJob,
                              os_getTime( ) + ms2osticks( APP_TX_DUTYCYCLE + randr( -APP_TX_DUTYCYCLE_RND, APP_TX_DUTYCYCLE_RND ) ),
                              onSendFrame );
-        
+
         ////Sends frame as soon as possible (duty cycle limitations)
         //onSendFrame( NULL );
     }
@@ -300,7 +306,7 @@ static void prepareTxFrame( void )
     LMIC.frame[3] = LMIC.rssi >> 8;
     LMIC.frame[4] = LMIC.rssi;
     LMIC.frame[5] = LMIC.snr;
-#endif    
+#endif
 }
 
 void movement() {
@@ -327,11 +333,11 @@ Change the content of the `prepareTxFrame` function to change which data you're 
 
 #### Importing the boilerplate program into the online IDE
 
-1. [Sign up](https://developer.mbed.org/account/signup/?next=%2F) for an account on ARM mbed, which hosts the online compiler we'll be using. 
+1. [Sign up](https://developer.mbed.org/account/signup/?next=%2F) for an account on ARM mbed, which hosts the online compiler we'll be using.
 1. Go to the [Multitech mDot platform page](https://developer.mbed.org/platforms/MTS-mDot-F411/).
-1. Click *Add to your mbed compiler*. 
+1. Click *Add to your mbed compiler*.
 1. Go to the [mdot_personalized_activation](https://developer.mbed.org/users/janjongboom/code/mdot_personalized_activation/) project page.
-1. Click *Import this program*. 
+1. Click *Import this program*.
 1. You're redirected to the online compiler where you can give the program a name.
 
 
@@ -347,7 +353,7 @@ Change the content of the `prepareTxFrame` function to change which data you're 
 
 #### Adding LORIOT keys
 
-Now let's program the keys from LORIOT into the device firmware. 
+Now let's program the keys from LORIOT into the device firmware.
 
 Open ``main.cpp``, and copy the big endian DevAddr and the `APPSKEY` and `NWKSKEY`'s from LORIOT into the application:
 
@@ -364,7 +370,7 @@ Now we can verify whether our setup works, by clicking the *Compile* button.
 
 ![Compile button]({{ site.baseurl }}/assets/lora10.png)
 
-When compilation succeeds a file is downloaded. 
+When compilation succeeds a file is downloaded.
 
 Plug your development board into the computer (over micro-USB) to mount it as a USB mass storage device. In most cases no drivers should be needed, but they are [here](https://developer.mbed.org/handbook/Windows-serial-configuration) just in case.
 
@@ -382,7 +388,7 @@ By default the application sends data automatically. If you want to change this,
 
 Now that we have the first three parts of our network up and running, it's time to use the sensor data in a small application. LORIOT offers a number of ways of getting your data out of their service, but the easiest is using a websocket. We can write a quick web application that will turn the page red when movement is detected, and green when everything is OK. We do this by checking the first byte of the LoRa payload (1=movement, 0=no movement).
 
-1. In LORIOT: go to your dashboard and click *Applications > Sample App > Output*. 
+1. In LORIOT: go to your dashboard and click *Applications > Sample App > Output*.
 1. Change the output type to *WebSocket*.
 
 
@@ -416,7 +422,7 @@ Now that we have the first three parts of our network up and running, it's time 
         console.log('onmessage', e);
         var data = JSON.parse(e.data);
         if (data.cmd !== 'rx') return;
-        
+
         switch (Number(data.data.slice(0, 2))) {
             case 0: document.body.style.backgroundColor = 'green'; break;
             case 1: document.body.style.backgroundColor = 'red'; break;
