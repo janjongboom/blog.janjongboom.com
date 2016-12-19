@@ -117,4 +117,5 @@ Total Flash memory (text + data + misc): 14102 bytes
 Together these three optimizations gave us a huge decrease of both static RAM (47%) and flash (2.69x less) usage. Compared with mbed 2.0 we use 3K more RAM - which is mainly due to the inclusion of mbed RTOS - but we use only half the flash. We'll continue to make improvements on this in the near future. All patches have landed and are included in mbed OS 5.2.
 
 -
+
 *This article was written by Vincent Coubard (Senior Software Engineer) and Jan Jongboom (Developer Evangelist IoT).*

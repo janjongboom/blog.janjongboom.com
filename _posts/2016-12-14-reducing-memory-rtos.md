@@ -9,9 +9,9 @@ originalName: "mbed Developer Blog"
 
 Two weeks ago, we blogged about [optimizing memory usage for mbed OS 5.2](https://developer.mbed.org/blog/entry/Optimizing-memory-usage-in-mbed-OS-52/), and today we want to show how memory usage can be decreased even further. This can be accomplished by tuning the RTOS configuration to our specific needs, or even turning off mbed RTOS altogether. This allows us to fit mbed mbed OS 5.2 on the smallest targets, like the [nRF51822](https://developer.mbed.org/platforms/Nordic-nRF51-DK/) which has only 6K of RAM available for user-space applications.
 
-All programs in this blog post are compiled for the nRF51-DK target using GCC 4.9.3.
-
 <!--more-->
+
+All programs in this blog post are compiled for the nRF51-DK target using GCC 4.9.3.
 
 ## Baseline numbers
 
