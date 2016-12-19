@@ -37,7 +37,7 @@ int main() {
 }
 ```
 
-When you compile this code with ARMCC, the program will crash right after toggling the LED. This is due to blocking operations being unallowed  in ISRs, they should be handled as fast as possible. We should thus signal the main thread and do the `printf` call in there. That's especially confusing when teaching beginners, as now we need to explain the concept of [Semaphores](https://developer.mbed.org/handbook/RTOS#semaphore) or [Mailboxes](https://developer.mbed.org/handbook/RTOS#mail) as well.
+When you compile this code with ARMCC, the program will crash right after toggling the LED. This is because calls to stdio (like `printf`) are [guarded by mutexes](https://developer.mbed.org/handbook/CMSIS-RTOS) in the ARM C standard library, and mutex functions [cannot be called from an ISR](https://www.keil.com/pack/doc/cmsis/RTOS/html/group__CMSIS__RTOS__MutexMgmt.html). We can get around this by signalling the main thread from the ISR and do the `printf` call in there. That's especially confusing when teaching beginners, as now we need to explain the concept of [Semaphores](https://developer.mbed.org/handbook/RTOS#semaphore) or [Mailboxes](https://developer.mbed.org/handbook/RTOS#mail) as well.
 
 **Using a Semaphore**
 
