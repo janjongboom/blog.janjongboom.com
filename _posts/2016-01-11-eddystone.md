@@ -4,7 +4,7 @@ title:    "Physical Web and Web Bluetooth on mbed OS"
 date:     2016-01-11 14:00:00
 tags:     iot bluetooth
 originalUrl: http://blog.mbed.com/post/137093070607/physical-web-and-web-bluetooth-on-mbed-os
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 One of the questions we're facing as IoT developers is: 'how can we make users interact with our devices?'. The standard way of solving that issue for the past few years has been to create an app to accompany your device, but with the vast rise of devices around you it gets harder and harder to convince users to install *'yet another app™'*. Of course, that is under the assumption that your users even know about your device...

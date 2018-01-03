@@ -4,7 +4,7 @@ title:    "Using Bluetooth Low Energy from JavaScript on mbed"
 date:     2016-12-01 11:00:00
 tags:     mbed js iot ble
 originalUrl: https://developer.mbed.org/blog/entry/Using-Bluetooth-Low-Energy-from-JavaScri/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Some time ago we blogged about [adding JavaScript support for mbed OS 5](https://developer.mbed.org/blog/entry/Bringing-JavaScript-to-mbed-OS/) through the JerryScript VM. In this blog post we'll show how you can use the Bluetooth Low Energy API from a JavaScript application. Writing your BLE application in JavaScript on mbed means enjoying the flexibility of a dynamic language while leveraging the well tested, widely used and battery friendly [mbed BLE API](https://docs.mbed.com/docs/ble-intros/en/master/).

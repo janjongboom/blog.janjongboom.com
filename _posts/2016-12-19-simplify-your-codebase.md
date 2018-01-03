@@ -4,7 +4,7 @@ title:    "Simplify your codebase with mbed-events"
 date:     2016-12-19 00:00:00
 tags:     mbed
 originalUrl: https://developer.mbed.org/blog/entry/Simplify-your-code-with-mbed-events/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Alongside the release of mbed OS 5, we also introduced [mbed-events](https://github.com/ARMmbed/mbed-events), an event loop library that can run in an RTOS thread. Using an event loop is very useful to defer execution of code to a different context. An example would be to defer execution from an interrupt context (ISR) to the main loop, or to defer execution from the high-priority thread to a lower priority thread. Now that mbed-events is part of core mbed OS 5.2, we'd like to show how this library can simplify your code.
@@ -60,7 +60,7 @@ int main() {
   while (1) {
     // wait for the semaphore to be released from the ISR
     int32_t v = updates.wait();
-    
+
     // now this runs on the main thread, and is safe
     if (v == 1) {
       led = !led;
@@ -96,7 +96,7 @@ int main() {
   // create a thread that'll run the event queue's dispatch function
   Thread eventThread;
   eventThread.start(callback(&queue, &EventQueue::dispatch_forever));
-  
+
   // wrap calls in queue.event to automatically defer to the queue's thread
   btn.fall(queue.event(&do_something));
 
@@ -127,7 +127,7 @@ void do_something_outside_irq() {
 void do_something_in_irq() {
   // this runs in the ISR
   led = !led;
-  
+
   // then defer the printf call to the other thread
   queue.call(&do_something_outside_irq);
 }
@@ -135,7 +135,7 @@ void do_something_in_irq() {
 int main() {
   Thread eventThread;
   eventThread.start(callback(&queue, &EventQueue::dispatch_forever));
-  
+
   btn.fall(&do_something_in_irq);
 
   while (1) {}
@@ -160,7 +160,7 @@ EventQueue eventQueue;
 void blink_led2() {
   // this runs in the normal priority thread
   led2 = !led2;
-}   
+}
 
 void print_toggle_led() {
   // this runs in the lower priority thread
@@ -169,7 +169,7 @@ void print_toggle_led() {
 
 void btn_fall_irq() {
   led1 = !led1;
-  
+
   // defer the printf call to the low priority thread
   printfQueue.call(&print_toggle_led);
 }
@@ -178,15 +178,15 @@ int main() {
   // low priority thread for calling printf()
   Thread printfThread(osPriorityLow);
   printfThread.start(callback(&printfQueue, &EventQueue::dispatch_forever));
-  
+
   // normal priority thread for other events
   Thread eventThread(osPriorityNormal);
   eventThread.start(callback(&eventQueue, &EventQueue::dispatch_forever));
-  
+
   // call blink_led2 every second, automatically defering to the eventThread
   Ticker ledTicker;
   ledTicker.attach(eventQueue.event(&blink_led2), 1.0f);
-  
+
   // button fall still runs in the ISR
   btn.fall(&btn_fall_irq);
 

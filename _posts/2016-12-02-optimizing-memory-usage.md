@@ -4,7 +4,7 @@ title:    "Optimizing memory usage in mbed OS 5.2"
 date:     2016-12-02 11:00:00
 tags:     mbed
 originalUrl: https://developer.mbed.org/blog/entry/Optimizing-memory-usage-in-mbed-OS-52/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Three months ago we released [mbed OS 5](https://developer.mbed.org/blog/entry/Introducing-mbed-OS-5/), the latest version of our operating system for microcontrollers. While we added a lot of new features - including an RTOS - we also saw a bigger than expected increase in flash and RAM usage, two things that are scarce on embedded devices. Reason for Vincent Coubard, Senior Software Engineer on the mbed team, to dig through the `.map` files and see how we can decrease memory usage in mbed OS.

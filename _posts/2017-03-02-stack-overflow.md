@@ -4,7 +4,7 @@ title:    "Tracing stack and heap overflow errors"
 date:     2017-03-02 00:00:00
 tags:     mbed
 originalUrl: https://developer.mbed.org/blog/entry/Tracing-stack-and-heap-overflow-errors/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 If you have ever seen the [lights of dead](https://docs.mbed.com/docs/debugging-on-mbed/en/latest/Debugging/lights_of_dead/) on your development board, accompanied by an `RTX error code: 0x00000001` or `Operator new out of memory` message on the serial port, you have hit a memory overflow bug. Memory management remains a difficult problem on microcontrollers. Not only is memory limited, but also microcontrollers do not have an MMU and therefore cannot move memory blocks around without changing addresses. This lack of virtual memory means you have to have fixed stack sizes, so you can run into a stack overflow error even when there is still RAM available.

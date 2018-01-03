@@ -4,7 +4,7 @@ title:    "Towards firmware updates over LoRa: cryptography and delta updates"
 date:     2017-10-11 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/towards-fota-lora-crypto-delta-updates/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Last June Arm and The Things Network demonstrated [firmware updates over Low-Power Wide Area Networks](https://os.mbed.com/blog/entry/firmware-updates-over-lpwan-lora/). At that point we were using two development boards, with a [Multi-Tech xDot](https://os.mbed.com/platforms/MTS-xDot-L151CC/) Cortex-M3 MCU as the LoRa radio, and a [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/) Cortex-M4 MCU as the application processor. That system was great for a demonstration, but not very cost efficient for a commercial rollout. In addition, we were also always sending the complete firmware to the device, even if only a few bytes changed. Not great if we're using a network that has duty cycle limitations.
@@ -312,7 +312,7 @@ Time to generate a patch file. As before, we'll need to compile a new applicatio
 
 In this article we gave some insights into the challenges with secure firmware updates. We used Mbed TLS to verify that data was sent by a trusted party, and JANPatch to implement delta updates on a microcontroller. We implemented these features to enable efficient firmware updates over very slow networks, but they should be helpful for anyone writing a firmware update service. Note that we added some security to the example, but it's still too insecure to deploy in a real-life scenario. If you're interested in the subject, Brendan Moran is speaking at TechCon about the subject: "[Building Firmware Updates: the devil is in the details](http://schedule.armtechcon.com/session/building-firmware-updates-the-devil-is-in-the-details/850554)". If you're looking for a one-stop solution, Arm has a fully secure update client and bootloader available as part of Mbed Cloud.
 
-We'll be releasing all parts of the LoRaWAN firmware update service in about two weeks, so keep an eye on the Mbed developer blog. If you're going to the LoRa All-Members meeting in Suzhou, we'll be doing a tech talk about firmware updates on Thursday 19 October from 11:30 - 12:30. And if you're at TechCon come and find us at the Mbed booth, and make sure to visit our session "[Enabling firmware updates over LPWAN](http://schedule.armtechcon.com/session/enabling-firmware-updates-over-lpwan/850218)" on Thursday 26 October at 11:30 AM in Ballroom G!
+We'll be releasing all parts of the LoRaWAN firmware update service in about two weeks, so keep an eye on the Mbed Developer Blog. If you're going to the LoRa All-Members meeting in Suzhou, we'll be doing a tech talk about firmware updates on Thursday 19 October from 11:30 - 12:30. And if you're at TechCon come and find us at the Mbed booth, and make sure to visit our session "[Enabling firmware updates over LPWAN](http://schedule.armtechcon.com/session/enabling-firmware-updates-over-lpwan/850218)" on Thursday 26 October at 11:30 AM in Ballroom G!
 
 -
 

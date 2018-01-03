@@ -4,7 +4,7 @@ title:    "Using HTTP, HTTPS, MQTT and CoAP from mbed OS"
 date:     2017-02-16 00:00:00
 tags:     mbed
 originalUrl: https://developer.mbed.org/blog/entry/Using-HTTP-HTTPS-MQTT-and-CoAP-from-mbed/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 One of the biggest changes in mbed OS 5 compared to mbed OS 2.0 was the unification of network interfaces. Every interface, whether it's Ethernet, Wi-Fi, Cellular, 6LoWPAN or Thread mesh, implements the same [NetworkInterface](https://docs.mbed.com/docs/mbed-os-api-reference/en/latest/APIs/communication/network_sockets/) API. This makes it easier to write portable code that matches the available connectivity method. In addition this API is easy to implement on top of any library that supports socket primitives, so porting new targets is straightforward. Recently we also added the [Easy Connect](https://github.com/ARMmbed/easy-connect) library, which allows users to switch between all supported connectivity methods through a config file - tremendously helpful for tutorials and workshops.

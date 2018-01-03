@@ -4,7 +4,7 @@ title:    "Building IoT devices: scaling from 10 - 1,000 devices"
 date:     2016-10-04 11:00:00
 tags:     iot
 originalUrl: https://developer.mbed.org/blog/entry/Building-IoT-devices-scaling-from-10-1k/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Unbeknownst to many of you, December 10th, 2015 was a historic day. That morning, I walked into the building of [Noca](http://noca.no) - a factory in Trondheim, Norway - wearing a white lab coat, a JTAG in my hand, and with a LoRaWAN base station in my backpack. That day, we could finally inspect the very first factory samples of the LoRa device that my team and I had been developing. The moment you see your components mounted on a PCB is both the most exciting and most scary moment in the life of any developer working on a hardware project.

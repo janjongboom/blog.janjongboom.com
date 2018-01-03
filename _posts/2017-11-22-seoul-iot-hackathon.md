@@ -4,7 +4,7 @@ title:    "Winners of the Seoul IoT Hackathon"
 date:     2017-11-22 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/seoul-iot-hackathon-report/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 ![Seoul IoT hackathon participants]({{ site.baseurl }}/assets/seoul-hackathon1.jpg)

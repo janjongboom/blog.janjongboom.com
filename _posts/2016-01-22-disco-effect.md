@@ -4,7 +4,7 @@ title:    "A disco effect: Looping and wait() in mbed OS"
 date:     2016-01-22 11:21:00
 tags:     iot
 originalUrl: http://blog.mbed.com/post/137808406402/a-disco-effect-looping-and-wait-in-mbed-os
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Let's say I have a tri-color LED, and I want to make a small disco effect by toggling the three channels every few hundred milliseconds, and stopping after ten iterations.

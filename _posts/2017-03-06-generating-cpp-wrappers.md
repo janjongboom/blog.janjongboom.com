@@ -4,7 +4,7 @@ title:    "Generating C++ wrappers for JS on mbed"
 date:     2017-03-06 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/Generating-C-wrappers-for-JS-on-mbed/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 **TL;DR?** Here's the link to the [JS wrapper generator](https://github.com/janjongboom/mbed-js-wrapper-generator).

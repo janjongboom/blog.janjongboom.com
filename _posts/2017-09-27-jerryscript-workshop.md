@@ -4,7 +4,7 @@ title:    "JerryScript workshop 2017"
 date:     2017-09-27 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/JerryScript-workshop-2017/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 A year ago we launched [experimental JavaScript support](https://os.mbed.com/javascript-on-mbed/) for mbed OS 5, which allows developers to write their IoT applications in a high level scripting language. This is possible through [JerryScript](http://jerryscript.net), a lightweight JavaScript engine that has full EcmaScript 5.1 support, but fits in only 64K of RAM.

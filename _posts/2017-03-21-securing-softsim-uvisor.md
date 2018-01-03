@@ -4,7 +4,7 @@ title:    "Securing soft-SIM credentials with mbed uVisor"
 date:     2017-03-21 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/Securing-soft-SIM-credentials-with-mbed/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Device authentication is a difficult and interesting problem. How do you know that a device is not lying about its identity? How do you keep authentication keys secure? On mobile phones, we've solved this by using SIM cards, which run their own operating system completely separate from the OS of your phone, ensuring that keys stay secure. However, SIM cards have some big disadvantages for IoT devices: they are relatively bulky, need a connector and add extra cost to your design. That's why [Ericsson, u-blox and ARM have collaborated](https://www.ericsson.com/research-blog/internet-of-things/secure-iot-identities/) to work on a solution for IoT devices that offers strong enough security but none of the downsides of SIM cards. This work was demonstrated three weeks ago during Mobile World Congress.

@@ -4,7 +4,7 @@ title:    "Firmware updates over Low-Powered Wide Area Networks"
 date:     2017-06-16 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/firmware-updates-over-lpwan-lora/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 <iframe width="700" height="450" src="https://www.youtube.com/embed/0NoshDOqmdM" frameborder="0" allowfullscreen></iframe>

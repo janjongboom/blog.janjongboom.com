@@ -4,7 +4,7 @@ title:    "Why JavaScript on microcontrollers makes sense"
 date:     2016-12-16 00:00:00
 tags:     mbed iot javascript
 originalUrl: https://developer.mbed.org/blog/entry/Why-JavaScript-on-microcontrollers-makes/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Three weeks ago, during [JSConf.asia 2016](http://jsconf.asia/), we announced [JavaScript on mbed](https://developer.mbed.org/javascript-on-mbed/), which enables developers to write firmware for IoT devices in JavaScript. This is not done by transpiling JavaScript into C++ or Assembly, but rather by running the [JerryScript VM](http://jerryscript.net) directly on top of ARM's mbed OS 5, which can be run on cost-effective microcontrollers. This announcement caused an interesting debate, including a [heated thread on the Reddit Programming subreddit](https://www.reddit.com/r/programming/comments/5etrbo/building_iot_devices_with_javascript_run_js_on_2/) with 192 comments.
@@ -65,7 +65,7 @@ We might be able to take this further, offering pre-built images containing the 
 
 At the moment, software development is a relatively small part of the cost when building IoT devices; hardware design is the expensive part - especially because it's easier to patch software than hardware. Having to spend a dollar extra to add more RAM or flash to your device, because you're shipping it with a JavaScript VM, will drive up cost faster than the development time savings are worth.
 
-But, times are changing. With the advent of cheap modules, which combine MCUs and radios, the upfront cost of designing connected devices is being driven down by not having to pay an RF engineer or do certification for your device. Although this raises the price per unit, it will become feasible to do smaller runs of devices, creating a market where smaller companies can also produce (relatively) low-cost custom IoT solutions. 
+But, times are changing. With the advent of cheap modules, which combine MCUs and radios, the upfront cost of designing connected devices is being driven down by not having to pay an RF engineer or do certification for your device. Although this raises the price per unit, it will become feasible to do smaller runs of devices, creating a market where smaller companies can also produce (relatively) low-cost custom IoT solutions.
 
 If you can save time developing your firmware by using a higher level language (at the price of a beefier MCU), it might be cost-effective at low volumes. With the price of modules constantly dropping ([here's a $2 WiFi module with a Cortex-M3 and 512K RAM](https://www.pine64.org/?page_id=917)), the cost effectiveness threshold will go up over time.
 

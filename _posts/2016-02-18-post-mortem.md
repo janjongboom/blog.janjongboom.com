@@ -4,7 +4,7 @@ title:    "Debugging a crashed device with CMSIS-DAP"
 date:     2016-02-18 12:00:00
 tags:     iot
 originalUrl: http://blog.mbed.com/post/139539984822/debugging-a-crashed-device-with-cmsis-dap
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 When it comes to programming microcontrollers, the one scenario that you never want to face is a device that suddenly hangs. It's already very frustrating while you're developing software, and tracing down these bugs can be very time-consuming; it's even worse when the device is already deployed in the field. Replicating the exact conditions in which the device failed can be almost impossible in the lab, especially when the failure manifested itself months after deployment.

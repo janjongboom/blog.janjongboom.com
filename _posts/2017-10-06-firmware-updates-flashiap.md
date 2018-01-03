@@ -4,7 +4,7 @@ title:    "Firmware updates on Mbed OS 5.5 with FlashIAP"
 date:     2017-10-06 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/firmware-updates-mbed-5-flashiap/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 The Dutch have a saying: "where people work, mistakes are made." This is a problem if the mistake involves thousands of IoT devices that have a critical bug or a gaping security hole, especially if these devices are on a remote island or baked into concrete. Therefore, every Internet of Things deployment needs to remotely upgrade firmware securely and safely. To help developers build these firmware update capabilities into their devices, we have added new APIs and tools to Arm Mbed OS 5.5.

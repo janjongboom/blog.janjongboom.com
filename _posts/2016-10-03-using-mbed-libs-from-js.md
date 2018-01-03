@@ -4,7 +4,7 @@ title:    "Using mbed libraries with JerryScript"
 date:     2016-10-03 11:00:00
 tags:     mbed js
 originalUrl: https://developer.mbed.org/blog/entry/Using-mbed-libraries-with-JerryScript/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Two weeks ago Stephen Kyle [posted about](https://developer.mbed.org/blog/entry/Bringing-JavaScript-to-mbed-OS/) adding support for JavaScript on ARM mbed OS with JerryScript - which has now landed in the [JerryScript main repository](https://github.com/Samsung/jerryscript/pull/1318). The ability to run a JavaScript engine on top of a microcontroller is tremendously helpful for rapid prototyping, and lowers the barrier for anyone interested in programming microcontrollers. One great thing about building JerryScript support on top of ARM mbed is that we can also leverage the vast set of published mbed libraries (5,375 and counting!).  Unfortunately at this point we cannot directly use C++ libraries from JavaScript - we need some glue. In this article we'll go over the pieces needed to use a C++ mbed library in JerryScript.

@@ -4,7 +4,7 @@ title:    "A new Bluetooth library: SimpleBLE"
 date:     2016-05-18 11:00:00
 tags:     iot mbed ble
 originalUrl: https://developer.mbed.org/blog/entry/A-new-Bluetooth-library-SimpleBLE/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 **TL;DR?** Here's the link to the [SimpleBLE library](https://developer.mbed.org/teams/mbed-x/code/SimpleBLE/).

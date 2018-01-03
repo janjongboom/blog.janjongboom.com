@@ -4,7 +4,7 @@ title:    "Now available: Secure WebSockets and MQTT over TLS libraries"
 date:     2016-04-26 11:00:00
 tags:     iot mbed
 originalUrl: https://developer.mbed.org/blog/entry/Now-available-Secure-WebSockets-and-MQTT/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Two weeks ago [Real Time Logic](https://realtimelogic.com) released some very interesting libraries for mbed. Real Time Logic maintains the [SharkSSL](https://realtimelogic.com/products/sharkssl/) library, which contains a lightweight TLS client suitable for running on Cortex-M series microcontrollers. Previously SharkSSL was only available under a commercial license, but they have now released a light version of SharkSSL for [mbed users](https://developer.mbed.org/users/wini/code/SharkSSL-Lite/).

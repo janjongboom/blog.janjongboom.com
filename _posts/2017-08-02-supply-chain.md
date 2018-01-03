@@ -4,7 +4,7 @@ title:    "Built with mbed - supply chain monitoring with Babbler"
 date:     2017-08-02 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/Built-with-mbed-Supply-chain-monitoring/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 This is the third article in the 'built with mbed'-series. In the previous articles, we [monitored snow](https://developer.mbed.org/blog/entry/Built-with-mbed-Snowmelt-System-Monitor/) and [brewed beer](https://developer.mbed.org/blog/entry/Built-with-mbed-brewing-beer-with-bruiot/).

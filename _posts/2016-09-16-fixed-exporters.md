@@ -4,7 +4,7 @@ title:    "Fixed exporters in the mbed Online Compiler"
 date:     2016-09-16 11:00:00
 tags:     mbed
 originalUrl: https://developer.mbed.org/blog/entry/Fixed-exporters-in-the-mbed-Online-Compi/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 We have three ways of developing on top of mbed OS: in the browser using the [mbed Online Compiler](https://developer.mbed.org/compiler/), offline using [mbed CLI](http://github.com/armmbed/mbed-cli), or by using an IDE like µVision or Eclipse. The last option adds a lot of flexibility: you can use mbed RTOS and mbed OS 5 as your application middleware, while still being able to develop and properly debug your application in your favourite editor.

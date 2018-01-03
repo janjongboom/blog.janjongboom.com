@@ -4,7 +4,7 @@ title:    "Adding a Visual Studio Code exporter"
 date:     2017-12-09 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/Adding-a-Visual-Studio-Code-exporter/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Visual Studio Code, Microsoft's new cross-platform IDE, is gaining a lot of momentum. In the [2017 Stack Overflow Developer Survey](https://stackoverflow.com/insights/survey/2017#technology-most-popular-developer-environments-by-occupation) it ranked in the top five for most popular developer environment for both web and desktop developers. Unfortunately, the survey did not have numbers on embedded developers - but its popularity is definitely on the rise in the Mbed offices, thanks to the excellent C/C++ support and the built-in support for visual debugging through GDB.

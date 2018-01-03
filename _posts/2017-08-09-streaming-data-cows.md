@@ -4,7 +4,7 @@ title:    "Streaming data of cows during Data Science Africa"
 date:     2017-08-09 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/streaming-data-cows-dsa2017/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 Last month, Arm sponsored [Data Science Africa 2017](http://www.datascienceafrica.org/dsa2017/), a machine learning and data science conference held annually in East Africa. This year, the [Nelson Mandela African Institute of Science and Technology](http://www.nm-aist.ac.tz) in Arusha, Tanzania hosted the 300 attendees for five days of workshops, talks and interesting conversations. Arm hosted a two-day IoT workshop and a keynote, but the fun starts when you apply your acquired knowledge to a real-life scenario. Thus, on the Saturday after the conference, Jan Jongboom (Developer Evangelist), Damon Civin (Lead Data Scientist)  and 15 conference attendees, headed to the outskirts of Arusha for some good, old-fashioned field work.

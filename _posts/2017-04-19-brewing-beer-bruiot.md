@@ -4,7 +4,7 @@ title:    "Built with mbed - brewing beer with bruiot"
 date:     2017-04-19 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/Built-with-mbed-brewing-beer-with-bruiot/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 This is the second article in the 'built with mbed'-series. In the previous article, we explored the [snowmelt monitoring system](https://developer.mbed.org/blog/entry/Built-with-mbed-Snowmelt-System-Monitor/) deployed in Holland, MI.

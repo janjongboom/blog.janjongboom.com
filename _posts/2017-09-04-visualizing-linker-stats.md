@@ -4,7 +4,7 @@ title:    "Where did my flash go? Visualizing linker statistics"
 date:     2017-09-04 00:00:00
 tags:     mbed
 originalUrl: https://os.mbed.com/blog/entry/visualizing-linker-stats/
-originalName: "mbed Developer Blog"
+originalName: "Mbed Developer Blog"
 ---
 
 It happens to all of us. At some point, your application compiles, but the linker fails with a message similar to `'.data' will not fit in region `RAM'`. This is a sign that the application does not fit in flash, something that is limited on most microcontrollers. Flash memory takes up a lot of silicon area ([In this picture of an ST Cortex-M3, the 128K of flash is in red](STM32F100C4T6B-die-shot.jpg)), and therefore increases both the cost and the likelihood of defects in microcontrollers. Flash also requires power, and more flash increases power consumption. Less flash is better for cost and energy efficiency, but it can be a nuisance when writing applications.
