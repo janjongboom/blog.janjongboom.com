@@ -248,7 +248,7 @@ hr {
 
     .original-post {
         background-color: #cf5300;
-        padding: 7px;
+        padding: 7px 7px 7px 13px;
         color: white;
 
         a {
@@ -296,9 +296,17 @@ hr {
     text-decoration: italic;
     font-style: italic;
     margin-bottom: 20px;
-    
+
     a {
         color: white;
         text-decoration: underline;
     }
+}
+
+#archive-note {
+    border: solid 1px #333;
+    background-color: #ddd;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
 }
