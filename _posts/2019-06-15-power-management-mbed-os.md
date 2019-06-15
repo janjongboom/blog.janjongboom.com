@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "Power management in Mbed OS"
-date:     2019-06-10 00:00:00
+date:     2019-06-15 00:00:00
 tags:     mbed
 ---
 
@@ -291,4 +291,3 @@ This is related to the maximum timeout of the hardware low power ticker. It can 
 ### Device does not sleep in bare-metal mode
 
 The sleep manager is currently not loaded when running Mbed OS in bare-metal mode. We're planning to add this in the Mbed OS 5.13 release. You can track progress [in this pull request](https://github.com/ARMmbed/mbed-os/pull/10104).
-
