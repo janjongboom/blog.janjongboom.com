@@ -234,7 +234,6 @@ Accurately measuring power consumption of deep sleep is hard because the huge dy
 
 1. A current measurement probe. Some options that we have good experiences with:
     * [QOITECH Otii](https://www.qoitech.com/) - acts as both a current and voltage measurement device, and as a flexible power source for your device. Probably your best option if you can spare $589.
-    * [ULINKplus](http://www2.keil.com/mdk5/ulink/ulinkplus) - debugging probe that can be used together with Keil MDK that also provides current measurement. Good option if you already have an MDK license. Available for $690.
      * [SiLabs Giant Gecko](https://os.mbed.com/platforms/EFM32-Giant-Gecko/) - this development board has a circuit which can also measure current [of an external MCU](https://www.silabs.com/community/mcu/32-bit/forum.topic.html/how_to_use_an_stkto-jLpQ). At $29 a much cheaper alternative to the dedicated probes, but can only output 3.3V which can be a problem when powering 5V peripherals.
     * [Nordic Power Profiler kit](https://www.nordicsemi.com/Software-and-Tools/Development-Kits/Power-Profiler-Kit) - originally made for Nordic development boards, you can also use this kit to measure current of any other MCU. Available for $80, but can also only output a maximum of 3.3V.
 1. Have a way of powering the MCU (and preferably its peripherals) without powering the debug circuit - this is very specific to the development board.
@@ -299,4 +298,4 @@ This is related to the maximum timeout of the hardware low power ticker. It can 
 
 ### Device does not sleep in bare-metal mode
 
-The sleep manager is currently not loaded when running Mbed OS in bare-metal mode. We're planning to add this in the Mbed OS 5.13 release. You can track progress [in this pull request](https://github.com/ARMmbed/mbed-os/pull/10104).
+The sleep manager is currently not loaded when running Mbed OS in bare-metal mode. You can track progress [in this pull request](https://github.com/ARMmbed/mbed-os/pull/10104).
