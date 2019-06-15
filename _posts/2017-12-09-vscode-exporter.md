@@ -7,6 +7,8 @@ originalUrl: https://os.mbed.com/blog/entry/Adding-a-Visual-Studio-Code-exporter
 originalName: "Mbed Developer Blog"
 ---
 
+**Update (June 2019): I've given up on using the Mbed exporters. They're breaking very often, and are inflexible. Instead I've put together [mbed-vscode-generator](https://github.com/janjongboom/mbed-vscode-generator) which should work for both pyOCD and STLink targets.**
+
 Visual Studio Code, Microsoft's new cross-platform IDE, is gaining a lot of momentum. In the [2017 Stack Overflow Developer Survey](https://stackoverflow.com/insights/survey/2017#technology-most-popular-developer-environments-by-occupation) it ranked in the top five for most popular developer environment for both web and desktop developers. Unfortunately, the survey did not have numbers on embedded developers - but its popularity is definitely on the rise in the Mbed offices, thanks to the excellent C/C++ support and the built-in support for visual debugging through GDB.
 
 <!--more-->
