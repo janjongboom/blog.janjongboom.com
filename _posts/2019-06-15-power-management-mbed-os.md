@@ -55,9 +55,9 @@ This yields significant energy savings, without any modification from the develo
 
 ![Deep sleep]({{ site.baseurl }}/assets/deepsleep1.png)
 
-*In deep sleep mode, the idle current goes down to 358 uA. The jitter is noise from the energy profiler.*
+*In deep sleep mode, the idle current goes down to 358 uA. Jitter can show if unused pins are not properly pulled up.*
 
-**Note:** the current consumption differs wildly between targets, even when comparing between MCUs from the same vendor. Look at the data sheet for your MCU to get an indication of power consumption in sleep and deep sleep mode.
+**Note:** the current consumption differs wildly between targets, even when comparing between MCUs from the same vendor. Look at the data sheet for your MCU to get an indication of power consumption in sleep and deep sleep mode. The DISCO-L475VG-IOT01A target goes down to under 60 uA with the same application.
 
 ### Sleep vs. deep sleep
 
@@ -241,7 +241,7 @@ Accurately measuring power consumption of deep sleep is hard because the huge dy
 1. Disable any peripherals that draw power but are not part of your application (e.g. a power LED). This might require you to physically remove components.
 
 
-![Current measurement setup for this article]({{ site.baseurl }}/assets/sleep-setup-jan.JPG)
+![Current measurement setup for this article]({{ site.baseurl }}/assets/sleep-setup-jan.jpg)
 
 This is the current measurement setup for the images earlier in this article. The STLink debug circuit is physically disconnected from the NUCLEO-F446RE to avoid powering the debug circuit during measurement. The jumper wires from the STLink to the development board are there to re-program the device. On the NUCLEO-F446RE board resistor R32 is removed to disable the power LED. The EFM32 Giant Gecko acts as the power source for the board, connecting VMCU on the Giant Gecko to 3.3V on the NUCLEO-F446RE (and GND to GND). Simplicity Studio can be used to show the current measurement.
 
@@ -250,6 +250,15 @@ Unfortunately there is no generic way of doing this. There are probably hints in
 ### Choice of, and shutting down of, peripherals
 
 It might seem like an open door, but putting the MCU to sleep is only part of a low power design: peripherals can draw much more power than the MCU. The LED in the beginning of the article is drawing ~2.8 mA, much more than the rest of the circuit in deep sleep. Thus, make sure to pick components that fit your power budget, and shut peripherals down when you don't use them. Radios often have sleep modes that you can invoke, so make sure your drivers use these.
+
+In addition you can see jitter if you keep unused pins floating (see the image at the beginning of the article). You can pull these pins up in software via:
+
+```cpp
+static DigitalIn unused[] = { PA_4, PA_7, PA_8 };
+for (size_t ix = 0; ix < sizeof(unused) / sizeof(unused[0]); ix++) {
+    unused[ix].mode(PullUp);
+}
+```
 
 Another thing to consider is to use a lower voltage design. There are many MCUs that can run at 1.8V instead of 3.3V, and picking peripherals that can run on the same voltage will drastically reduce your overall power consumption.
 
